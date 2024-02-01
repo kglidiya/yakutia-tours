@@ -57,7 +57,7 @@ export const tourGallery = [
   {
     id: 1,
     image:
-      "http://activehike.ru/wp-content/uploads/2017/03/yakutiya_20020103-01.jpg",
+      "https://celes.club/uploads/posts/2023-03/1679761087_celes-club-p-doroga-zimoi-pinterest-43.jpg",
     title: "Якутск — ГУЛАГ — Оймякон — Магадан",
     price: "100 000 руб.",
     date: "Январь-февраль",
@@ -65,7 +65,7 @@ export const tourGallery = [
   },
   {
     id: 1,
-    image: "http://s4.fotokto.ru/photo/full/257/2571570.jpg",
+    image: "https://pm1.aminoapps.com/7725/db33595fb3923fab3a3ef45cdbc72df7ac8395fdr1-793-505v2_hq.jpg",
     title: "Конные прогулки",
     price: "10 000 руб.",
     date: "Январь-февраль",
