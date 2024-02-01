@@ -1,0 +1,76 @@
+.main {
+  position: relative;
+
+}
+
+.facts {
+  font-size: 24px;
+
+  width: 70%;
+  margin: 100px auto;
+}
+
+.facts__gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  width: 70%;
+  margin: 30px auto;
+  /* flex-wrap: wrap; */
+}
+
+.facts__image {
+  width: 24%;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.tours {
+  margin: 100px auto;
+  font-size: 44px;
+}
+
+.tours__gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  /* row-gap: 30px;
+  column-gap: 30px; */
+  /* justify-content: space-between; */
+  width: 70%;
+  margin: 30px auto 100px auto;
+  flex-wrap: wrap;
+}
+
+.form {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url(../../assets/images/background.jpg);
+  background-size: cover; */
+  background-image: url('https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg');
+  background-size: cover;
+  overflow: hidden;
+  /* background-size: 60px;
+  padding-top: 10vh;
+  background-repeat: no-repeat; */
+
+  
+}
+
+@media (max-width: 1200px) {
+
+  .facts__gallery {
+    width: 90%;
+  }
+
+  .tours__gallery {
+    width: 90%;
+  }
+
+ 
+}

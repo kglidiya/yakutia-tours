@@ -1,0 +1,12 @@
+.footer {
+  height: 70px;
+  width: 70px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-image: url(../../assets/images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: -5px;
+  transform-origin: 0;
+}

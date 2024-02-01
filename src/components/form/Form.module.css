@@ -1,0 +1,63 @@
+.wrapper {
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+  background-image: url(../../assets/images/chum.png);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: 130% 60%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  padding-bottom:45px;
+}
+
+.title {
+  color: rgb(98, 161, 216);
+  font-size: 24px;
+  margin: 25px;
+  text-shadow: -1px 0 rgba(70, 70, 71, 0.595), 0 1px rgba(70, 70, 71, 0.595), 1px 0 rgba(70, 70, 71, 0.595), 0 -1px rgba(70, 70, 71, 0.595);
+}
+
+.inputs {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.chum {
+  height: 130%;
+  width: fit-content;
+  /* z-index: 5; */
+  position: absolute;
+  top: -18%;
+  right: -17%;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    /* height: 500px; */
+    background-position: 120% 100%;
+    background-size: contain;
+  }
+  .inputs {
+    width: 90%;
+  }
+}
