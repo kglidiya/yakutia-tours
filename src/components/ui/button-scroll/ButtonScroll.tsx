@@ -8,12 +8,20 @@ interface IButton {
   borderRadius: string;
   rotate: string;
   right?: string;
+  bottom?: string;
+  left?: string;
+  opacity?: number;
+  backgroundColor?: string;
 }
 export default function ButtonScroll({
   onClick,
   borderRadius,
   rotate,
   right,
+  left,
+  bottom,
+  opacity,
+  backgroundColor
 }: IButton) {
   return (
     <motion.button
@@ -25,7 +33,7 @@ export default function ButtonScroll({
       whileTap={{
         scale: 0.9,
       }}
-      style={{borderRadius, rotate,  right }}
+      style={{borderRadius, rotate,  right, left, bottom, opacity, backgroundColor }}
     >
       <ArrowUp />
     </motion.button>

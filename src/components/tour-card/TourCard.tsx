@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./TourCard.module.css";
 import Button from "../ui/button/Button";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function TourCard({
   tour,
@@ -10,9 +11,10 @@ export default function TourCard({
   tour: any;
   index: number;
 }) {
-  // console.log(tour);
+  const navigate = useNavigate();
   return (
     <motion.article
+    onClick={()=> navigate(tour.path)}
       className={styles.wrapper}
       style={{ backgroundImage: `url(${tour.image})` }}
       initial={{ y: 50, opacity: 0 }}

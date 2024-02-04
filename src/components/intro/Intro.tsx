@@ -39,7 +39,7 @@ export default function Intro({ images, text, textLarge, onClick }: IIntroProps)
       >
         {text} <br /> <span style={{ fontSize: "80px" }}>{textLarge}</span>
       </motion.h1>
-      <ButtonScrollBotton onClick={onClick} borderRadius="10px" rotate="0deg"/>
+      <ButtonScrollBotton onClick={onClick} borderRadius="10px" rotate="0deg"  opacity={0.6}/>
     </section>
   );
 }

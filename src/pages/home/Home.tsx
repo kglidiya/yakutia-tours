@@ -1,33 +1,45 @@
-import { images, tourGallery, factsGallery } from "../../utils/helpers";
+import {
+  images,
+  tourGallery,
+  factsGallery,
+  tourConditions,
+} from "../../utils/helpers";
 import MotionCover from "../../components/motion-cover/MotionCover";
 import styles from "./Home.module.css";
 import { motion } from "framer-motion";
 import TourCard from "../../components/tour-card/TourCard";
 import Form from "../../components/form/Form";
 import Intro from "../../components/intro/Intro";
-import ButtonScrollBotton from "../../components/ui/button-scroll/ButtonScroll";
+
+import ButtonScroll from "../../components/ui/button-scroll/ButtonScroll";
+import MotionFooter from "../../components/motion-footer/MotionFooter";
 
 export default function Home() {
   const scrollDown = () => {
     window.scrollBy({
       top: 500,
       left: 0,
-      behavior: "smooth"
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
-  const scrollUp = () => {
+  const backToTop = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
-  }
+  };
 
   return (
     <main className={styles.main}>
       <MotionCover image={require("../../assets/images/logo.png")} />
-      <Intro images={images} text="Туры по зимней" textLarge="Якутии" onClick={scrollDown}/>
+      <Intro
+        images={images}
+        text="Туры по зимней"
+        textLarge="Якутии"
+        onClick={scrollDown}
+      />
       <motion.p
         className={styles.facts}
         initial={{ x: "-50vw", opacity: 0 }}
@@ -67,12 +79,48 @@ export default function Home() {
         })}
       </section>
       <div className={styles.form}>
-        <div style={{width: '70%'}}> 
-        <Form text="Форма обратной связи" />
-        </div>
+        <motion.div
+          initial={{ x: "-50vw", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className={styles.condition__wrapper}
+        >
+          <h4 className={styles.condition}>В стоимость туров включено:</h4>
+          <ul className={styles.list}>
+            {tourConditions.included.map((condition, i: number) => {
+              return (
+                <li key={i} className={styles.list__item}>
+                  <span className={styles.list__marker_included}></span>
+                  {condition}
+                </li>
+              );
+            })}
+          </ul>
+          <h4 className={styles.condition}>Оплачитается отдельно:</h4>
+          <ul className={styles.list}>
+            {tourConditions.excluded.map((condition, i: number) => {
+              return (
+                <li key={i} className={styles.list__item}>
+                  <span className={styles.list__marker_excluded}></span>
+                  {condition}
+                </li>
+              );
+            })}
+          </ul>
+        </motion.div>
 
+        <div style={{ width: "70%" }}>
+          <Form text="Форма обратной связи" />
+        </div>
       </div>
-      <ButtonScrollBotton onClick={scrollUp} borderRadius="50%" rotate="180deg" right="20px"/>
+      {/* <ButtonScroll
+        onClick={backToTop}
+        borderRadius="50%"
+        rotate="180deg"
+        right="20px"
+        opacity={0.8}
+      /> */}
+       <MotionFooter />
     </main>
   );
 }

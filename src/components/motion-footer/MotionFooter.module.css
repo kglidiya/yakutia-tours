@@ -1,0 +1,39 @@
+.slider {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40vh;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+  }
+  
+  
+  .slider__background {
+    width: 100%;
+    height: 40vh;
+    background: url(../../assets/images/treesbackground.png);
+    background-size: 30%;
+    background-repeat: repeat-x;
+    background-position: bottom;
+  }
+  
+  .slider__image {
+    width: 60%;
+    height: 30vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    /* background: url(../../assets/images/2222_pixian_ai.png); */
+    /* background: url(../../assets/images/55555.png), url(../../assets/images/44444_pixian_ai.png); */
+    background: url(../../assets/images/55555.png), url(../../assets/images/44444_pixian_ai.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
