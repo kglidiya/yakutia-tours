@@ -16,3 +16,27 @@
   transform: translate(-50%, -50%);
   z-index: 1;
 }
+
+.title_large {
+  font-size: 84px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 54px;
+  }
+
+  .title_large {
+    font-size: 68px;
+  }
+ }
+
+ @media (max-width: 576px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .title_large {
+    font-size: 62px;
+  }
+ }

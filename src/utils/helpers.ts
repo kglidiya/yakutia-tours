@@ -70,6 +70,7 @@ export const tourGallery = [
     ],
     gallery: [
       "https://jazico-travel.com/Assets/images/russia/5.jpg",
+      "https://storage.yandexcloud.net/storage.yasno.media/nat-geo/images/2019/5/16/690a7a99c6ae4aefae27b84e92c71a55.max-1200x800.jpg",
       "https://celes.club/uploads/posts/2021-12/1640858884_27-celes-club-p-oimyakon-zima-priroda-krasivo-foto-33.jpg",
     ],
   },

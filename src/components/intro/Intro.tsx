@@ -37,7 +37,7 @@ export default function Intro({ images, text, textLarge, onClick }: IIntroProps)
         transition={{ duration: 1, delay: 1 }}
         className={styles.title}
       >
-        {text} <br /> <span style={{ fontSize: "80px" }}>{textLarge}</span>
+        {text} <br /> <span className={styles.title_large}>{textLarge}</span>
       </motion.h1>
       <ButtonScrollBotton onClick={onClick} borderRadius="10px" rotate="0deg"  opacity={0.6}/>
     </section>

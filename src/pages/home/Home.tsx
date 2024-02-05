@@ -91,7 +91,7 @@ export default function Home() {
               return (
                 <li key={i} className={styles.list__item}>
                   <span className={styles.list__marker_included}></span>
-                  {condition}
+                  <p className={styles.list__text}> {condition}</p>
                 </li>
               );
             })}
@@ -102,7 +102,7 @@ export default function Home() {
               return (
                 <li key={i} className={styles.list__item}>
                   <span className={styles.list__marker_excluded}></span>
-                  {condition}
+                  <p  className={styles.list__text}> {condition}</p>
                 </li>
               );
             })}
@@ -120,7 +120,7 @@ export default function Home() {
         right="20px"
         opacity={0.8}
       /> */}
-       <MotionFooter />
+      <MotionFooter />
     </main>
   );
 }
