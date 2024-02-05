@@ -108,3 +108,23 @@
     width: 95%;
   }
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 48px;
+   
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}

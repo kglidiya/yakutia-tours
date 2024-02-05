@@ -8,12 +8,13 @@
   background-position: 130% 60%;
   background-color: rgb(255, 255, 255);
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   border-radius: 15px;
   padding: 0 20px 25px 20px;
   -webkit-box-shadow: 0px -8px 33px 37px rgba(98, 161, 216, 0.2);
   -moz-box-shadow: 0px -8px 33px 37px rgba(98, 161, 216, 0.2);
   box-shadow: 0px -8px 33px 8px rgba(194 200 205 / 20%);
+  box-sizing: border-box;
 }
 
 .flexBox {
@@ -23,6 +24,7 @@
   /* align-items: flex-start; */
   justify-content: space-between;
   gap: 30px;
+  margin-bottom: 10px;
 }
 .title {
   color: rgb(98, 161, 216);
@@ -66,7 +68,7 @@
 
 @media (max-width: 768px) {
   .wrapper {
-    height: 500px;
+    height: 538px;
     background-position: 160% 100%;
     background-size: 80%;
   }

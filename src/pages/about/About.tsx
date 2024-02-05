@@ -124,7 +124,7 @@ export default function About() {
           <motion.div
             className={styles.chum}
             initial={{
-              bottom: mobile ? "-10%" : "-22%",
+              bottom: mobile ? 0 : "-22%",
               right: 0,
               left: 0,
               opacity: 0,
@@ -145,7 +145,7 @@ export default function About() {
           </motion.div>
         </section>
 
-        <section className={styles.section}>
+        <section className={styles.section} >
           <motion.span
             className={styles.sun}
             initial={{
@@ -235,7 +235,21 @@ export default function About() {
           </motion.div>
         </section>
         {mobile && (
-          <section className={styles.section}>
+          <section className={styles.section} style={{backgroundColor: 'white', paddingTop: '40px'}}>
+            <motion.span
+            className={styles.sun}
+            initial={{
+              top: "1%",
+              right: "-15vw",
+              opacity: 0,
+            }}
+            whileInView={{
+              top: "1%",
+              right: 0,
+              opacity: 1,
+              transition: { duration: 3, delay: 0 },
+            }}
+          ></motion.span>
             <Form text="Форма обратной связи" />
           </section>
         )}

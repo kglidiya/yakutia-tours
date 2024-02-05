@@ -6,17 +6,20 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import useMediaQuery from "../../../../hooks/use-media-query";
 export default function Devider() {
+  const mobile = useMediaQuery("(max-width: 576px)");
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
+      style={{width: '100vw'}}
     >
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
-        width="500"
+        width={mobile? "300": "500"}
         height="68.61924686192468"
         viewBox="0 0 896.000000 123.000000"
         preserveAspectRatio="xMidYMid meet"

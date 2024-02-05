@@ -1,39 +1,80 @@
 .list {
-    list-style: none;
-    width: 80%;
-    margin: auto;
-    overflow: visible;
-  
-  }
-  
-  .list__item {
-    margin-top: 60px;
-    /* height: 50vh; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    /* height: 30vh; */
-  
-  }
-  .list__text {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+  list-style: none;
+  padding-left: 0;
+  width: 80%;
+  margin: auto;
+  overflow: visible;
+}
+
+.list__item {
+  margin-top: 60px;
+  /* height: 50vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  /* height: 30vh; */
+}
+.list__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.day {
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.activities {
+  font-size: 18px;
+  line-height: 24px;
+  text-align: justify;
+  /* height: 100%; */
+  /* width: 60%; */
+  /* transition: height 0.5s linear; */
+  overflow: hidden;
+}
+
+.button {
+  font-weight: bold;
+}
+@media (max-width: 992px) {
+  .list {
+    width: 90%;
   }
   .day {
-  
-    white-space: nowrap;
-    font-size: 18px;
-    font-weight: bold;
+
+    font-size: 16px;
+ 
   }
   
   .activities {
-    font-size: 18px;
-    line-height: 24px;
-    text-align: justify;
-   width: 60%;
+    font-size: 16px;
   }
+}
+
+@media (max-width: 768px) {
+  .list {
+    width: 100%;
+  }
+
+  .list__item {
+    margin-top: 20px;
+    gap: 20px;
+  }
+  .day {
+
+    font-size: 14px;
+ 
+  }
+  
+  .activities {
+    font-size: 14px;
+  }
+
+
+}
