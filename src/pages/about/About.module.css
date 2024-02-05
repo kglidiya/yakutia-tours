@@ -14,15 +14,10 @@
 
 .section {
   height: 100vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-image: url('https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg');
-  background-size: cover; */
-  /* background: url(../../assets/images/background.jpg); */
   position: relative;
-  /* z-index: 2; */
   overflow: hidden;
 }
 /* .section:nth-child(3) {
@@ -34,16 +29,7 @@
 } */
 .chum {
   position: absolute;
-  /* margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center; */
-  /* bottom: -50%;
-  right: -10%; */
-  /* display: flex; */
-  /* z-index: 1; */
-  /* overflow: hidden; */
-  /* right: 0; */
+
 }
 .imgTopRight {
   width: 100%;
@@ -103,9 +89,11 @@
   margin-top: 13vh;
 } */
 .form {
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   margin-top: 5vh;
+  position: relative;
+  z-index: 15;
 }
 
 @media (max-width: 1200px) {
@@ -128,6 +116,9 @@
   .sun {
     width: 30vw;
     height: 30vw;
+  }
+  .form {
+    width: 70vh;
   }
 }
 

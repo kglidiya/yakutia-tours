@@ -17,12 +17,13 @@ export default function NavMobile() {
       <motion.ul
         className={styles.links}
         // initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: isOpen? 1: 0, opacity: isOpen? 1: 0 }}
+        animate={{ scale: isOpen ? 1 : 0, opacity: isOpen ? 1 : 0 }}
         // exit={{ scale: 0, opacity: 0, transition: { duration: 0.5 } }}
         transition={{ duration: 0.5 }}
       >
-        <li>
+        <li  onClick={() => setOpen(false)}>
           <NavLink
+            // onClick={() => setOpen(false)}
             to="/about"
             className={({ isActive }) =>
               isActive
@@ -33,7 +34,7 @@ export default function NavMobile() {
             О нас
           </NavLink>
         </li>
-        <li>
+        <li onClick={() => setOpen(false)}>
           <NavLink
             to="/"
             className={({ isActive }) =>

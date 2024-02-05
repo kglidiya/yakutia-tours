@@ -169,7 +169,7 @@ export default function About() {
               группами туристов на маршрутах до 5-й категории сложности.
             </p>
             <p className={styles.text}>Ждем Ваших пожеланий.</p>
-            <div className={styles.form} style={{ zIndex: 2 }}>
+            <div className={styles.form} >
               {!tablet && <Form text="Форма обратной связи" />}
             </div>
           </div>
