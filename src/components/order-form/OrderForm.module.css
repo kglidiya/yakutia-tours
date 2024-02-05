@@ -40,7 +40,7 @@
   align-items: flex-start;
   justify-content: center;
   gap: 10px;
-  padding-left: 20px;
+  /* padding-left: 20px; */
 }
 
 .chum {
@@ -66,11 +66,13 @@
 
 @media (max-width: 768px) {
   .wrapper {
-    /* height: 500px; */
-    background-position: 120% 100%;
-    background-size: contain;
+    height: 500px;
+    background-position: 160% 100%;
+    background-size: 80%;
   }
   .inputs {
-    width: 90%;
+    width: 95%;
   }
+
+
 }

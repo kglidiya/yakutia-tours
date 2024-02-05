@@ -112,5 +112,19 @@
   .logo {
    margin-top:  50px;
   }
+  .logo__image {
+    width: 100px;
+    height: 100px; 
+  }
+
+}
+
+@media (max-width: 578px) {
+  .logo__title {
+    font-size: 26px;
+  }
+  .logo__title:last-of-type {
+    font-size:38px;
+  }
 
 }

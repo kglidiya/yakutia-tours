@@ -101,3 +101,10 @@
   margin: 100px auto 50px auto;
   width: 70%;
 }
+
+@media (max-width:992px) {
+  .form__wrapper {
+    margin: 100px auto 50px auto;
+    width: 95%;
+  }
+}

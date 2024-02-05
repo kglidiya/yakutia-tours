@@ -8,9 +8,13 @@ import Intro from "../../components/intro/Intro";
 import { SetStateAction, useEffect, useRef, useState } from "react";
 import useDebounce from "../../hooks/use-debounce";
 import Chum from "../../components/ui/icons/chum/Chum";
-
+import { useSwipeable } from "react-swipeable";
+import useMediaQuery from "../../hooks/use-media-query";
+import MotionFooter from "../../components/motion-footer/MotionFooter";
 
 export default function About() {
+  const mobile = useMediaQuery("(max-width: 576px)");
+  const tablet = useMediaQuery("(max-width: 768px)");
   const ref = useRef<HTMLDivElement | null>(null);
   const [translateY, setTranslateY] = useState(0);
 
@@ -34,17 +38,38 @@ export default function About() {
       });
     }
   };
-  
+
   const debouncedSearch = useDebounce(scrollHandler, 300);
+
+  const handlers = useSwipeable({
+    onSwipedDown: () => {
+      setTranslateY((prev) => {
+        if (prev === 0) {
+          return 0;
+        } else {
+          return prev + 100;
+        }
+      });
+    },
+    onSwipedUp: () => {
+      setTranslateY((prev) => {
+        if (prev === -300) {
+          return -300;
+        } else {
+          return prev - 100;
+        }
+      });
+    },
+  });
 
   useEffect(() => {
     const scrollContainer = ref.current;
-    const onWheel = (e: WheelEvent) => {
+    const onWheel = (e: any) => {
       e.preventDefault();
       debouncedSearch(e);
     };
     scrollContainer && scrollContainer.addEventListener("wheel", onWheel);
-
+    scrollContainer && scrollContainer.addEventListener("touchmove", onWheel);
     return () => {
       scrollContainer && scrollContainer.removeEventListener("wheel", onWheel);
     };
@@ -55,7 +80,7 @@ export default function About() {
   };
 
   return (
-    <motion.main className={styles.main}>
+    <motion.main className={styles.main} {...handlers}>
       <MotionCover image={require("../../assets/images/logo.png")} />
       <motion.div
         ref={ref}
@@ -65,7 +90,7 @@ export default function About() {
         transition={{ duration: 1 }}
       >
         <Intro images={images} text="О нас" onClick={onClick} />
-        <motion.section className={styles.section}>
+        <section className={styles.section}>
           <motion.span
             className={styles.sun}
             initial={{
@@ -99,13 +124,13 @@ export default function About() {
           <motion.div
             className={styles.chum}
             initial={{
-              bottom: "-22%",
+              bottom: mobile ? "-10%" : "-22%",
               right: 0,
               left: 0,
               opacity: 0,
             }}
             whileInView={{
-              bottom: 0,
+              bottom: mobile ? "5%" : 0,
               right: 0,
               left: 0,
               opacity: translateY === -100 ? 1 : 0,
@@ -118,9 +143,9 @@ export default function About() {
               alt=""
             />
           </motion.div>
-        </motion.section>
+        </section>
 
-        <motion.section className={styles.section}>
+        <section className={styles.section}>
           <motion.span
             className={styles.sun}
             initial={{
@@ -145,7 +170,7 @@ export default function About() {
             </p>
             <p className={styles.text}>Ждем Ваших пожеланий.</p>
             <div className={styles.form} style={{ zIndex: 2 }}>
-              <Form text="Форма обратной связи" />
+              {!tablet && <Form text="Форма обратной связи" />}
             </div>
           </div>
           <motion.div
@@ -162,7 +187,11 @@ export default function About() {
               transition: { duration: 1.5 },
             }}
           >
-            <img src={require("../../assets/images/family.png")} alt="" />
+            <img
+              src={require("../../assets/images/family.png")}
+              alt=""
+              className={styles.imgTopRight}
+            />
           </motion.div>
           <motion.div
             className={styles.chum}
@@ -181,7 +210,7 @@ export default function About() {
             <img
               src={require("../../assets/images/deerblue.png")}
               alt=""
-              style={{ width: "15vw", height: "auto", zIndex: 2 }}
+              className={styles.imageBottomDeer}
             />
           </motion.div>
           <motion.div
@@ -201,10 +230,15 @@ export default function About() {
             <img
               src={require("../../assets/images/tree.png")}
               alt=""
-              style={{ width: "35vw", height: "auto", zIndex: 1 }}
+              className={styles.imageBottomTree}
             />
           </motion.div>
-        </motion.section>
+        </section>
+        {mobile && (
+          <section className={styles.section}>
+            <Form text="Форма обратной связи" />
+          </section>
+        )}
       </motion.div>
     </motion.main>
   );

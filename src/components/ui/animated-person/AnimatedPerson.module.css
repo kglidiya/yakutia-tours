@@ -23,3 +23,11 @@
   bottom: -15px;
   left: 75px;
 }
+
+@media (max-width: 768px) { 
+
+  .image {
+    height: 35%;
+    margin-top: 250px;
+  }
+}

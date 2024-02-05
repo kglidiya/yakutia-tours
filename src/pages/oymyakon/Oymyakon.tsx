@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import styles from "./Oymyakon.module.css";
+import styles from "../tours.module.css";
 import { motion } from "framer-motion";
 import { tourGallery } from "../../utils/helpers";
 import ButtonScroll from "../../components/ui/button-scroll/ButtonScroll";

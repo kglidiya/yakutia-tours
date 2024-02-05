@@ -109,9 +109,9 @@ export default function Home() {
           </ul>
         </motion.div>
 
-        <div style={{ width: "70%" }}>
+
           <Form text="Форма обратной связи" />
-        </div>
+    
       </div>
       {/* <ButtonScroll
         onClick={backToTop}
