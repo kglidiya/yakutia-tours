@@ -21,6 +21,8 @@
   font-size: 24px;
   margin: 25px;
   text-shadow: -1px 0 rgba(70, 70, 71, 0.595), 0 1px rgba(70, 70, 71, 0.595), 1px 0 rgba(70, 70, 71, 0.595), 0 -1px rgba(70, 70, 71, 0.595);
+  z-index: 3;
+  position: relative;
 }
 
 .inputs {
