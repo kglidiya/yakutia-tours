@@ -33,6 +33,8 @@
 }
 .imgTopRight {
   width: 100%;
+  z-index: 3;
+  position: relative;
 }
 .image {
   width: 75%;
@@ -126,6 +128,8 @@
   .imgTopRight {
     width: 80%;
     margin-top: 20px;
+    /* z-index: 3;
+    position: relative; */
   }
   .imageBottomDeer {
     width: 30vw;
