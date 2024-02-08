@@ -74,7 +74,7 @@ export default function AllTours() {
       <div className={styles.container} ref={refContent} >
         <video className={styles.intro} autoPlay loop muted poster={'https://celes.club/uploads/posts/2021-12/1640858891_29-celes-club-p-oimyakon-zima-priroda-krasivo-foto-35.jpg'}>
           <source
-            src={require("../../assets/video/video.mp4")}
+            src={require("../../assets/video/video1.mp4")}
             type="video/mp4"
           />
         </video>
@@ -102,6 +102,7 @@ export default function AllTours() {
           borderRadius="10px"
           rotate="0deg"
           backgroundColor={"#d1e8ef"}
+          opacity={0.6}
         />
       </div>
 
@@ -114,7 +115,7 @@ export default function AllTours() {
            whileInView={{ x: 0, opacity: 1 }}
            transition={{ duration: 1 }}>
           Для бронирования тура необходимо оплатить 30% его стоимости. Полность
-          тур должен быть оплачет на две недели до его начала. Оставьте заявку и
+          тур должен быть оплачет за две недели до его начала. Оставьте заявку и
           с Вами свяжется наш менеджер для уточнения деталей.
         </motion.p>
       </section>

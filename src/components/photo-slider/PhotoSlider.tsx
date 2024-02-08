@@ -47,7 +47,7 @@ export default function PhotoSlider({ images }: { images: string[] }) {
       <Title text="  Фотогалерея" />
       <motion.div
         className={styles.gallery}
-        initial={{ scale: 0 }}
+        initial={{ scale: 0.5 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 1.5 }}
       >
