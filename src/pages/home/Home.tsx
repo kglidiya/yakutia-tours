@@ -82,7 +82,7 @@ export default function Home() {
       <Conditions/>
  
      
-      <MotionFooter />
+      <MotionFooter type="option_1"/>
     </main>
   );
 }

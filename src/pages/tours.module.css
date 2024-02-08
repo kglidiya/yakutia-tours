@@ -7,8 +7,8 @@
 
 .intro {
   position: absolute;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
   left: 50%;
   top: 50%;
   z-index:-1;

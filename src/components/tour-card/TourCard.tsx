@@ -14,7 +14,7 @@ export default function TourCard({
   const navigate = useNavigate();
   return (
     <motion.article
-    onClick={()=> navigate(tour.path)}
+    onClick={()=> navigate(`/${tour.path}`)}
       className={styles.wrapper}
       style={{ backgroundImage: `url(${tour.image})` }}
       initial={{ y: 50, opacity: 0 }}

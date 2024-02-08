@@ -30,10 +30,11 @@
     left: 0;
     margin-left: auto;
     margin-right: auto;
-    background: url(../../assets/images/2222_pixian_ai.png);
+    /* background: url(../../assets/images/2222_pixian_ai.png); */
     /* background: url(../../assets/images/55555.png), url(../../assets/images/44444_pixian_ai.png); */
-    background-size: contain;
+    /* background-size: contain;
     background-repeat: no-repeat;
+    background-position-x: center; */
     z-index: 2;
   }
 

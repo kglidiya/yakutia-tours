@@ -131,7 +131,7 @@ export default function Tour({ tour }: { tour: ITour }) {
             </motion.div>
           </div>
         </div>
-        <MotionFooter />
+        <MotionFooter type="option_1"/>
       </div>
     </>
   );

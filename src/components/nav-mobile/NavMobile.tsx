@@ -36,7 +36,7 @@ export default function NavMobile() {
         </li>
         <li onClick={() => setOpen(false)}>
           <NavLink
-            to="/"
+            to="/tours"
             className={({ isActive }) =>
               isActive
                 ? `${styles.link} ${styles.link_active}`

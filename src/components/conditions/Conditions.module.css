@@ -15,7 +15,8 @@
     /* background-image: url("https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg"); */
     background-size: cover;
     overflow: hidden;
-    padding-top: 0;
+    padding-top: 15vh;
+    margin-top: -25vh;
     padding-bottom: 300px;
     box-shadow: 1px -23px 40px 12px #d4eff5, -2px 24px 26px 1px #d4eff5 inset;
   }
