@@ -33,7 +33,7 @@ export default function Header() {
           О нас
         </NavLink>
         <NavLink
-          to="/"
+          to="/tours"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.link_active}` : `${styles.link} ${styles.link_default}`
           }

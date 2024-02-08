@@ -130,7 +130,7 @@ export default function About() {
               opacity: 0,
             }}
             whileInView={{
-              bottom: mobile ? "5%" : 0,
+              bottom: mobile ? "4%" : 0,
               right: 0,
               left: 0,
               opacity: translateY === -100 ? 1 : 0,

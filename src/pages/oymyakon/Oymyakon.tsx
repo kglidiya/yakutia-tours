@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "../tours.module.css";
 import { motion } from "framer-motion";
-import { tourGallery } from "../../utils/helpers";
+import { tourConditions, tourGallery } from "../../utils/helpers";
 import ButtonScroll from "../../components/ui/button-scroll/ButtonScroll";
 import Title from "../../components/title/Title";
 import TourProgram from "../../components/tour-program/TourProgram";
@@ -11,6 +11,10 @@ import Button from "../../components/ui/button/Button";
 import MotionCover from "../../components/motion-cover/MotionCover";
 import PhotoSlider from "../../components/photo-slider/PhotoSlider";
 import MotionFooter from "../../components/motion-footer/MotionFooter";
+import { useSwipeable } from "react-swipeable";
+import TourCard from "../../components/tour-card/TourCard";
+import Form from "../../components/form/Form";
+import Conditions from "../../components/conditions/Conditions";
 
 export default function Oymyakon({ tour }: { tour: ITour }) {
   const refContent = useRef<HTMLDivElement | null>(null);
@@ -65,57 +69,49 @@ export default function Oymyakon({ tour }: { tour: ITour }) {
   };
 
   return (
-    <>
+    <main style={{ position: "relative" }}>
       <MotionCover image={require("../../assets/images/logo.png")} />
-      <motion.div
-        className={`${styles.intro} ${styles.intro_oymyakon}`}
-        ref={refContent}
-      >
-        <motion.div
-          initial={{ left: "-50%" }}
-          animate={{ left: "50%" }}
-          transition={{ duration: 1, delay: 1 }}
-          className={styles.caption}
-        >
-          <h3 className={styles.title}>Путешествие в Оймякон</h3>
-          <p className={styles.subtitle}>
-            Оймякон — самое холодное место на Земле, где круглый год живут люди.
-            Зимой температура здесь опускается до -60°C.
-          </p>
-          <Button
-            type="submit"
-            text="Заказать"
-            fontSize="18px"
-            width="200px"
-            onClick={scrollToForm}
+      <div className={styles.container} ref={refContent}>
+        <video className={styles.intro} autoPlay loop muted>
+          <source
+            src={require("../../assets/video/video.mp4")}
+            type="video/mp4"
           />
-        </motion.div>
-        <ButtonScroll
-          onClick={scrollDown}
-          borderRadius="10px"
-          rotate="0deg"
-          backgroundColor={"#d1e8ef"}
+        </video>
+        <motion.div
+        initial={{ left: "-50%" }}
+        animate={{ left: "50%" }}
+        transition={{ duration: 1, delay: 1 }}
+        className={styles.caption}
+      >
+        <h3 className={styles.title}>Наши туры</h3>
+        <p className={styles.subtitle}>
+          По запросу организовываем любые туры, путешествия и экспедиции по
+          Якутии.
+        </p>
+        <Button
+          type="submit"
+          text="Задать вопрос"
+          fontSize="18px"
+          width="200px"
+          onClick={scrollToForm}
         />
       </motion.div>
-      <div className={styles.wrapper}>
-        <div className={styles.content}>
-          <div className={styles.description}>
-            <PhotoSlider images={tour.gallery} />
-            <Title text=" Программа тура" margin="100px auto 60px auto" />
-            <TourProgram tour={tourGallery[1].program} />
-            <motion.div
-              ref={refForm}
-              className={styles.form__wrapper}
-              initial={{ y: "30vh" }}
-              whileInView={{ y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <OrderForm text="Оставить заявку" />
-            </motion.div>
-          </div>
-        </div>
-        <MotionFooter />
+      <ButtonScroll
+        onClick={scrollDown}
+        borderRadius="10px"
+        rotate="0deg"
+        backgroundColor={"#d1e8ef"}
+      />
       </div>
-    </>
+      
+      <section className={styles.tours__gallery}>
+        {tourGallery.map((tour: any, i: number) => {
+          return <TourCard tour={tour} index={i} />;
+        })}
+      </section>
+      <Conditions />
+      <MotionFooter />
+    </main>
   );
 }

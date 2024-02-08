@@ -13,6 +13,7 @@ import Intro from "../../components/intro/Intro";
 
 import ButtonScroll from "../../components/ui/button-scroll/ButtonScroll";
 import MotionFooter from "../../components/motion-footer/MotionFooter";
+import Conditions from "../../components/conditions/Conditions";
 
 export default function Home() {
   const scrollDown = () => {
@@ -78,48 +79,9 @@ export default function Home() {
           return <TourCard tour={tour} index={i} />;
         })}
       </section>
-      <div className={styles.form}>
-        <motion.div
-          initial={{ x: "-50vw", opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-          className={styles.condition__wrapper}
-        >
-          <h4 className={styles.condition}>В стоимость туров включено:</h4>
-          <ul className={styles.list}>
-            {tourConditions.included.map((condition, i: number) => {
-              return (
-                <li key={i} className={styles.list__item}>
-                  <span className={styles.list__marker_included}></span>
-                  <p className={styles.list__text}> {condition}</p>
-                </li>
-              );
-            })}
-          </ul>
-          <h4 className={styles.condition}>Оплачитается отдельно:</h4>
-          <ul className={styles.list}>
-            {tourConditions.excluded.map((condition, i: number) => {
-              return (
-                <li key={i} className={styles.list__item}>
-                  <span className={styles.list__marker_excluded}></span>
-                  <p  className={styles.list__text}> {condition}</p>
-                </li>
-              );
-            })}
-          </ul>
-        </motion.div>
-
-
-          <Form text="Форма обратной связи" />
-    
-      </div>
-      {/* <ButtonScroll
-        onClick={backToTop}
-        borderRadius="50%"
-        rotate="180deg"
-        right="20px"
-        opacity={0.8}
-      /> */}
+      <Conditions/>
+ 
+     
       <MotionFooter />
     </main>
   );

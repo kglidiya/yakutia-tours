@@ -7,7 +7,7 @@ export default function AnimatedPerson() {
     <motion.div
       initial={{ x: 0, y: 0 }}
       whileInView={{
-        x: "55vw",
+        x: "50vw",
         y: "10px",
         transition: {
           x: { duration: 6, repeat: 0 },

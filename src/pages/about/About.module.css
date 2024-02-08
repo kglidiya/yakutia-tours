@@ -148,7 +148,7 @@
 
   .text {
     font-size: 20px;
-    margin: 0;
+    margin: 5px;
     /* width: 90%;
     z-index: 2;
     margin: 10px; */
@@ -162,8 +162,14 @@
 @media (max-width: 576px) {
   .wrapper {
     width: 90%;
-    height: 55%;
+    height: 65vh;
     margin-top: 0;
+    justify-content: center;
+  }
+
+  .wrapper_last {
+    justify-content: center;
+    margin-top: 15vh;
   }
   .sun {
     width: 40vw;
@@ -174,7 +180,7 @@
     margin-top: 40px;
   }
   .text {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .imageBottomDeer {
