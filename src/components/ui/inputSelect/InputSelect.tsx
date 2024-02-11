@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./InputSelect.module.css";
-import CloseIcon from "../icons/closeIcon/CloseIcon";
+
 
 interface IInput {
   options: string[];
@@ -27,7 +27,6 @@ const InputSelect = ({
   name,
   errorMessage,
   border,
-  label,
 
   required,
 
@@ -53,8 +52,7 @@ const InputSelect = ({
           }}
         />
       )} */}
-      <label className={styles.label}>
-        {label}
+
         <input
           autoComplete="off"
           type={type}
@@ -70,7 +68,7 @@ const InputSelect = ({
         {error?.[`${name}`] && (
           <span className={styles.error}>{errorMessage}</span>
         )}
-      </label>
+      
 
       <ul
         className={`${styles.list} ${

@@ -70,7 +70,7 @@ export default function AllTours() {
 
   return (
     <main style={{ position: "relative" }} ref={refMain}>
-      <MotionCover image={require("../../assets/images/logo.png")} />
+      {/* <MotionCover image={require("../../assets/images/logo.png")} /> */}
       <div className={styles.container} ref={refContent} >
         <video className={styles.intro} autoPlay loop muted poster={'https://celes.club/uploads/posts/2021-12/1640858891_29-celes-club-p-oimyakon-zima-priroda-krasivo-foto-35.jpg'}>
           <source
@@ -81,7 +81,7 @@ export default function AllTours() {
         <motion.div
           initial={{ left: "-50%" }}
           animate={{ left: "50%" }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1, delay: 0 }}
           className={styles.caption}
         >
           <h3 className={styles.title}>Наши туры</h3>

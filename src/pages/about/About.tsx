@@ -94,13 +94,13 @@ export default function About() {
           <motion.span
             className={styles.sun}
             initial={{
-              top: "4%",
+              top:  mobile? '1%':"4%",
               right: "-15vw",
               opacity: 0,
             }}
             whileInView={{
-              top: "4%",
-              right: "12vw",
+              top:  mobile? '1%': "4%",
+              right: mobile? 0: "12vw",
               opacity: 1,
               transition: { duration: 2, delay: 0 },
             }}
@@ -155,7 +155,7 @@ export default function About() {
             }}
             whileInView={{
               top: "1%",
-              right: "12vw",
+              right: mobile? 0: "12vw",
               opacity: 1,
               transition: { duration: 3, delay: 0 },
             }}
@@ -178,7 +178,7 @@ export default function About() {
             initial={{
               top: "5%",
               right: "-10%",
-              opacity: 0,
+              opacity: mobile? 1: 0,
             }}
             whileInView={{
               top: "5%",

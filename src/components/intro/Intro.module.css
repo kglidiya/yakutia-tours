@@ -29,9 +29,9 @@
   .title_large {
     font-size: 68px;
   }
- }
+}
 
- @media (max-width: 576px) {
+@media (max-width: 576px) {
   .title {
     font-size: 48px;
   }
@@ -39,4 +39,4 @@
   .title_large {
     font-size: 62px;
   }
- }
+}

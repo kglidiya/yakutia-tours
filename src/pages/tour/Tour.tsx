@@ -12,41 +12,56 @@ import MotionCover from "../../components/motion-cover/MotionCover";
 import PhotoSlider from "../../components/photo-slider/PhotoSlider";
 import MotionFooter from "../../components/motion-footer/MotionFooter";
 import { useSwipeable } from "react-swipeable";
-interface ITourProps {
-  title: string;
-  subtitle: string;
-  tour: ITour;
-}
 
 export default function Tour({ tour }: { tour: ITour }) {
   const refContent = useRef<HTMLDivElement | null>(null);
   const refForm = useRef<HTMLDivElement | null>(null);
+  const scrollDown = () => {
+    window.scrollTo({
+      top: refContent.current?.clientHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
 
-  useEffect(() => {
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: "smooth",
     });
+  };
+
+  const scrollToForm = () => {
+    refForm.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
+  };
+
+  useEffect(() => {
+   scrollToTop()
   }, []);
+
+
+  const handlers = useSwipeable({
+    onSwipedDown: () => {
+      scrollToTop()
+    },
+    onSwipedUp: () => {
+      scrollDown()
+    },
+  });
 
   useEffect(() => {
     const scrollContainer = refContent.current;
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
       if (e.deltaY > 0) {
-        window.scrollTo({
-          top: refContent.current?.clientHeight,
-          left: 0,
-          behavior: "smooth",
-        });
+        scrollDown()
       }
       if (e.deltaY < 0) {
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "smooth",
-        });
+        scrollToTop()
       }
     };
     scrollContainer && scrollContainer.addEventListener("wheel", onWheel);
@@ -56,19 +71,8 @@ export default function Tour({ tour }: { tour: ITour }) {
     };
   }, []);
 
-  const scrollDown = () => {
-    window.scrollTo({
-      top: refContent.current?.clientHeight,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
-  const scrollToForm = () => {
-    refForm.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-    });
-  };
+
+
   const style = {
     background: `linear-gradient(
     to bottom,
@@ -80,21 +84,26 @@ export default function Tour({ tour }: { tour: ITour }) {
     no-repeat`,
     'background-size': "cover",
   };
-
+  const refPassthrough = (el: any) => {
+    handlers.ref(el);
+    refContent.current = el;
+  }
+  
   return (
     <>
-      <MotionCover image={require("../../assets/images/logo.png")} />
+      {/* <MotionCover image={require("../../assets/images/logo.png")} /> */}
       <motion.div
         // className={`${styles.intro} ${styles.intro_oymyakon}`}
         className={styles.intro}
         style={style}
-        ref={refContent}
-        // {...handlers}
+        {...handlers}
+        ref={refPassthrough}
+     
       >
         <motion.div
           initial={{ left: "-50%" }}
           animate={{ left: "50%" }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1, delay: 0 }}
           className={styles.caption}
         >
           <h3 className={styles.title}>{tour.title_short}</h3>
@@ -127,7 +136,7 @@ export default function Tour({ tour }: { tour: ITour }) {
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <OrderForm text="Оставить заявку" />
+              <OrderForm text="Оставить заявку" dates={tour.dates} tour={tour.title_short}/>
             </motion.div>
           </div>
         </div>

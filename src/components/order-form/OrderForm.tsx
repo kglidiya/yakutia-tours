@@ -11,19 +11,27 @@ import emailjs from "@emailjs/browser";
 import Spinner from "../ui/spinner/Spinner";
 import InputSelect from "../ui/inputSelect/InputSelect";
 
-export default function OrderForm({ text }: { text: string }) {
+export default function OrderForm({
+  text,
+  dates,
+  tour,
+}: {
+  text: string;
+  dates: string[];
+  tour: string;
+}) {
   const form = useRef<HTMLFormElement | null>(null);
-  const [btnText, setBtnText] = useState<string|ReactNode>('Отправить')
+  const [btnText, setBtnText] = useState<string | ReactNode>("Отправить");
   const {
     register,
     handleSubmit,
     setValue,
     formState: { errors },
   } = useForm<any>({
-    values: {},
+    values: { tour: tour },
   });
   const onSubmit = () => {
-    setBtnText(<Spinner/>)
+    setBtnText(<Spinner />);
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE as string,
@@ -33,18 +41,19 @@ export default function OrderForm({ text }: { text: string }) {
       )
       .then(
         (result: any) => {
-          if(result.text === 'OK') {
-            setBtnText('Отпралено')
-            setTimeout(()=> {
-              form.current && form.current.reset()
-              setBtnText('Отправить')
-            }, 1000)
-          } else setBtnText('Ошибка')
+          if (result.text === "OK") {
+            setBtnText("Отпралено");
+            setTimeout(() => {
+              form.current && form.current.reset();
+              setBtnText("Отправить");
+            }, 1000);
+          } else setBtnText("Ошибка");
         },
         (error: any) => {
           console.log(error.text);
         }
       );
+    console.log(form.current);
   };
   return (
     <form
@@ -63,7 +72,6 @@ export default function OrderForm({ text }: { text: string }) {
           required
           error={errors}
           errorMessage="Заполните все поля"
-       
         />
         <Input
           type="text"
@@ -73,37 +81,40 @@ export default function OrderForm({ text }: { text: string }) {
           required
           error={errors}
           errorMessage="Заполните все поля"
-       
         />
         <div className={styles.flexBox}>
-        <InputSelect
-					placeholder="Кол-во человек"
-					register={register}
-					setValue={setValue}
-					options={['1', '2', '3']}
-					type="text"
-					name="quantity"
-					required
-				/>
-           <InputSelect
-					placeholder="Желаемые даты"
-					register={register}
-					setValue={setValue}
-					options={['28 декабря - 5 января', '5 - 13 января', '20 - 26 января']}
-					type="text"
-					name="dates"
-					required
-				/>
+          <InputSelect
+            placeholder="Кол-во человек"
+            register={register}
+            setValue={setValue}
+            options={["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]}
+            type="text"
+            name="quantity"
+            required
+          />
+          <InputSelect
+            placeholder="Желаемые даты"
+            register={register}
+            setValue={setValue}
+            options={dates}
+            type="text"
+            name="dates"
+            required
+          />
         </div>
         <TextArea
           register={register}
           required={false}
           placeholder="Комментарии"
           name="message"
-   
-     
         />
-        <Button type="submit" text={btnText} fontSize="18px" width="250px"/>
+        <input
+          type="text"
+          name="tour"
+          value={tour}
+          style={{ display: "none" }}
+        />
+        <Button type="submit" text={btnText} fontSize="18px" width="250px" />
       </div>
     </form>
   );

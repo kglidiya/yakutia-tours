@@ -59,9 +59,10 @@ input:-webkit-autofill:active {
 	position: absolute;
 	z-index: 2;
 	background-color: white;
-	top: 65px;
+	top: 45px;
 	right: 0;
 	width: 100%;
+
 }
 
 .list_default {
@@ -70,11 +71,13 @@ input:-webkit-autofill:active {
 }
 
 .list_active {
-	height: auto;
+	
 	visibility: visible;
 
 	border: 1px solid #ccc;
 	border-radius: 4px;
+	height: 160px;
+	overflow-y: scroll;
 }
 
 .list__item {
@@ -84,7 +87,7 @@ input:-webkit-autofill:active {
 	align-items: center;
 	padding-left: 15px;
 	padding-right: 15px;
-	
+	font-size: 14px;
 }
 
 .list__item:hover {
@@ -93,3 +96,13 @@ input:-webkit-autofill:active {
 	color: white;
 	border-radius: 4px;
 }
+
+@media (max-width: 768px) {
+
+	.list_active {
+	  height: 280px;
+	}
+  
+  
+  }
+  

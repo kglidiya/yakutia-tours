@@ -14,10 +14,11 @@ export default function AppRouter() {
       <Routes>
         <Route path={"/"} element={<Home />} />
         <Route path={"/about"} element={<About />} />
+        <Route path="/tours" element={<AllTours />} />
         {tourGallery.map((tour) => {
           return <Route path={tour.path} element={<Tour tour={tour} />} />;
         })}
-        <Route path="/tours" element={<AllTours />} />
+    
       </Routes>
     </>
   );

@@ -11,7 +11,7 @@ export default function TourProgram({ tour }: { tour: string[] }) {
   const toggle = () => {
     setHidden(!hidden);
   };
-  console.log(hidden);
+
   return (
     <ul className={styles.list}>
       {tour.map((day, i: number) => {

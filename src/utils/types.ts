@@ -7,7 +7,7 @@ export interface ITour {
     title_short: string,
     subtitle: string,
     price: string,
-    date: string,
+    dates: string[],
     duration: string,
     program: string[],
     gallery: string[],
