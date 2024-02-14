@@ -76,7 +76,7 @@ export default function Home() {
       </motion.h3>
       <section className={styles.tours__gallery}>
         {tourGallery.map((tour: any, i: number) => {
-          return <TourCard tour={tour} index={i} />;
+          return <TourCard tour={tour} index={i} key={i}/>;
         })}
       </section>
       <Conditions/>

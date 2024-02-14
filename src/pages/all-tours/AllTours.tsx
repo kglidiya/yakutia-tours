@@ -47,7 +47,7 @@ export default function AllTours() {
         });
       }
     };
-    scrollContainer && scrollContainer.addEventListener("wheel", onWheel);
+    scrollContainer && scrollContainer.addEventListener("wheel", onWheel, { passive: false });
 
     return () => {
       scrollContainer && scrollContainer.removeEventListener("wheel", onWheel);
@@ -108,7 +108,7 @@ export default function AllTours() {
 
       <section className={styles.tours__gallery}>
         {tourGallery.map((tour: any, i: number) => {
-          return <TourCard tour={tour} index={i} />;
+          return <TourCard tour={tour} index={i} key={i}/>;
         })}
         <motion.p className={styles.booking}
            initial={{ x: "-50vw", opacity: 0 }}
