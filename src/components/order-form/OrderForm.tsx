@@ -1,10 +1,8 @@
-import React, { ReactNode, useRef, useState } from "react";
+import { ReactNode, useRef, useState } from "react";
 import styles from "./OrderForm.module.css";
 import Input from "../ui/input/Input";
 import { useForm } from "react-hook-form";
 import Button from "../ui/button/Button";
-import Shoes from "../ui/icons/shoes/Shoes";
-import { motion, useScroll, useSpring } from "framer-motion";
 import TextArea from "../ui/textarea/TextArea";
 import AnimatedPerson from "../ui/animated-person/AnimatedPerson";
 import emailjs from "@emailjs/browser";
@@ -93,7 +91,7 @@ export default function OrderForm({
             required
           />
           <InputSelect
-            placeholder="Желаемые даты"
+            placeholder="Даты"
             register={register}
             setValue={setValue}
             options={dates}
@@ -112,6 +110,7 @@ export default function OrderForm({
           type="text"
           name="tour"
           value={tour}
+          readOnly
           style={{ display: "none" }}
         />
         <Button type="submit" text={btnText} fontSize="18px" width="250px" />

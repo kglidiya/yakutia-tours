@@ -1,16 +1,13 @@
-import { images, tourGallery, factsGallery } from "../../utils/helpers";
+import { images } from "../../utils/helpers";
 import MotionCover from "../../components/motion-cover/MotionCover";
 import styles from "./About.module.css";
-import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
-import TourCard from "../../components/tour-card/TourCard";
+import { motion } from "framer-motion";
 import Form from "../../components/form/Form";
 import Intro from "../../components/intro/Intro";
-import { SetStateAction, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useDebounce from "../../hooks/use-debounce";
-import Chum from "../../components/ui/icons/chum/Chum";
 import { useSwipeable } from "react-swipeable";
 import useMediaQuery from "../../hooks/use-media-query";
-import MotionFooter from "../../components/motion-footer/MotionFooter";
 
 export default function About() {
   const mobile = useMediaQuery("(max-width: 576px)");
@@ -69,7 +66,6 @@ export default function About() {
       debouncedSearch(e);
     };
     scrollContainer && scrollContainer.addEventListener("wheel", onWheel);
-    scrollContainer && scrollContainer.addEventListener("touchmove", onWheel);
     return () => {
       scrollContainer && scrollContainer.removeEventListener("wheel", onWheel);
     };
@@ -94,13 +90,13 @@ export default function About() {
           <motion.span
             className={styles.sun}
             initial={{
-              top:  mobile? '1%':"4%",
+              top: mobile ? "1%" : "4%",
               right: "-15vw",
               opacity: 0,
             }}
             whileInView={{
-              top:  mobile? '1%': "4%",
-              right: mobile? 0: "12vw",
+              top: mobile ? "1%" : "4%",
+              right: mobile ? 0 : "12vw",
               opacity: 1,
               transition: { duration: 2, delay: 0 },
             }}
@@ -145,7 +141,7 @@ export default function About() {
           </motion.div>
         </section>
 
-        <section className={styles.section} >
+        <section className={styles.section}>
           <motion.span
             className={styles.sun}
             initial={{
@@ -155,7 +151,7 @@ export default function About() {
             }}
             whileInView={{
               top: "1%",
-              right: mobile? 0: "12vw",
+              right: mobile ? 0 : "12vw",
               opacity: 1,
               transition: { duration: 3, delay: 0 },
             }}
@@ -169,7 +165,7 @@ export default function About() {
               группами туристов на маршрутах до 5-й категории сложности.
             </p>
             <p className={styles.text}>Ждем Ваших пожеланий.</p>
-            <div className={styles.form} >
+            <div className={styles.form}>
               {!tablet && <Form text="Форма обратной связи" />}
             </div>
           </div>
@@ -178,7 +174,7 @@ export default function About() {
             initial={{
               top: "5%",
               right: "-10%",
-              opacity: mobile? 1: 0,
+              opacity: mobile ? 1 : 0,
             }}
             whileInView={{
               top: "5%",
@@ -198,12 +194,10 @@ export default function About() {
             initial={{
               bottom: "5%",
               left: "-5%",
-              // opacity: 0,
             }}
             whileInView={{
               bottom: "5%",
               left: "2%",
-              // opacity: 1,
               transition: { duration: 1.5 },
             }}
           >
@@ -235,21 +229,24 @@ export default function About() {
           </motion.div>
         </section>
         {mobile && (
-          <section className={styles.section} style={{backgroundColor: 'white', paddingTop: '40px'}}>
+          <section
+            className={styles.section}
+            style={{ backgroundColor: "white", paddingTop: "40px" }}
+          >
             <motion.span
-            className={styles.sun}
-            initial={{
-              top: "1%",
-              right: "-15vw",
-              opacity: 0,
-            }}
-            whileInView={{
-              top: "1%",
-              right: 0,
-              opacity: 1,
-              transition: { duration: 3, delay: 0 },
-            }}
-          ></motion.span>
+              className={styles.sun}
+              initial={{
+                top: "1%",
+                right: "-15vw",
+                opacity: 0,
+              }}
+              whileInView={{
+                top: "1%",
+                right: 0,
+                opacity: 1,
+                transition: { duration: 3, delay: 0 },
+              }}
+            ></motion.span>
             <Form text="Форма обратной связи" />
           </section>
         )}

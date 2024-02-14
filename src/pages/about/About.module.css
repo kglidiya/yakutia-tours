@@ -29,7 +29,6 @@
 } */
 .chum {
   position: absolute;
-
 }
 .imgTopRight {
   width: 100%;
@@ -60,10 +59,8 @@
 .imageBottomTree {
   width: 35vw;
   height: auto;
-
 }
 .wrapper {
-  /* background: white; */
   width: 65%;
   height: 70%;
   display: flex;
@@ -75,21 +72,17 @@
 }
 
 .wrapper_last {
-  /* margin-top: 0; */
   justify-content: flex-end;
   height: 76%;
   gap: 20px;
-  /* background-color: blue; */
 }
 .text {
   font-size: 22px;
   width: 90%;
-  z-index: 2;
+  z-index: 4;
   margin: 10px;
 }
-/* .text:first-of-type {
-  margin-top: 13vh;
-} */
+
 .form {
   width: 100vw;
   height: fit-content;
@@ -128,17 +121,15 @@
   .imgTopRight {
     width: 80%;
     margin-top: 20px;
-    /* z-index: 3;
-    position: relative; */
-  }
-  .imageBottomDeer {
-    width: 30vw;
-   
   }
   
+  .imageBottomDeer {
+    width: 30vw;
+  }
+
   .imageBottomTree {
     width: 60vw;
-   }
+  }
 
   .wrapper_last {
     height: 50%;
@@ -190,10 +181,9 @@
 
   .imageBottomDeer {
     width: 35vw;
-   
   }
-  
+
   .imageBottomTree {
     width: 65vw;
-   }
+  }
 }

@@ -11,7 +11,7 @@ import TourCard from "../../components/tour-card/TourCard";
 import Form from "../../components/form/Form";
 import Intro from "../../components/intro/Intro";
 
-import ButtonScroll from "../../components/ui/button-scroll/ButtonScroll";
+import ButtonScroll from "../../components/ui/button-nav/ButtonNav";
 import MotionFooter from "../../components/motion-footer/MotionFooter";
 import Conditions from "../../components/conditions/Conditions";
 

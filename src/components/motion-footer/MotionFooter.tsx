@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import React from "react";
 import Slider from "react-slick";
 import trees from "../../assets/images/treesbackground.png";
 import styles from "./MotionFooter.module.css";
-import ButtonScroll from "../ui/button-scroll/ButtonScroll";
-import img1 from '../../assets/images/2222_pixian_ai.png';
-import img2 from '../../assets/images/55555.png';
-import img3 from '../../assets/images/44444_pixian_ai.png';
+import ButtonScroll from "../ui/button-nav/ButtonNav";
+import img1 from "../../assets/images/2222_pixian_ai.png";
+import img2 from "../../assets/images/55555.png";
+import img3 from "../../assets/images/44444_pixian_ai.png";
 const motionTrees = [trees, trees];
 interface IMotionFooter {
   type: string;
@@ -16,14 +15,10 @@ export default function MotionFooter({ type }: IMotionFooter) {
   const style = {
     option_1: {
       background: `url(${img1}) top center / contain no-repeat`,
-
     },
     option_2: {
-      background:
-      `url(${img2}) top center / contain no-repeat, url(${img3}) 50% / contain no-repeat`,
-
-      },
-    
+      background: `url(${img2}) top center / contain no-repeat, url(${img3}) 50% / contain no-repeat`,
+    },
   };
   const settings = {
     dots: false,
@@ -45,14 +40,14 @@ export default function MotionFooter({ type }: IMotionFooter) {
   };
 
   return (
-    <div className={styles.slider}>
+    <div className={styles.wrapper}>
       <motion.div
         className={styles.slider__image}
         style={type === "option_1" ? style.option_1 : style.option_2}
       ></motion.div>
       <Slider {...settings}>
-        {motionTrees.map(() => {
-          return <div className={styles.slider__background}></div>;
+        {motionTrees.map((_, i) => {
+          return <div className={styles.slider__background} key={i}></div>;
         })}
       </Slider>
       <ButtonScroll

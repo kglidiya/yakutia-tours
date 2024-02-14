@@ -10,7 +10,7 @@ export default function Header() {
   const navigate = useNavigate();
   const matches = useMediaQuery('(min-width: 768px)');
   return (
-    <header className={styles.header}>
+    <header className={styles.wrapper}>
 
       <div className={styles.logo} onClick={()=> navigate('/')}>
         <img
@@ -19,8 +19,8 @@ export default function Header() {
           className={styles.logo__image}
         />
         <span>
-          <h2 className={styles.logo__title}>Вечная</h2>
-          <h2 className={styles.logo__title}>мерзлота</h2>
+          <h2 className={styles.logo__text}>Вечная</h2>
+          <h2 className={styles.logo__text}>мерзлота</h2>
         </span>
       </div>
       {matches &&   <nav className={styles.links}>

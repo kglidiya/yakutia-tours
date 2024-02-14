@@ -1,5 +1,5 @@
 import { Twirl as Hamburger } from "hamburger-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import WhatsUpIcon from "../ui/icons/whatsup-icon/WhatsUpIcon";
 import { Link, NavLink } from "react-router-dom";
 import EmailIcon from "../ui/icons/email-icon/EmailIcon";
@@ -13,17 +13,13 @@ export default function NavMobile() {
       <span className={styles.icon}>
         <Hamburger toggled={isOpen} toggle={setOpen} color="white" />
       </span>
-
       <motion.ul
         className={styles.links}
-        // initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: isOpen ? 1 : 0, opacity: isOpen ? 1 : 0 }}
-        // exit={{ scale: 0, opacity: 0, transition: { duration: 0.5 } }}
         transition={{ duration: 0.5 }}
       >
-        <li  onClick={() => setOpen(false)}>
+        <li onClick={() => setOpen(false)}>
           <NavLink
-            // onClick={() => setOpen(false)}
             to="/about"
             className={({ isActive }) =>
               isActive

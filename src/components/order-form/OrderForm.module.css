@@ -21,11 +21,11 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  /* align-items: flex-start; */
   justify-content: space-between;
   gap: 30px;
   margin-bottom: 10px;
 }
+
 .title {
   color: rgb(98, 161, 216);
   font-size: 24px;
@@ -42,24 +42,15 @@
   align-items: flex-start;
   justify-content: center;
   gap: 10px;
-  /* font-size: 14px; */
-  /* padding-left: 20px; */
 }
 
 .chum {
   height: 130%;
   width: fit-content;
-  /* z-index: 5; */
   position: absolute;
   top: -18%;
   right: -17%;
 }
-
-/* @media (max-width: 1200px) {
-  .wrapper {
-    width: 80%;
-  }
-} */
 
 @media (max-width: 992px) {
   .wrapper {
@@ -76,6 +67,4 @@
   .inputs {
     width: 95%;
   }
-
-
 }

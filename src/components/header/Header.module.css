@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Roboto&display=swap");
 
-.header {
+.wrapper {
   height: 50px;
   width: 90%;
   position: absolute;
@@ -24,7 +24,7 @@
   height: 130px;
   object-fit: contain;
 }
-.logo__title {
+.logo__text {
   font-family: "Kablammo", system-ui;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -36,7 +36,7 @@
   margin: 0;
 }
 
-.logo__title:last-of-type {
+.logo__text:last-of-type {
   font-size: 44px;
   color: rgb(98, 161, 216);
 }
@@ -71,19 +71,18 @@
 }
 
 @media (max-width: 1350px) {
-  .header {
- 
+  .wrapper {
     padding-left: 20px;
   }
   .logo__image {
     width: 120px;
     height: 120px;
   }
-  .logo__title {
+  .logo__text {
     font-size: 28px;
   }
 
-  .logo__title:last-of-type {
+  .logo__text:last-of-type {
     font-size: 40px;
   }
   .links {
@@ -100,31 +99,41 @@
     flex-direction: column;
     gap: 10px;
   }
-
 }
 
 @media (max-width: 768px) {
-  .header {
-   padding: 0 0 0 0;
-   width: 100%;
+  .wrapper {
+    padding: 0 0 0 0;
+    width: 100%;
   }
 
   .logo {
-   margin-top:  50px;
+    margin-top: 50px;
   }
   .logo__image {
     width: 100px;
-    height: 100px; 
+    height: 100px;
   }
-
 }
 
 @media (max-width: 578px) {
-  .logo__title {
+  .logo__text {
     font-size: 26px;
   }
-  .logo__title:last-of-type {
-    font-size:38px;
+  .logo__text:last-of-type {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo__image {
+    width: 90px;
   }
 
+  .logo__text {
+    font-size: 24px;
+  }
+  .logo__text:last-of-type {
+    font-size: 30px;
+  }
 }

@@ -4,14 +4,7 @@ import styles from "../Icons.module.css";
 export default function WhatsUpIcon({ onClick }: IIcon) {
   return (
     <div className={styles.icon} onClick={onClick}>
-      <svg
-        width={24}
-        height={24}
-        viewBox="0 0 24 24"
-        id="meteor-icon-kit__solid-whatsapp"
-        // fill={styles.fill}
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width={24} height={24} viewBox="0 0 24 24">
         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g
           id="SVGRepo_tracerCarrier"

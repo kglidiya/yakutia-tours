@@ -1,62 +1,54 @@
 .links {
+  width: fit-content;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: #8bd0f7;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  transform-origin: right top;
+  box-sizing: border-box;
+}
 
-    width: fit-content;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 10px;
-    background-color: #8bd0f7;
-    /* background-image: url(../../assets/images/snowflake-forecast-svgrepo-com.svg);
-    background-size: 20%; */
-    list-style: none;
-    position: absolute;
-    top: 0;
-    right: 20px;
-    transform-origin: right top;
-    box-sizing: border-box;
+.icon {
+  display: block;
+  position: relative;
+  z-index: 6;
+  margin-top: 40px;
+  margin-right: 30px;
+}
+
+.link {
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.link_default {
+  color: white;
+}
+
+.link_active {
+  color: #62a1d8;
+}
+
+@media (max-width: 578px) {
+  .links {
+    width: 100vw;
+    right: 0;
   }
-  
+
   .icon {
-    display: block;
-    position: relative;
-    z-index: 6;
-    margin-top: 40px;
-    margin-right: 30px;
+    margin-right: 10px;
   }
-  .link {
-    height: 40px;
-    font-size: 22px;
-    font-weight: bold;
-    text-decoration: none;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    border-bottom: 1px solid whitesmoke;
-    /* border-top: 1px solid whitesmoke; */
-    /* text-shadow: 2px 2px 2px #deebf2; */
-  }
-  
-  .link_default {
- 
-    color: white;
-  }
-  
-  .link_active {
-    color: #62a1d8;
-   
-  }
-
-  @media (max-width: 578px) {
-    .links {
-      width: 100vw;
-      right: 0;
-    }
-  
-    .icon {
-  
-      /* margin-top: 15px; */
-      margin-right: 10px;
-    }
-  }
+}

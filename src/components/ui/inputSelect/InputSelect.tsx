@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "./InputSelect.module.css";
 
-
 interface IInput {
   options: string[];
   type: string;
@@ -9,13 +8,10 @@ interface IInput {
   name: string;
   border?: string;
   label?: string;
-
   required: boolean;
   value?: string;
   error?: any;
   errorMessage?: string;
-  onClick?: (e: any) => void;
-
   register: any;
   setValue: any;
   values?: { [name: string]: string | number | string[] | null };
@@ -27,14 +23,9 @@ const InputSelect = ({
   name,
   errorMessage,
   border,
-
   required,
-
   error,
-  onClick,
-
   setValue,
-
   register,
 }: IInput) => {
   const [isActive, setActive] = useState(false);
@@ -45,30 +36,21 @@ const InputSelect = ({
 
   return (
     <div className={styles.container}>
-      {/* {clearButton && (
-        <CloseIcon
-          onClick={(e) => {
-            onClick?.(e);
-          }}
-        />
-      )} */}
-
-        <input
-          autoComplete="off"
-          type={type}
-          className={styles.input}
-          placeholder={placeholder}
-          {...register(name, {
-            required,
-            onChange: () => setActive(true),
-          })}
-          onFocus={() => setActive(true)}
-          style={{ border }}
-        />
-        {error?.[`${name}`] && (
-          <span className={styles.error}>{errorMessage}</span>
-        )}
-      
+      <input
+        autoComplete="off"
+        type={type}
+        className={styles.input}
+        placeholder={placeholder}
+        {...register(name, {
+          required,
+          onChange: () => setActive(true),
+        })}
+        onFocus={() => setActive(true)}
+        style={{ border }}
+      />
+      {error?.[`${name}`] && (
+        <span className={styles.error}>{errorMessage}</span>
+      )}
 
       <ul
         className={`${styles.list} ${

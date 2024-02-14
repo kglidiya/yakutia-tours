@@ -1,12 +1,12 @@
 .icon {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .fill {
-	fill: #ffffff;
-	transition: fill 0.3s linear;
+  fill: #ffffff;
+  transition: fill 0.3s linear;
 }
 
 .fill:hover {
-	fill: #62a1d8;
+  fill: #62a1d8;
 }

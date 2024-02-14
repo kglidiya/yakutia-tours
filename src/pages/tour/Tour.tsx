@@ -1,14 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./Tour.module.css";
 import { motion } from "framer-motion";
-import { tourGallery } from "../../utils/helpers";
-import ButtonScroll from "../../components/ui/button-scroll/ButtonScroll";
+import ButtonScroll from "../../components/ui/button-nav/ButtonNav";
 import Title from "../../components/title/Title";
 import TourProgram from "../../components/tour-program/TourProgram";
 import OrderForm from "../../components/order-form/OrderForm";
 import { ITour } from "../../utils/types";
 import Button from "../../components/ui/button/Button";
-import MotionCover from "../../components/motion-cover/MotionCover";
 import PhotoSlider from "../../components/photo-slider/PhotoSlider";
 import MotionFooter from "../../components/motion-footer/MotionFooter";
 import { useSwipeable } from "react-swipeable";
@@ -40,16 +38,15 @@ export default function Tour({ tour }: { tour: ITour }) {
   };
 
   useEffect(() => {
-   scrollToTop()
+    scrollToTop();
   }, []);
-
 
   const handlers = useSwipeable({
     onSwipedDown: () => {
-      scrollToTop()
+      scrollToTop();
     },
     onSwipedUp: () => {
-      scrollDown()
+      scrollDown();
     },
   });
 
@@ -58,10 +55,10 @@ export default function Tour({ tour }: { tour: ITour }) {
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
       if (e.deltaY > 0) {
-        scrollDown()
+        scrollDown();
       }
       if (e.deltaY < 0) {
-        scrollToTop()
+        scrollToTop();
       }
     };
     scrollContainer && scrollContainer.addEventListener("wheel", onWheel);
@@ -70,8 +67,6 @@ export default function Tour({ tour }: { tour: ITour }) {
       scrollContainer && scrollContainer.removeEventListener("wheel", onWheel);
     };
   }, []);
-
-
 
   const style = {
     background: `linear-gradient(
@@ -82,13 +77,13 @@ export default function Tour({ tour }: { tour: ITour }) {
   ),
   url(${tour.image_intro})
     no-repeat`,
-    'background-size': "cover",
+    backgroundSize: "cover",
   };
   const refPassthrough = (el: any) => {
     handlers.ref(el);
     refContent.current = el;
-  }
-  
+  };
+
   return (
     <>
       {/* <MotionCover image={require("../../assets/images/logo.png")} /> */}
@@ -98,7 +93,6 @@ export default function Tour({ tour }: { tour: ITour }) {
         style={style}
         {...handlers}
         ref={refPassthrough}
-     
       >
         <motion.div
           initial={{ left: "-50%" }}
@@ -136,11 +130,15 @@ export default function Tour({ tour }: { tour: ITour }) {
               whileInView={{ y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <OrderForm text="Оставить заявку" dates={tour.dates} tour={tour.title_short}/>
+              <OrderForm
+                text="Оставить заявку"
+                dates={tour.dates}
+                tour={tour.title_short}
+              />
             </motion.div>
           </div>
         </div>
-        <MotionFooter type="option_1"/>
+        <MotionFooter type="option_1" />
       </div>
     </>
   );

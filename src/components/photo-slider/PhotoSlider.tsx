@@ -1,5 +1,4 @@
-import React from "react";
-import ButtonScroll from "../ui/button-scroll/ButtonScroll";
+import ButtonScroll from "../ui/button-nav/ButtonNav";
 import Title from "../title/Title";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
@@ -55,6 +54,7 @@ export default function PhotoSlider({ images }: { images: string[] }) {
           {images.map((image) => {
             return (
               <motion.img
+                key={image}
                 src={image}
                 alt="Фотографии с тура"
                 className={styles.gallery__image}

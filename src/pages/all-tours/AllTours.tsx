@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./AllTours.module.css";
 import { motion } from "framer-motion";
 import { tourConditions, tourGallery } from "../../utils/helpers";
-import ButtonScroll from "../../components/ui/button-scroll/ButtonScroll";
+import ButtonScroll from "../../components/ui/button-nav/ButtonNav";
 import Title from "../../components/title/Title";
 import TourProgram from "../../components/tour-program/TourProgram";
 import OrderForm from "../../components/order-form/OrderForm";

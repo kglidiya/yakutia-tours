@@ -1,6 +1,6 @@
 import styles from "./Button.module.css";
-import { motion, useScroll, useSpring } from "framer-motion";
-import image from '../../../assets/images/background.jpg'
+import { motion } from "framer-motion";
+import image from "../../../assets/images/background.jpg";
 import { ReactNode } from "react";
 interface IButton {
   text: string | ReactNode;
@@ -19,22 +19,17 @@ export default function Button({
   type = "button",
 }: IButton) {
   return (
-    // eslint-disable-next-line react/button-has-type
     <motion.button
-      // eslint-disable-next-line react/button-has-type
       type={type}
       className={styles.button}
-      style={{ width, fontSize}}
+      style={{ width, fontSize }}
       onClick={onClick}
       disabled={disabled}
       whileTap={{
         scale: 0.9,
-        backgroundImage:
-          `url(${image})`,
+        backgroundImage: `url(${image})`,
         backgroundSize: "500%",
-	    
       }}
-
     >
       {text}
     </motion.button>

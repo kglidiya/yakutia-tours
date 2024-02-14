@@ -1,6 +1,6 @@
 .wrapper {
   width: 31%;
-  height: 50vh;
+  height: 45vh;
   background-size: cover;
   cursor: pointer;
   border-radius: 10px;
@@ -31,14 +31,15 @@
 .overlay:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
+
 .title {
   font-size: 22px;
   font-weight: bold;
   width: 100%;
   color: white;
-
   border-bottom: 1px solid white;
 }
+
 .details {
   display: flex;
   flex-direction: row;
@@ -59,21 +60,20 @@
 }
 
 @media (max-width: 992px) {
- .wrapper {
-  width: 47%;
- }
+  .wrapper {
+    width: 47%;
+  }
 }
-
 
 @media (max-width: 768px) {
   .wrapper {
-   height: 40vh;
+    height: 40vh;
   }
- }
+}
 
- @media (max-width: 576px) {
+@media (max-width: 576px) {
   .wrapper {
     width: 90%;
     height: 350px;
   }
- }
+}

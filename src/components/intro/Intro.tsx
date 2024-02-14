@@ -1,14 +1,19 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./Intro.module.css";
-import ButtonScrollBotton from "../ui/button-scroll/ButtonScroll";
+import ButtonScrollBotton from "../ui/button-nav/ButtonNav";
 interface IIntroProps {
   images: string[];
   text?: string;
   textLarge?: string;
-  onClick: VoidFunction
+  onClick: VoidFunction;
 }
-export default function Intro({ images, text, textLarge, onClick }: IIntroProps) {
+export default function Intro({
+  images,
+  text,
+  textLarge,
+  onClick,
+}: IIntroProps) {
   const [image, setImages] = useState(images[0]);
 
   useEffect(() => {
@@ -39,7 +44,12 @@ export default function Intro({ images, text, textLarge, onClick }: IIntroProps)
       >
         {text} <br /> <span className={styles.title_large}>{textLarge}</span>
       </motion.h1>
-      <ButtonScrollBotton onClick={onClick} borderRadius="10px" rotate="0deg"  opacity={0.6}/>
+      <ButtonScrollBotton
+        onClick={onClick}
+        borderRadius="10px"
+        rotate="0deg"
+        opacity={0.6}
+      />
     </section>
   );
 }

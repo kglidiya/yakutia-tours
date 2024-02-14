@@ -1,10 +1,8 @@
-import React, { ReactNode, useRef, useState } from "react";
+import { ReactNode, useRef, useState } from "react";
 import styles from "./Form.module.css";
 import Input from "../ui/input/Input";
 import { useForm } from "react-hook-form";
 import Button from "../ui/button/Button";
-import Shoes from "../ui/icons/shoes/Shoes";
-import { motion, useScroll, useSpring } from "framer-motion";
 import TextArea from "../ui/textarea/TextArea";
 import AnimatedPerson from "../ui/animated-person/AnimatedPerson";
 import emailjs from "@emailjs/browser";
@@ -12,17 +10,16 @@ import Spinner from "../ui/spinner/Spinner";
 
 export default function Form({ text }: { text: string }) {
   const form = useRef<HTMLFormElement | null>(null);
-  const [btnText, setBtnText] = useState<string|ReactNode>('Отправить')
+  const [btnText, setBtnText] = useState<string | ReactNode>("Отправить");
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
   } = useForm<any>({
     values: {},
   });
   const onSubmit = () => {
-    setBtnText(<Spinner/>)
+    setBtnText(<Spinner />);
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE as string,
@@ -32,13 +29,13 @@ export default function Form({ text }: { text: string }) {
       )
       .then(
         (result: any) => {
-          if(result.text === 'OK') {
-            setBtnText('Отпралено')
-            setTimeout(()=> {
-              form.current && form.current.reset()
-              setBtnText('Отправить')
-            }, 1000)
-          } else setBtnText('Ошибка')
+          if (result.text === "OK") {
+            setBtnText("Отпралено");
+            setTimeout(() => {
+              form.current && form.current.reset();
+              setBtnText("Отправить");
+            }, 1000);
+          } else setBtnText("Ошибка");
         },
         (error: any) => {
           console.log(error.text);
@@ -62,7 +59,6 @@ export default function Form({ text }: { text: string }) {
           required
           error={errors}
           errorMessage="Заполните все поля"
-       
         />
         <Input
           type="text"
@@ -72,7 +68,6 @@ export default function Form({ text }: { text: string }) {
           required
           error={errors}
           errorMessage="Заполните все поля"
-       
         />
         <TextArea
           register={register}
@@ -81,9 +76,8 @@ export default function Form({ text }: { text: string }) {
           name="message"
           error={errors}
           errorMessage="Заполните все поля"
-     
         />
-        <Button type="submit" text={btnText} fontSize="18px" width="250px"/>
+        <Button type="submit" text={btnText} fontSize="18px" width="250px" />
       </div>
     </form>
   );

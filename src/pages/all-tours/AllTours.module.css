@@ -1,144 +1,134 @@
 .container {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-    /* width: 100vw; */
-  }
-  
-  .intro {
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    left: 50%;
-    top: 50%;
-    z-index:-1;
-    transform: translate(-50%, -50%);
-  }
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
 
-  
-  .caption {
-    width: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  }
-  
-  .title {
-    font-size: 60px;
-    text-align: start;
-    color: white;
-    margin-top: 0;
-    margin-bottom: 30px;
-    text-shadow: -2px 9px 16px rgba(98,161,216,0.77);
-  }
-  
-  .subtitle {
-    font-size: 24px;
-    line-height: 40px;
-    text-align: start;
-    color: white;
-    margin-top: 0;
-    margin-bottom: 30px;
-    text-shadow: -2px 9px 16px rgba(98,161,216,0.77);
-  }
-  /* #62a1d8 */
-  
-  /* .tours {
-    margin: 100px auto;
-    font-size: 44px;
-  } */
-  
+.intro {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.caption {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.title {
+  font-size: 60px;
+  text-align: start;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-shadow: -2px 9px 16px rgba(98, 161, 216, 0.77);
+}
+
+.subtitle {
+  font-size: 24px;
+  line-height: 40px;
+  text-align: start;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-shadow: -2px 9px 16px rgba(98, 161, 216, 0.77);
+}
+
+.tours__gallery {
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin: 50px auto 100px auto;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      to top,
+      rgba(253, 253, 253, 0) 0%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url("https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg");
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+
+  height: 70vh;
+  margin: 0 auto 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+.description {
+  width: 100%;
+}
+
+.form__wrapper {
+  margin: 100px auto 50px auto;
+  width: 60%;
+}
+.booking {
+  width: 80%;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 35px;
+  margin: 15px auto 0 auto;
+}
+
+@media (max-width: 1400px) {
   .tours__gallery {
-    width: 70vw;
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    margin: 50px auto 100px auto;
-    flex-wrap: wrap;
+    width: 90%;
   }
-  
-  .wrapper {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(
-        to top,
-        rgba(253, 253, 253, 0) 0%,
-        rgba(255, 255, 255, 1) 100%
-      ),
-      url("https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg");
-    overflow: hidden;
-  }
-  
-  .content {
-    width: 100%;
-  
-    height: 70vh;
-    margin: 0 auto 50px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  .content::-webkit-scrollbar {
-    display: none;
-  }
-  .description {
-    width: 100%;
-  }
-  
+}
+
+@media (max-width: 992px) {
   .form__wrapper {
     margin: 100px auto 50px auto;
-    width: 60%;
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 48px;
   }
   .booking {
-    width: 80%;
-    text-align: justify;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
     font-size: 18px;
-    line-height: 35px;
-    margin: 15px auto 0 auto;
- 
+    line-height: 24px;
+    margin-bottom: 20px;
   }
 
-  @media (max-width: 1400px) {
-  
-    .tours__gallery {
-      width: 90%;
-    }
+  .booking {
+    font-size: 16px;
+    line-height: 24px;
   }
-
-  @media (max-width: 992px) {
-    .form__wrapper {
-      margin: 100px auto 50px auto;
-      width: 95%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .title {
-      font-size: 48px;
-    }
-    .booking {
-        font-size: 20px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .title {
-      font-size: 38px;
-      margin-bottom: 20px;
-    }
-  
-    .subtitle {
-      font-size: 18px;
-      line-height: 24px;
-      margin-bottom: 20px;
-    }
-
-    .booking {
-        font-size: 16px;
-    }
-  }
-  
+}
