@@ -1,3 +1,5 @@
+import style from './style.module.css'
+
 export default function Shoes() {
   return (
     <svg
@@ -7,7 +9,8 @@ export default function Shoes() {
       width="32px"
       height="32px"
       fill="#000000"
-      transform="rotate(0)matrix(-1, 0, 0, 1, 0, 0)"
+      // transform="rotate(0)matrix(-1, 0, 0, 1, 0, 0)"
+      className={style.rotate}
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
@@ -17,7 +20,7 @@ export default function Shoes() {
         strokeLinejoin="round"
       />
 
-      <g id="SVGRepo_iconCarrier">
+      <g id="SVGRepo_iconCarrier" >
         {" "}
         <style type="text/css"> </style>{" "}
         <g>

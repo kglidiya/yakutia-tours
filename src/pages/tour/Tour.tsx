@@ -61,7 +61,8 @@ export default function Tour({ tour }: { tour: ITour }) {
         scrollToTop();
       }
     };
-    scrollContainer && scrollContainer.addEventListener("wheel", onWheel);
+    scrollContainer &&
+      scrollContainer.addEventListener("wheel", onWheel, { passive: false });
 
     return () => {
       scrollContainer && scrollContainer.removeEventListener("wheel", onWheel);

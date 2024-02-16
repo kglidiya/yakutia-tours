@@ -65,7 +65,7 @@ export default function About() {
       e.preventDefault();
       debouncedSearch(e);
     };
-    scrollContainer && scrollContainer.addEventListener("wheel", onWheel);
+    scrollContainer && scrollContainer.addEventListener("wheel", onWheel, {passive: false});
     return () => {
       scrollContainer && scrollContainer.removeEventListener("wheel", onWheel);
     };

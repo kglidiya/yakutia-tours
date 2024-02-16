@@ -1,6 +1,8 @@
 export default function ArrowUp() {
   return (
     <svg
+      height={32}
+      width={32}
       viewBox="-2.64 -2.64 29.28 29.28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
