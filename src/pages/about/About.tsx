@@ -14,7 +14,7 @@ export default function About() {
   const tablet = useMediaQuery("(max-width: 768px)");
   const ref = useRef<HTMLDivElement | null>(null);
   const [translateY, setTranslateY] = useState(0);
-  let vh = window.innerHeight * 100;
+  let vh = window.innerHeight;
   const scrollHandler = (e: any) => {
     if (e.deltaY > 0) {
       setTranslateY((prev) => {
@@ -37,26 +37,44 @@ export default function About() {
   };
 
   const debouncedSearch = useDebounce(scrollHandler, 300);
-
+  console.log(vh);
   const handlers = useSwipeable({
     onSwipedDown: () => {
       setTranslateY((prev) => {
         if (prev === 0) {
           return 0;
         } else {
-          return prev + 100;
+          return prev + vh;
         }
       });
     },
     onSwipedUp: () => {
       setTranslateY((prev) => {
-        if (prev === -300) {
-          return -300;
+        if (prev === -(vh*3)) {
+          return -(vh*3);
         } else {
-          return prev - 100;
+          return prev - vh;
         }
       });
     },
+    // onSwipedDown: () => {
+    //   setTranslateY((prev) => {
+    //     if (prev === 0) {
+    //       return 0;
+    //     } else {
+    //       return prev + 100;
+    //     }
+    //   });
+    // },
+    // onSwipedUp: () => {
+    //   setTranslateY((prev) => {
+    //     if (prev === -300) {
+    //       return -300;
+    //     } else {
+    //       return prev - 100;
+    //     }
+    //   });
+    // },
   });
 
   useEffect(() => {
@@ -65,7 +83,8 @@ export default function About() {
       e.preventDefault();
       debouncedSearch(e);
     };
-    scrollContainer && scrollContainer.addEventListener("wheel", onWheel, {passive: false});
+    scrollContainer &&
+      scrollContainer.addEventListener("wheel", onWheel, { passive: false });
     return () => {
       scrollContainer && scrollContainer.removeEventListener("wheel", onWheel);
     };
@@ -81,12 +100,14 @@ export default function About() {
       <motion.div
         ref={ref}
         animate={{
-          transform: `translateY(${translateY}vh)`,
+          transform: !mobile
+            ? `translateY(${translateY}vh)`
+            : `translateY(${translateY}px)`,
         }}
         transition={{ duration: 1 }}
       >
         <Intro images={images} text="О нас" onClick={onClick} />
-        <section className={styles.section} >
+        <section className={styles.section}>
           <motion.span
             className={styles.sun}
             initial={{
