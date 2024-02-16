@@ -14,7 +14,7 @@ export default function About() {
   const tablet = useMediaQuery("(max-width: 768px)");
   const ref = useRef<HTMLDivElement | null>(null);
   const [translateY, setTranslateY] = useState(0);
-
+  // let vh = window.innerHeight * 0.01;
   const scrollHandler = (e: any) => {
     if (e.deltaY > 0) {
       setTranslateY((prev) => {
@@ -86,7 +86,7 @@ export default function About() {
         transition={{ duration: 1 }}
       >
         <Intro images={images} text="О нас" onClick={onClick} />
-        <section className={styles.section}>
+        <section className={styles.section} >
           <motion.span
             className={styles.sun}
             initial={{
