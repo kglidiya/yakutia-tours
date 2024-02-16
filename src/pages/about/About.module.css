@@ -1,7 +1,9 @@
 .main {
   position: relative;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
+
   /* background-image: url('https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg');
   background-size: cover; */
   background: linear-gradient(
@@ -14,6 +16,7 @@
 
 .section {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   align-items: center;
   justify-content: center;
