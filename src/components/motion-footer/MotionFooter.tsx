@@ -3,9 +3,9 @@ import Slider from "react-slick";
 import trees from "../../assets/images/treesbackground.png";
 import styles from "./MotionFooter.module.css";
 import ButtonScroll from "../ui/button-nav/ButtonNav";
-import img1 from "../../assets/images/2222_pixian_ai.png";
-import img2 from "../../assets/images/55555.png";
-import img3 from "../../assets/images/44444_pixian_ai.png";
+import img1 from "../../assets/images/img1.png";
+import img2 from "../../assets/images/img2.png";
+import img3 from "../../assets/images/img3.png";
 const motionTrees = [trees, trees];
 interface IMotionFooter {
   type: string;

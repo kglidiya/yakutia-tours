@@ -26,10 +26,7 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
       whileTap={{
-        scale: 0.9,
-        backgroundImage: `url(${image})`,
-        backgroundSize: "500%",
-      }}
+        scale: 0.9 }}
     >
       {text}
     </motion.button>

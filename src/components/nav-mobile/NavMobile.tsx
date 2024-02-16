@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export default function NavMobile() {
   const [isOpen, setOpen] = useState(false);
   return (
-    <nav style={{ position: "relative" }}>
+    <nav >
       <span className={styles.icon}>
         <Hamburger toggled={isOpen} toggle={setOpen} color="white" />
       </span>

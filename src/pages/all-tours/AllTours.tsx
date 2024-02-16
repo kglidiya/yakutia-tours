@@ -1,31 +1,34 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./AllTours.module.css";
 import { motion } from "framer-motion";
-import { tourConditions, tourGallery } from "../../utils/helpers";
+import {  tourGallery } from "../../utils/helpers";
 import ButtonScroll from "../../components/ui/button-nav/ButtonNav";
-import Title from "../../components/title/Title";
-import TourProgram from "../../components/tour-program/TourProgram";
-import OrderForm from "../../components/order-form/OrderForm";
-import { ITour } from "../../utils/types";
 import Button from "../../components/ui/button/Button";
-import MotionCover from "../../components/motion-cover/MotionCover";
-import PhotoSlider from "../../components/photo-slider/PhotoSlider";
 import MotionFooter from "../../components/motion-footer/MotionFooter";
-import { useSwipeable } from "react-swipeable";
 import TourCard from "../../components/tour-card/TourCard";
-import Form from "../../components/form/Form";
 import Conditions from "../../components/conditions/Conditions";
 
 export default function AllTours() {
   const refContent = useRef<HTMLDivElement | null>(null);
   const refMain = useRef<HTMLDivElement | null>(null);
+ const scrollTop = () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+ }
+
+ const scrollDown = () => {
+  window.scrollTo({
+    top: refContent.current?.clientHeight,
+    left: 0,
+    behavior: "smooth",
+  });
+ }
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
+    scrollTop()
   }, []);
 
   useEffect(() => {
@@ -33,18 +36,10 @@ export default function AllTours() {
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
       if (e.deltaY > 0) {
-        window.scrollTo({
-          top: refContent.current?.clientHeight,
-          left: 0,
-          behavior: "smooth",
-        });
+        scrollDown()
       }
       if (e.deltaY < 0) {
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "smooth",
-        });
+        scrollTop()
       }
     };
     scrollContainer && scrollContainer.addEventListener("wheel", onWheel, { passive: false });
@@ -54,13 +49,6 @@ export default function AllTours() {
     };
   }, []);
 
-  const scrollDown = () => {
-    window.scrollTo({
-      top: refContent.current?.clientHeight,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
   const scrollToForm = () => {
     refMain.current?.scrollIntoView({
       behavior: "smooth",
@@ -70,7 +58,6 @@ export default function AllTours() {
 
   return (
     <main style={{ position: "relative" }} ref={refMain}>
-      {/* <MotionCover image={require("../../assets/images/logo.png")} /> */}
       <div className={styles.container} ref={refContent} >
         <video className={styles.intro} autoPlay loop muted playsInline poster={'https://celes.club/uploads/posts/2021-12/1640858891_29-celes-club-p-oimyakon-zima-priroda-krasivo-foto-35.jpg'}>
           <source

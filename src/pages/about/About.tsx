@@ -14,8 +14,8 @@ export default function About() {
   const tablet = useMediaQuery("(max-width: 768px)");
   const ref = useRef<HTMLDivElement | null>(null);
   const [translateY, setTranslateY] = useState(0);
-  const [vh, setVh] = useState(window.innerHeight)
-  // const vh = window.innerHeight;
+  const [vh, setVh] = useState(window.innerHeight);
+
   const scrollHandler = (e: any) => {
     if (e.deltaY > 0) {
       setTranslateY((prev) => {
@@ -35,24 +35,6 @@ export default function About() {
         }
       });
     }
-    // if (e.deltaY > 0) {
-    //   setTranslateY((prev) => {
-    //     if (prev === -200) {
-    //       return -200;
-    //     } else {
-    //       return prev - 100;
-    //     }
-    //   });
-    // }
-    // if (e.deltaY < 0) {
-    //   setTranslateY((prev) => {
-    //     if (prev === 0) {
-    //       return 0;
-    //     } else {
-    //       return prev + 100;
-    //     }
-    //   });
-    // }
   };
 
   const debouncedSearch = useDebounce(scrollHandler, 300);
@@ -76,24 +58,6 @@ export default function About() {
         }
       });
     },
-    // onSwipedDown: () => {
-    //   setTranslateY((prev) => {
-    //     if (prev === 0) {
-    //       return 0;
-    //     } else {
-    //       return prev + 100;
-    //     }
-    //   });
-    // },
-    // onSwipedUp: () => {
-    //   setTranslateY((prev) => {
-    //     if (prev === -300) {
-    //       return -300;
-    //     } else {
-    //       return prev - 100;
-    //     }
-    //   });
-    // },
   });
 
   const onResize = () => {
@@ -102,9 +66,10 @@ export default function About() {
       left: 0,
       behavior: "smooth",
     });
-    setVh(window.innerHeight)
+    setVh(window.innerHeight);
     setTranslateY(0);
   };
+
   useEffect(() => {
     const scrollContainer = ref.current;
     const onWheel = (e: any) => {
@@ -133,11 +98,6 @@ export default function About() {
       <MotionCover image={require("../../assets/images/logo.png")} />
       <motion.div
         ref={ref}
-        // animate={{
-        //   transform: !mobile
-        //     ? `translateY(${translateY}vh)`
-        //     : `translateY(${translateY}px)`,
-        // }}
         animate={{
           transform: `translateY(${translateY}px)`,
         }}
@@ -146,20 +106,19 @@ export default function About() {
         <Intro images={images} text="О нас" onClick={onClick} />
         <section className={styles.section} style={{ height: `${vh}px` }}>
           <motion.span
-            className={styles.sun}
+            className={styles.imageSun}
             initial={{
               top: mobile ? "1%" : "4%",
               right: "-15vw",
               opacity: 0,
             }}
             whileInView={{
-              top: mobile ? "1%" : "4%",
               right: mobile ? 0 : "12vw",
               opacity: 1,
               transition: { duration: 2, delay: 0 },
             }}
           ></motion.span>
-          <div className={styles.wrapper}>
+          <div className={styles.content}>
             <p className={styles.text}>
               Якутия — самый большой и самый холодный регион России. Именно
               здесь находится полюс холода Северного полушария — район земли с
@@ -176,45 +135,45 @@ export default function About() {
             </p>
           </div>
           <motion.div
-            className={styles.chum}
+            className={styles.motionImage}
             initial={{
-              bottom: mobile ? 0 : "-22%",
+              bottom: mobile ? "-11%" : "1%",
               right: 0,
               left: 0,
               opacity: 0,
             }}
             whileInView={{
-              bottom: mobile ? "4%" : 0,
-              right: 0,
-              left: 0,
-              opacity: translateY === -100 || translateY === -vh ? 1 : 0,
+              bottom: "5%",
+              // right: 0,
+              // left: 0,
+              opacity: 1,
               transition: { duration: 1 },
             }}
           >
             <img
-              className={styles.image}
-              src={require("../../assets/images/chumsblack.png")}
-              alt=""
+              className={styles.imageBottomCenter}
+              src={require("../../assets/images/chumBlack.png")}
+              alt="рисунок"
             />
           </motion.div>
         </section>
 
         <section className={styles.section} style={{ height: `${vh}px` }}>
           <motion.span
-            className={styles.sun}
+            className={styles.imageSun}
             initial={{
               top: "1%",
               right: "-15vw",
               opacity: 0,
             }}
             whileInView={{
-              top: "1%",
+              // top: "1%",
               right: mobile ? 0 : "12vw",
               opacity: 1,
               transition: { duration: 3, delay: 0 },
             }}
           ></motion.span>
-          <div className={`${styles.wrapper} ${styles.wrapper_last}`}>
+          <div className={`${styles.content} ${styles.content_last}`}>
             <p className={styles.text}>
               По запросу организовываем любые туры, путешествия и экспедиции по
               Якутии, а также познавательные экскурсии по Якутску и другим
@@ -228,14 +187,14 @@ export default function About() {
             </div>
           </div>
           <motion.div
-            className={styles.chum}
+            className={styles.motionImage}
             initial={{
               top: "5%",
-              right: "-10%",
+              right: "-15%",
               opacity: mobile ? 1 : 0,
             }}
             whileInView={{
-              top: "5%",
+              // top: "5%",
               right: 0,
               opacity: 1,
               transition: { duration: 1.5 },
@@ -243,45 +202,45 @@ export default function About() {
           >
             <img
               src={require("../../assets/images/family.png")}
-              alt=""
+              alt="рисунок"
               className={styles.imgTopRight}
             />
           </motion.div>
           <motion.div
-            className={styles.chum}
+            className={styles.motionImage}
             initial={{
               bottom: "5%",
               left: "-5%",
             }}
             whileInView={{
-              bottom: "5%",
+              // bottom: "5%",
               left: "2%",
               transition: { duration: 1.5 },
             }}
           >
             <img
               src={require("../../assets/images/deerblue.png")}
-              alt=""
+              alt="рисунок"
               className={styles.imageBottomDeer}
             />
           </motion.div>
           <motion.div
-            className={styles.chum}
+            className={styles.motionImage}
             initial={{
               bottom: "5%",
               left: "-10%",
               opacity: 0,
             }}
             whileInView={{
-              bottom: "5%",
-              left: "-10%",
+              // bottom: "5%",
+              // left: "-10%",
               opacity: 1,
               transition: { duration: 1.5 },
             }}
           >
             <img
               src={require("../../assets/images/tree.png")}
-              alt=""
+              alt="рисунок"
               className={styles.imageBottomTree}
             />
           </motion.div>
@@ -296,14 +255,14 @@ export default function About() {
             }}
           >
             <motion.span
-              className={styles.sun}
+              className={styles.imageSun}
               initial={{
                 top: "1%",
                 right: "-15vw",
                 opacity: 0,
               }}
               whileInView={{
-                top: "1%",
+                // top: "1%",
                 right: 0,
                 opacity: 1,
                 transition: { duration: 3, delay: 0 },
