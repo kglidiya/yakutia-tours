@@ -61,13 +61,13 @@ export default function About() {
   });
 
   const onResize = () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-    setVh(window.innerHeight);
-    setTranslateY(0);
+    // window.scrollTo({
+    //   top: 0,
+    //   left: 0,
+    //   behavior: "smooth",
+    // });
+    // setVh(window.innerHeight);
+    // setTranslateY(0);
   };
 
   useEffect(() => {

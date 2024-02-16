@@ -9,7 +9,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   let vh = window.innerHeight * 0.01;
+ 
   useEffect(() => {
+
     document.documentElement.style.setProperty("--vh", `${vh}px`);
     window.addEventListener('resize', () => {
       // We execute the same script as before
