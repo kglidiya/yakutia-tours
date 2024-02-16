@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./InputSelect.module.css";
+import { FieldErrors, UseFormRegister } from "react-hook-form";
 
 interface IInput {
   options: string[];
@@ -7,14 +8,14 @@ interface IInput {
   placeholder?: string;
   name: string;
   border?: string;
-  label?: string;
   required: boolean;
   value?: string;
-  error?: any;
+  error?: FieldErrors<any>;
   errorMessage?: string;
-  register: any;
+  register:  UseFormRegister<any>;
   setValue: any;
   values?: { [name: string]: string | number | string[] | null };
+  getValues: any
 }
 const InputSelect = ({
   options,
@@ -27,13 +28,14 @@ const InputSelect = ({
   error,
   setValue,
   register,
+  getValues
 }: IInput) => {
   const [isActive, setActive] = useState(false);
 
   const handleToggle = () => {
     setActive(!isActive);
   };
-
+ console.log(getValues(name))
   return (
     <div className={styles.container}>
       <input
@@ -47,8 +49,9 @@ const InputSelect = ({
         })}
         onFocus={() => setActive(true)}
         style={{ border }}
+       
       />
-      {error?.[`${name}`] && (
+      {error?.[`${name}`] && !getValues(name) && (
         <span className={styles.error}>{errorMessage}</span>
       )}
 

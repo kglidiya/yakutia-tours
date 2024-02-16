@@ -14,6 +14,7 @@ export default function Form({ text }: { text: string }) {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<any>({
     values: {},
@@ -33,6 +34,7 @@ export default function Form({ text }: { text: string }) {
             setBtnText("Отпралено");
             setTimeout(() => {
               form.current && form.current.reset();
+              reset();
               setBtnText("Отправить");
             }, 1000);
           } else setBtnText("Ошибка");
@@ -58,7 +60,7 @@ export default function Form({ text }: { text: string }) {
           register={register}
           required
           error={errors}
-          errorMessage="Заполните все поля"
+          errorMessage="Заполните это поле"
         />
         <Input
           type="text"
@@ -67,7 +69,7 @@ export default function Form({ text }: { text: string }) {
           register={register}
           required
           error={errors}
-          errorMessage="Заполните все поля"
+          errorMessage="Заполните это поле"
         />
         <TextArea
           register={register}
@@ -75,7 +77,7 @@ export default function Form({ text }: { text: string }) {
           placeholder="Ваш вопрос"
           name="message"
           error={errors}
-          errorMessage="Заполните все поля"
+          errorMessage="Заполните это поле"
         />
         <Button type="submit" text={btnText} fontSize="18px" width="250px" />
       </div>

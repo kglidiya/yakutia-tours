@@ -28,6 +28,6 @@
   color: red;
   position: absolute;
   font-weight: bold;
-  bottom: -25px;
-  left: 0;
+  top: 11px;
+  right: 10px;
 }

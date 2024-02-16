@@ -154,7 +154,8 @@
   .content {
     width: 90%;
     height: 65vh;
-    margin-top: 40px;
+    padding-top: 40px;
+    margin-top: 0;
     /* justify-content: center; */
   }
 
@@ -171,7 +172,6 @@
 
   .imgTopRight {
     width: 70%;
-    
     margin-top: 40px;
   }
 

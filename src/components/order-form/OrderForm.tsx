@@ -24,12 +24,15 @@ export default function OrderForm({
     register,
     handleSubmit,
     setValue,
+    getValues,
+    reset,
     formState: { errors },
   } = useForm<any>({
     values: { tour: tour },
   });
   const onSubmit = () => {
     setBtnText(<Spinner />);
+
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE as string,
@@ -43,6 +46,7 @@ export default function OrderForm({
             setBtnText("Отпралено");
             setTimeout(() => {
               form.current && form.current.reset();
+              reset()
               setBtnText("Отправить");
             }, 1000);
           } else setBtnText("Ошибка");
@@ -51,8 +55,8 @@ export default function OrderForm({
           console.log(error.text);
         }
       );
-    console.log(form.current);
   };
+ 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -69,7 +73,7 @@ export default function OrderForm({
           register={register}
           required
           error={errors}
-          errorMessage="Заполните все поля"
+          errorMessage="Заполните это поле"
         />
         <Input
           type="text"
@@ -78,7 +82,7 @@ export default function OrderForm({
           register={register}
           required
           error={errors}
-          errorMessage="Заполните все поля"
+          errorMessage="Заполните это поле"
         />
         <div className={styles.flexBox}>
           <InputSelect
@@ -89,6 +93,9 @@ export default function OrderForm({
             type="text"
             name="quantity"
             required
+            error={errors}
+            errorMessage="?"
+            getValues={getValues}
           />
           <InputSelect
             placeholder="Даты"
@@ -98,6 +105,9 @@ export default function OrderForm({
             type="text"
             name="dates"
             required
+            error={errors}
+            errorMessage="?"
+            getValues={getValues}
           />
         </div>
         <TextArea
