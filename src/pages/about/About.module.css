@@ -155,6 +155,9 @@
 }
 
 @media (max-width: 576px) {
+  /* .section {
+    height: calc(100vh - 100px);
+  } */
   .wrapper {
     width: 90%;
     height: 65vh;
