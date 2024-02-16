@@ -154,8 +154,8 @@
   .content {
     width: 90%;
     height: 65vh;
-    margin-top: 0;
-    justify-content: center;
+    margin-top: 5vh;
+    /* justify-content: center; */
   }
 
   .content_last {
