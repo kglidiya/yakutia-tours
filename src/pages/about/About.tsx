@@ -14,14 +14,15 @@ export default function About() {
   const tablet = useMediaQuery("(max-width: 768px)");
   const ref = useRef<HTMLDivElement | null>(null);
   const [translateY, setTranslateY] = useState(0);
-  let vh = window.innerHeight;
+  const [vh, setVh] = useState(window.innerHeight)
+  // const vh = window.innerHeight;
   const scrollHandler = (e: any) => {
     if (e.deltaY > 0) {
       setTranslateY((prev) => {
-        if (prev === -200) {
-          return -200;
+        if (prev === -(vh * 2)) {
+          return -(vh * 2);
         } else {
-          return prev - 100;
+          return prev - vh;
         }
       });
     }
@@ -30,14 +31,32 @@ export default function About() {
         if (prev === 0) {
           return 0;
         } else {
-          return prev + 100;
+          return prev + vh;
         }
       });
     }
+    // if (e.deltaY > 0) {
+    //   setTranslateY((prev) => {
+    //     if (prev === -200) {
+    //       return -200;
+    //     } else {
+    //       return prev - 100;
+    //     }
+    //   });
+    // }
+    // if (e.deltaY < 0) {
+    //   setTranslateY((prev) => {
+    //     if (prev === 0) {
+    //       return 0;
+    //     } else {
+    //       return prev + 100;
+    //     }
+    //   });
+    // }
   };
 
   const debouncedSearch = useDebounce(scrollHandler, 300);
-  console.log(vh);
+
   const handlers = useSwipeable({
     onSwipedDown: () => {
       setTranslateY((prev) => {
@@ -50,8 +69,8 @@ export default function About() {
     },
     onSwipedUp: () => {
       setTranslateY((prev) => {
-        if (prev === -(vh*3)) {
-          return -(vh*3);
+        if (prev === -(vh * 3)) {
+          return -(vh * 3);
         } else {
           return prev - vh;
         }
@@ -77,6 +96,15 @@ export default function About() {
     // },
   });
 
+  const onResize = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+    setVh(window.innerHeight)
+    setTranslateY(0);
+  };
   useEffect(() => {
     const scrollContainer = ref.current;
     const onWheel = (e: any) => {
@@ -85,29 +113,38 @@ export default function About() {
     };
     scrollContainer &&
       scrollContainer.addEventListener("wheel", onWheel, { passive: false });
+    window.addEventListener("resize", onResize);
     return () => {
       scrollContainer && scrollContainer.removeEventListener("wheel", onWheel);
+      window.removeEventListener("resize", onResize);
     };
   }, [debouncedSearch]);
 
   const onClick = () => {
-    setTranslateY(-100);
+    setTranslateY(-vh);
   };
 
   return (
-    <motion.main className={styles.main} {...handlers}>
+    <motion.main
+      className={styles.main}
+      {...handlers}
+      style={{ height: `${vh}px` }}
+    >
       <MotionCover image={require("../../assets/images/logo.png")} />
       <motion.div
         ref={ref}
+        // animate={{
+        //   transform: !mobile
+        //     ? `translateY(${translateY}vh)`
+        //     : `translateY(${translateY}px)`,
+        // }}
         animate={{
-          transform: !mobile
-            ? `translateY(${translateY}vh)`
-            : `translateY(${translateY}px)`,
+          transform: `translateY(${translateY}px)`,
         }}
         transition={{ duration: 1 }}
       >
         <Intro images={images} text="О нас" onClick={onClick} />
-        <section className={styles.section}>
+        <section className={styles.section} style={{ height: `${vh}px` }}>
           <motion.span
             className={styles.sun}
             initial={{
@@ -150,7 +187,7 @@ export default function About() {
               bottom: mobile ? "4%" : 0,
               right: 0,
               left: 0,
-              opacity: translateY === -100 ? 1 : 0,
+              opacity: translateY === -100 || translateY === -vh ? 1 : 0,
               transition: { duration: 1 },
             }}
           >
@@ -162,7 +199,7 @@ export default function About() {
           </motion.div>
         </section>
 
-        <section className={styles.section}>
+        <section className={styles.section} style={{ height: `${vh}px` }}>
           <motion.span
             className={styles.sun}
             initial={{
@@ -252,7 +289,11 @@ export default function About() {
         {mobile && (
           <section
             className={styles.section}
-            style={{ backgroundColor: "white", paddingTop: "40px" }}
+            style={{
+              backgroundColor: "white",
+              paddingTop: "70px",
+              height: `${vh}px`,
+            }}
           >
             <motion.span
               className={styles.sun}

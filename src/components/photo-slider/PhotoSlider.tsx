@@ -17,7 +17,7 @@ export default function PhotoSlider({ images }: { images: string[] }) {
       <ButtonScroll
         borderRadius="10px"
         rotate="-90deg"
-        bottom="45%"
+        bottom="42%"
         right="2%"
         opacity={0.7}
       />
@@ -26,7 +26,7 @@ export default function PhotoSlider({ images }: { images: string[] }) {
       <ButtonScroll
         borderRadius="10px"
         rotate="90deg"
-        bottom="45%"
+        bottom="42%"
         left="2%"
         opacity={0.7}
       />
