@@ -61,13 +61,16 @@ export default function About() {
   });
 console.log(translateY)
   const onResize = () => {
-    // window.scrollTo({
-    //   top: 0,
-    //   left: 0,
-    //   behavior: "smooth",
-    // });
-    // setVh(window.innerHeight);
-    // setTranslateY(0);
+
+      // window.scrollTo({
+      //   top: 0,
+      //   left: 0,
+      //   behavior: "smooth",
+      // });
+      // setVh(window.innerHeight);
+      // setTranslateY(0); 
+
+ 
   };
 
   useEffect(() => {
@@ -146,8 +149,6 @@ console.log(translateY)
             }}
             whileInView={{
               bottom: "5%",
-              // right: 0,
-              // left: 0,
               opacity: 1,
               transition: { duration: 1 },
             }}
@@ -171,7 +172,6 @@ console.log(translateY)
               opacity: 0,
             }}
             whileInView={{
-              // top: "1%",
               right: mobile ? 0 : "12vw",
               opacity: 1,
               transition: { duration: 3, delay: 0 },
@@ -198,7 +198,6 @@ console.log(translateY)
               opacity: mobile ? 1 : 0,
             }}
             whileInView={{
-              // top: "5%",
               right: 0,
               opacity: 1,
               transition: { duration: 1.5 },
@@ -217,7 +216,6 @@ console.log(translateY)
               left: "-5%",
             }}
             whileInView={{
-              // bottom: "5%",
               left: "2%",
               transition: { duration: 1.5 },
             }}
@@ -236,8 +234,6 @@ console.log(translateY)
               opacity: 0,
             }}
             whileInView={{
-              // bottom: "5%",
-              // left: "-10%",
               opacity: 1,
               transition: { duration: 1.5 },
             }}
@@ -266,7 +262,6 @@ console.log(translateY)
                 opacity: 0,
               }}
               whileInView={{
-                // top: "1%",
                 right: 0,
                 opacity: 1,
                 transition: { duration: 3, delay: 0 },

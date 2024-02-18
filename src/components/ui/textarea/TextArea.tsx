@@ -1,5 +1,6 @@
 import { UseFormRegister } from "react-hook-form";
 import styles from "./TextArea.module.css";
+import { ChangeEventHandler } from "react";
 
 interface ITextArea {
   placeholder?: string;
@@ -11,6 +12,7 @@ interface ITextArea {
   error?: any;
   errorMessage?: string;
   setValue?: any;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
 const TextArea = ({
@@ -22,6 +24,7 @@ const TextArea = ({
   minLength,
   error,
   errorMessage,
+  onChange,
 }: ITextArea) => {
   return (
     <div className={styles.container}>
@@ -30,6 +33,7 @@ const TextArea = ({
         placeholder={placeholder}
         {...register(name, {
           required,
+          onChange,
           maxLength,
           minLength,
         })}

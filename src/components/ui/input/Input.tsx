@@ -11,6 +11,8 @@ interface IInput {
   error?: FieldErrors<any>;
   errorMessage?: string;
   onChange?: ChangeEventHandler<HTMLInputElement>;
+
+
 }
 
 const Input = ({
@@ -22,6 +24,7 @@ const Input = ({
   error,
   errorMessage,
   onChange,
+
 }: IInput) => {
   return (
     <div className={styles.container}>

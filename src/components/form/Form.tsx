@@ -7,9 +7,12 @@ import TextArea from "../ui/textarea/TextArea";
 import AnimatedPerson from "../ui/animated-person/AnimatedPerson";
 import emailjs from "@emailjs/browser";
 import Spinner from "../ui/spinner/Spinner";
+import useMediaQuery from "../../hooks/use-media-query";
 
 export default function Form({ text }: { text: string }) {
+  const mobile = useMediaQuery("(max-width: 576px)");
   const form = useRef<HTMLFormElement | null>(null);
+  const [height, setHeight] = useState("538px");
   const [btnText, setBtnText] = useState<string | ReactNode>("Отправить");
   const {
     register,
@@ -44,10 +47,17 @@ export default function Form({ text }: { text: string }) {
         }
       );
   };
+  const onChahge = () => {
+    if(mobile) {
+      setHeight('330px') 
+    }
+
+  };
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className={styles.wrapper}
+      style={{ height: mobile ? height : "" }}
       ref={form}
     >
       <h3 className={styles.title}>{text}</h3>
@@ -61,6 +71,8 @@ export default function Form({ text }: { text: string }) {
           required
           error={errors}
           errorMessage="Заполните это поле"
+          onChange={onChahge}
+         
         />
         <Input
           type="text"
@@ -78,6 +90,7 @@ export default function Form({ text }: { text: string }) {
           name="message"
           error={errors}
           errorMessage="Заполните это поле"
+          onChange={onChahge}
         />
         <Button type="submit" text={btnText} fontSize="18px" width="250px" />
       </div>
