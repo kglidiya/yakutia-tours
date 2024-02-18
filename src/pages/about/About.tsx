@@ -61,15 +61,15 @@ export default function About() {
   });
 
   const onResize = () => {
-    if(!isKeyBoardVisible) {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
-      setVh(window.innerHeight);
-      setTranslateY(0); 
-    }
+    // if(!isKeyBoardVisible) {
+    //   window.scrollTo({
+    //     top: 0,
+    //     left: 0,
+    //     behavior: "smooth",
+    //   });
+    //   setVh(window.innerHeight);
+    //   setTranslateY(0); 
+    // }
     
 
  
