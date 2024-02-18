@@ -263,7 +263,7 @@ export default function About() {
               backgroundColor: "white",
               paddingTop: "70px",
               // height: `${vh}px`,
-            //  ...height
+             ...height
             }}
           >
             <motion.span
