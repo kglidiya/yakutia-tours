@@ -36,7 +36,7 @@ export default function Conditions() {
         </ul>
       </motion.div>
 
-      <Form text="Форма обратной связи" />
+      {/* <Form text="Форма обратной связи" /> */}
     </div>
   );
 }

@@ -15,7 +15,7 @@ export default function About() {
   const ref = useRef<HTMLDivElement | null>(null);
   const [translateY, setTranslateY] = useState(0);
   const [vh, setVh] = useState(window.innerHeight);
-
+  const [isKeyBoardVisible, setIsKeyBoardVisible] = useState(false)
   const scrollHandler = (e: any) => {
     if (e.deltaY > 0) {
       setTranslateY((prev) => {
@@ -59,9 +59,9 @@ export default function About() {
       });
     },
   });
-console.log(translateY)
-  const onResize = () => {
 
+  const onResize = () => {
+    if(!isKeyBoardVisible) {
       window.scrollTo({
         top: 0,
         left: 0,
@@ -69,6 +69,8 @@ console.log(translateY)
       });
       setVh(window.innerHeight);
       setTranslateY(0); 
+    }
+    
 
  
   };
@@ -187,7 +189,7 @@ console.log(translateY)
             </p>
             <p className={styles.text}>Ждем Ваших пожеланий.</p>
             <div className={styles.form}>
-              {!tablet && <Form text="Форма обратной связи" />}
+              {!tablet && <Form text="Форма обратной связи" setIsKeyBoardVisible={ setIsKeyBoardVisible}/>}
             </div>
           </div>
           <motion.div
@@ -268,7 +270,7 @@ console.log(translateY)
                 transition: { duration: 3, delay: 0 },
               }}
             ></motion.span>
-            <Form text="Форма обратной связи" />
+            <Form text="Форма обратной связи"  setIsKeyBoardVisible={ setIsKeyBoardVisible}/>
           </section>
         )}
       </motion.div>
