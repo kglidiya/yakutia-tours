@@ -12,8 +12,7 @@ import useMediaQuery from "../../hooks/use-media-query";
 export default function Form({ text }: { text: string }) {
   const mobile = useMediaQuery("(max-width: 576px)");
   const form = useRef<HTMLFormElement | null>(null);
-  const [height, setHeight] = useState({height: "538px",
-paddingTop: '1px'});
+  const [height, setHeight] = useState({height: "538px"});
   const [isInputFocused, setIsInputFocused] = useState(false);
   const [btnText, setBtnText] = useState<string | ReactNode>("Отправить");
   const {
@@ -58,9 +57,8 @@ paddingTop: '1px'});
   useEffect(() => {
     if(mobile) {
       if(isInputFocused) {
-        setHeight({height: '330px', paddingTop: '1px'})
-       } else setHeight({height: "538px",
-       paddingTop: '1px'});
+        setHeight({height: '315px'})
+       } else setHeight({height: "538px"});
     }
   
   }, [isInputFocused, mobile])
@@ -106,7 +104,8 @@ paddingTop: '1px'});
           name="message"
           error={errors}
           errorMessage="Заполните это поле"
-          // onChange={onChahge}
+          onBlur={onBlur}
+          setIsInputFocused={setIsInputFocused}
         />
         <Button type="submit" text={btnText} fontSize="18px" width="250px" />
       </div>
