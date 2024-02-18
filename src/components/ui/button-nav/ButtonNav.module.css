@@ -1,15 +1,15 @@
 .button {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  background-color: rgb(255, 255, 255);
-  border: none;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: absolute;
-  bottom: 20px;
-  right: calc(50% - 45px);
-  z-index: 10;
+	width: 45px;
+	height: 45px;
+	display: flex;
+	background-color: rgb(255, 255, 255);
+	border: none;
+	align-self: center;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	position: absolute;
+	bottom: 20px;
+	right: calc(50% - 45px);
+	z-index: 10;
 }

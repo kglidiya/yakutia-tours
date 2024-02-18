@@ -1,32 +1,32 @@
 .image {
-  margin-top: 80px;
-  background-image: url(../../../assets//images/girl.png);
-  height: 50%;
-  width: 250px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: relative;
-  position: absolute;
-  flex: none;
-  z-index: 2;
+	margin-top: 80px;
+	background-image: url(../../../assets//images/girl.png);
+	height: 50%;
+	width: 250px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+	position: absolute;
+	flex: none;
+	z-index: 2;
 }
 
 .shoeRight {
-  position: absolute;
-  bottom: -15px;
-  left: 105px;
-  z-index: 1;
+	position: absolute;
+	bottom: -15px;
+	left: 105px;
+	z-index: 1;
 }
 
 .shoeLeft {
-  position: absolute;
-  bottom: -15px;
-  left: 75px;
+	position: absolute;
+	bottom: -15px;
+	left: 75px;
 }
 
 @media (max-width: 768px) {
-  .image {
-    height: 35%;
-    margin-top: 250px;
-  }
+	.image {
+		height: 35%;
+		margin-top: 250px;
+	}
 }

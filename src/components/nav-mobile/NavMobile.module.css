@@ -1,55 +1,55 @@
 .links {
-  width: fit-content;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border-radius: 10px;
-  background-color: #8bd0f7;
-  list-style: none;
-  position: absolute;
-  top: 0;
-  right: 20px;
-  transform-origin: right top;
-  box-sizing: border-box;
-  margin: 0;
+	width: fit-content;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border-radius: 10px;
+	background-color: #8bd0f7;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	right: 20px;
+	transform-origin: right top;
+	box-sizing: border-box;
+	margin: 0;
 }
 
 .icon {
-  display: block;
-  position: relative;
-  z-index: 6;
-  margin-right: 30px;
-  margin-top: -25px;
+	display: block;
+	position: relative;
+	z-index: 6;
+	margin-right: 30px;
+	margin-top: -25px;
 }
 
 .link {
-  height: 40px;
-  font-size: 22px;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  border-bottom: 1px solid whitesmoke;
+	height: 40px;
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	border-bottom: 1px solid whitesmoke;
 }
 
 .link_default {
-  color: white;
+	color: white;
 }
 
 .link_active {
-  color: #62a1d8;
+	color: #62a1d8;
 }
 
 @media (max-width: 578px) {
-  .links {
-    width: 100vw;
-    right: 0;
-  }
+	.links {
+		width: 100vw;
+		right: 0;
+	}
 
-  .icon {
-    margin-right: 15px;
-  }
+	.icon {
+		margin-right: 15px;
+	}
 }

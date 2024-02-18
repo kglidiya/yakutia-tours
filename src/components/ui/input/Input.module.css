@@ -1,52 +1,52 @@
 .container {
-  position: relative;
-  width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 .input {
-  display: block;
-  height: 38px;
-  border: 1px solid rgb(98, 161, 216);
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 35px;
-  outline: none;
-  transition: all 0.2s linear;
-  box-sizing: border-box;
-  font-size: 16px;
+	display: block;
+	height: 38px;
+	border: 1px solid rgb(98, 161, 216);
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 35px;
+	outline: none;
+	transition: all 0.2s linear;
+	box-sizing: border-box;
+	font-size: 16px;
 }
 
 .input:focus {
-  border-bottom: 2px solid rgb(98, 161, 216);
+	border-bottom: 2px solid rgb(98, 161, 216);
 }
 
 .input:hover {
-  border-bottom: 2px solid rgb(98, 161, 216);
+	border-bottom: 2px solid rgb(98, 161, 216);
 }
 
 .error {
-  color: red;
-  position: absolute;
-  font-weight: bold;
-  top: 10px;
-  right: 10px;
+	color: red;
+	position: absolute;
+	font-weight: bold;
+	top: 10px;
+	right: 10px;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
 }
 
-input[type="number"],
-input[type="number"]:hover,
-input[type="number"]:focus {
-  appearance: none;
-  -moz-appearance: textfield;
+input[type='number'],
+input[type='number']:hover,
+input[type='number']:focus {
+	appearance: none;
+	-moz-appearance: textfield;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
+	-webkit-box-shadow: 0 0 0 30px white inset !important;
 }

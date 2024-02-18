@@ -1,139 +1,150 @@
-@import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Roboto&display=swap');
 
 .wrapper {
-  /* height: 50px; */
-  width: 90%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 30px;
+	/* height: 50px; */
+	width: 90%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 30px;
 }
 
 .logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
 }
 .logo__image {
-  width: 130px;
-  height: 130px;
-  object-fit: contain;
+	width: 130px;
+	height: 130px;
+	object-fit: contain;
 }
 .logo__text {
-  font-family: "Kablammo", system-ui;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  text-align: left;
-  font-size: 32px;
-  line-height: 32px;
-  letter-spacing: 2px;
-  padding: 0;
-  margin: 0;
+	font-family: 'Kablammo', system-ui;
+	color: white;
+	text-shadow:
+		-1px 0 black,
+		0 1px black,
+		1px 0 black,
+		0 -1px black;
+	text-align: left;
+	font-size: 32px;
+	line-height: 32px;
+	letter-spacing: 2px;
+	padding: 0;
+	margin: 0;
 }
 
 .logo__text:last-of-type {
-  font-size: 44px;
-  color: rgb(98, 161, 216);
+	font-size: 44px;
+	color: rgb(98, 161, 216);
 }
 
 .links {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 50px;
+	align-items: center;
 }
 
 .link {
-  height: 30px;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+	height: 30px;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
 }
 
 .link_default {
-  text-shadow: -1px 0 rgb(125, 151, 187), 0 1px rgb(125, 151, 187),
-    1px 0 rgb(125, 151, 187), 0 -1px rgb(125, 151, 187);
-  color: white;
+	text-shadow:
+		-1px 0 rgb(125, 151, 187),
+		0 1px rgb(125, 151, 187),
+		1px 0 rgb(125, 151, 187),
+		0 -1px rgb(125, 151, 187);
+	color: white;
 }
 
 .link_active {
-  color: rgb(98, 161, 216);
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: rgb(98, 161, 216);
+	text-shadow:
+		-1px 0 black,
+		0 1px black,
+		1px 0 black,
+		0 -1px black;
 }
 
 @media (max-width: 1350px) {
-  .wrapper {
-    padding-left: 20px;
-  }
-  .logo__image {
-    width: 120px;
-    height: 120px;
-  }
-  .logo__text {
-    font-size: 28px;
-  }
+	.wrapper {
+		padding-left: 20px;
+	}
+	.logo__image {
+		width: 120px;
+		height: 120px;
+	}
+	.logo__text {
+		font-size: 28px;
+	}
 
-  .logo__text:last-of-type {
-    font-size: 40px;
-  }
-  .links {
-    gap: 30px;
-  }
-  .link {
-    font-size: 20px;
-  }
+	.logo__text:last-of-type {
+		font-size: 40px;
+	}
+	.links {
+		gap: 30px;
+	}
+	.link {
+		font-size: 20px;
+	}
 }
 
 @media (max-width: 992px) {
-  .links {
-    margin-top: 30px;
-    flex-direction: column;
-    gap: 10px;
-  }
+	.links {
+		margin-top: 30px;
+		flex-direction: column;
+		gap: 10px;
+	}
 }
 
 @media (max-width: 768px) {
-  .wrapper {
-    padding: 0 0 0 0;
-    width: 100%;
-  }
+	.wrapper {
+		padding: 0 0 0 0;
+		width: 100%;
+	}
 
-  /* .logo {
+	/* .logo {
     margin-top: 50px;
   } */
-  .logo__image {
-    width: 100px;
-    height: 100px;
-  }
+	.logo__image {
+		width: 100px;
+		height: 100px;
+	}
 }
 
 @media (max-width: 578px) {
-  .logo__text {
-    font-size: 26px;
-  }
-  .logo__text:last-of-type {
-    font-size: 38px;
-  }
+	.logo__text {
+		font-size: 26px;
+	}
+	.logo__text:last-of-type {
+		font-size: 38px;
+	}
 }
 
 @media (max-width: 320px) {
-  .logo__image {
-    width: 90px;
-  }
+	.logo__image {
+		width: 90px;
+	}
 
-  .logo__text {
-    font-size: 24px;
-  }
-  .logo__text:last-of-type {
-    font-size: 30px;
-  }
+	.logo__text {
+		font-size: 24px;
+	}
+	.logo__text:last-of-type {
+		font-size: 30px;
+	}
 }

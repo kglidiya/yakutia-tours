@@ -1,13 +1,13 @@
 .main {
-  position: relative;
-  /* position: fixed;
+	position: relative;
+	/* position: fixed;
   top: 0;
   left: 0;
   height: auto;
   width: 100%; */
-  background-image: url(../../assets/images/translucent-background-home.png);
-  background-size: 20%;
-  background-attachment: fixed;
+	background-image: url(../../assets/images/translucent-background-home.png);
+	background-size: 20%;
+	background-attachment: fixed;
 }
 
 /* .main::after {
@@ -19,182 +19,184 @@
   display: block;
 } */
 .facts {
-  font-size: 24px;
-  width: 70%;
-  margin: 100px auto;
+	font-size: 24px;
+	width: 70%;
+	margin: 100px auto;
 }
 
 .facts__gallery {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 20px;
-  width: 70%;
-  margin: 30px auto;
-  /* flex-wrap: wrap; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 20px;
+	width: 70%;
+	margin: 30px auto;
+	/* flex-wrap: wrap; */
 }
 
 .facts__image {
-  width: 24%;
-  height: inherit;
-  object-fit: cover;
-  border-radius: 10px;
+	width: 24%;
+	height: inherit;
+	object-fit: cover;
+	border-radius: 10px;
 }
 
 .tours {
-  margin: 100px auto;
-  font-size: 44px;
+	margin: 100px auto;
+	font-size: 44px;
 }
 
 .tours__gallery {
-  width: 70vw;
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  margin: 30px auto 100px auto;
-  flex-wrap: wrap;
+	width: 70vw;
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	margin: 30px auto 100px auto;
+	flex-wrap: wrap;
 }
 
 .form {
-  /* height: 60vh; */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-      to top,
-      rgba(253, 253, 253, 0) 0%,
-      rgba(255, 255, 255, 0.3) 100%
-    ),
-    url("https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg");
-  overflow: hidden;
-  /* background-image: url("https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg"); */
-  background-size: cover;
-  overflow: hidden;
-  padding-top: 0;
-  padding-bottom: 300px;
-  box-shadow: 1px -23px 40px 12px #d4eff5, -2px 24px 26px 1px #d4eff5 inset;
+	/* height: 60vh; */
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(
+			to top,
+			rgba(253, 253, 253, 0) 0%,
+			rgba(255, 255, 255, 0.3) 100%
+		),
+		url('https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg');
+	overflow: hidden;
+	/* background-image: url("https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg"); */
+	background-size: cover;
+	overflow: hidden;
+	padding-top: 0;
+	padding-bottom: 300px;
+	box-shadow:
+		1px -23px 40px 12px #d4eff5,
+		-2px 24px 26px 1px #d4eff5 inset;
 }
 .condition__wrapper {
-  width: 70%;
+	width: 70%;
 }
 .condition {
-  font-size: 24px;
-  font-weight: bold;
+	font-size: 24px;
+	font-weight: bold;
 }
 
 .list {
-  list-style: none;
-  padding-left: 0;
+	list-style: none;
+	padding-left: 0;
 }
 
 .list:last-of-type {
-  margin-bottom: 100px;
+	margin-bottom: 100px;
 }
 
 .list__item {
-  text-align: left;
-  font-size: 18px;
-  min-height: 35px;
-  display: flex;
-  flex-direction: row;
-  padding: 5px 0;
-  align-items: center;
-  gap: 20px;
+	text-align: left;
+	font-size: 18px;
+	min-height: 35px;
+	display: flex;
+	flex-direction: row;
+	padding: 5px 0;
+	align-items: center;
+	gap: 20px;
 }
 
 .list__text {
-  margin: 0;
-  width: 80%;
-  /* padding-left: 20px; */
+	margin: 0;
+	width: 80%;
+	/* padding-left: 20px; */
 }
 
 .list__marker_included {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: url(../../assets/images/included_icon.svg) no-repeat;
+	display: block;
+	width: 32px;
+	height: 32px;
+	background: url(../../assets/images/included_icon.svg) no-repeat;
 }
 .list__marker_excluded {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: url(../../assets/images/excluded_icon.svg) no-repeat;
+	display: block;
+	width: 32px;
+	height: 32px;
+	background: url(../../assets/images/excluded_icon.svg) no-repeat;
 }
 @media (max-width: 1400px) {
-  .facts__gallery {
-    width: 90%;
-  }
+	.facts__gallery {
+		width: 90%;
+	}
 
-  .tours__gallery {
-    width: 90%;
-  }
+	.tours__gallery {
+		width: 90%;
+	}
 }
 
 @media (max-width: 992px) {
-  .form__wrapper {
-    margin: 100px auto 50px auto;
-    width: 95%;
-  }
+	.form__wrapper {
+		margin: 100px auto 50px auto;
+		width: 95%;
+	}
 }
 
 @media (max-width: 768px) {
-  .tours {
-    margin: 60px auto;
-    font-size: 32px;
-  }
+	.tours {
+		margin: 60px auto;
+		font-size: 32px;
+	}
 
-  .facts {
-    font-size: 20px;
-    margin: 60px auto;
-  }
+	.facts {
+		font-size: 20px;
+		margin: 60px auto;
+	}
 
-  .facts__gallery {
-    flex-wrap: wrap;
-  }
-  .facts__image {
-    width: 42vw;
-    height: 42vw;
-  }
-  .condition__wrapper {
-    width: 90%;
-  }
-  .condition {
-    font-size: 20px;
-  }
+	.facts__gallery {
+		flex-wrap: wrap;
+	}
+	.facts__image {
+		width: 42vw;
+		height: 42vw;
+	}
+	.condition__wrapper {
+		width: 90%;
+	}
+	.condition {
+		font-size: 20px;
+	}
 }
 
 @media (max-width: 576px) {
-  .main {
-    background-size: 60%;
-  }
-  .facts {
-    font-size: 18px;
-    margin: 50px auto;
-  }
+	.main {
+		background-size: 60%;
+	}
+	.facts {
+		font-size: 18px;
+		margin: 50px auto;
+	}
 
-  .facts__gallery {
-    gap: 10px;
-    justify-content: space-around;
-  }
+	.facts__gallery {
+		gap: 10px;
+		justify-content: space-around;
+	}
 
-  .facts__image {
-    width: 40vw;
-    height: 40vw;
-  }
+	.facts__image {
+		width: 40vw;
+		height: 40vw;
+	}
 
-  .list__item {
-    font-size: 16px;
-    padding: 5px 0;
-  }
+	.list__item {
+		font-size: 16px;
+		padding: 5px 0;
+	}
 
-  .list:last-of-type {
-    margin-bottom: 40px;
-  }
-  .form {
-    padding-bottom: 200px;
-  }
+	.list:last-of-type {
+		margin-bottom: 40px;
+	}
+	.form {
+		padding-bottom: 200px;
+	}
 }
 /* @media (max-width: 992px) {
   .facts__gallery {

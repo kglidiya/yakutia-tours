@@ -1,190 +1,190 @@
 .main {
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
-  background: linear-gradient(
-      to top,
-      rgba(253, 253, 253, 0) 0%,
-      rgba(242, 240, 240, 0.7) 100%
-    ),
-    url("https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg");
-  background-size: cover;
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	background: linear-gradient(
+			to top,
+			rgba(253, 253, 253, 0) 0%,
+			rgba(242, 240, 240, 0.7) 100%
+		),
+		url('https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg');
+	background-size: cover;
 }
 
 .section {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
 }
 
 .motionImage {
-  position: absolute;
+	position: absolute;
 }
 
 .imgTopRight {
-  width: 100%;
-  z-index: 3;
-  position: relative;
+	width: 100%;
+	z-index: 3;
+	position: relative;
 }
 
 .imageBottomCenter {
-  width: 60%;
-  object-fit: contain;
-  min-width: 220px;
+	width: 60%;
+	object-fit: contain;
+	min-width: 220px;
 }
 
 .imageSun {
-  position: absolute;
-  display: block;
-  width: 17vw;
-  height: 17vw;
-  background-color: rgb(255 176 176);
-  border-radius: 50%;
+	position: absolute;
+	display: block;
+	width: 17vw;
+	height: 17vw;
+	background-color: rgb(255 176 176);
+	border-radius: 50%;
 }
 
 .imageBottomDeer {
-  width: 15vw;
-  height: auto;
-  position: relative;
-  z-index: 5;
+	width: 15vw;
+	height: auto;
+	position: relative;
+	z-index: 5;
 }
 
 .imageBottomTree {
-  width: 35vw;
-  height: auto;
+	width: 35vw;
+	height: auto;
 }
 
 .content {
-  width: 65%;
-  height: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  flex-direction: column;
-  margin-top: 10vh;
+	width: 65%;
+	height: 70%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	flex-direction: column;
+	margin-top: 10vh;
 }
 
 .content_last {
-  justify-content: flex-end;
-  height: 76%;
-  gap: 20px;
+	justify-content: flex-end;
+	height: 76%;
+	gap: 20px;
 }
 
 .text {
-  font-size: 22px;
-  width: 90%;
-  z-index: 4;
-  margin: 10px;
+	font-size: 22px;
+	width: 90%;
+	z-index: 4;
+	margin: 10px;
 }
 
 .form {
-  width: 100vw;
-  height: fit-content;
-  margin-top: 5vh;
-  position: relative;
-  z-index: 15;
+	width: 100vw;
+	height: fit-content;
+	margin-top: 5vh;
+	position: relative;
+	z-index: 15;
 }
 
 @media (max-width: 1200px) {
-  .imageSun {
-    width: 20vw;
-    height: 20vw;
-  }
+	.imageSun {
+		width: 20vw;
+		height: 20vw;
+	}
 }
 
 @media (max-width: 992px) {
-  .imgTopRight {
-    width: 80%;
-    margin-top: 80px;
-  }
-  .wrapper_last {
-    height: 85%;
-    gap: 0;
-  }
+	.imgTopRight {
+		width: 80%;
+		margin-top: 80px;
+	}
+	.wrapper_last {
+		height: 85%;
+		gap: 0;
+	}
 
-  .imageSun {
-    width: 30vw;
-    height: 30vw;
-  }
+	.imageSun {
+		width: 30vw;
+		height: 30vw;
+	}
 
-  .form {
-    width: 70vh;
-  }
+	.form {
+		width: 70vh;
+	}
 }
 
 @media (max-width: 768px) {
-  .imgTopRight {
-    width: 80%;
-    margin-top: 20px;
-  }
+	.imgTopRight {
+		width: 80%;
+		margin-top: 20px;
+	}
 
-  .imageBottomDeer {
-    width: 30vw;
-  }
+	.imageBottomDeer {
+		width: 30vw;
+	}
 
-  .imageBottomTree {
-    width: 60vw;
-  }
+	.imageBottomTree {
+		width: 60vw;
+	}
 
-  .content_last {
-    height: 50%;
-    z-index: 6;
-    gap: 10px;
-  }
+	.content_last {
+		height: 50%;
+		z-index: 6;
+		gap: 10px;
+	}
 
-  .imageSun {
-    width: 35vw;
-    height: 35vw;
-  }
+	.imageSun {
+		width: 35vw;
+		height: 35vw;
+	}
 
-  .text {
-    font-size: 20px;
-    margin: 5px;
-  }
+	.text {
+		font-size: 20px;
+		margin: 5px;
+	}
 
-  .imageBottomCenter {
-    width: 100%;
-  }
+	.imageBottomCenter {
+		width: 100%;
+	}
 }
 
 @media (max-width: 576px) {
-  .content {
-    width: 90%;
-    height: 65vh;
-    padding-top: 40px;
-    margin-top: 0;
-    /* justify-content: center; */
-  }
+	.content {
+		width: 90%;
+		height: 65vh;
+		padding-top: 40px;
+		margin-top: 0;
+		/* justify-content: center; */
+	}
 
-  .content_last {
-    justify-content: center;
-    margin-top: 15vh;
-  }
+	.content_last {
+		justify-content: center;
+		margin-top: 15vh;
+	}
 
-  .imageSun {
-    width: 40vw;
-    height: 40vw;
-    z-index: 2;
-  }
+	.imageSun {
+		width: 40vw;
+		height: 40vw;
+		z-index: 2;
+	}
 
-  .imgTopRight {
-    width: 70%;
-    margin-top: 40px;
-  }
+	.imgTopRight {
+		width: 70%;
+		margin-top: 40px;
+	}
 
-  .text {
-    font-size: 14px;
-  }
+	.text {
+		font-size: 14px;
+	}
 
-  .imageBottomDeer {
-    width: 35vw;
-  }
+	.imageBottomDeer {
+		width: 35vw;
+	}
 
-  .imageBottomTree {
-    width: 65vw;
-  }
+	.imageBottomTree {
+		width: 65vw;
+	}
 }
