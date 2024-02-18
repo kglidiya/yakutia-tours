@@ -104,8 +104,8 @@ export default function About() {
     <motion.main
       className={styles.main}
       {...handlers}
-      style={{ height: `${vh}px` }}
-      // style={height}
+      // style={{ height: `${vh}px` }}
+      style={height}
      
     >
       <MotionCover image={require("../../assets/images/logo.png")} />
@@ -263,7 +263,7 @@ export default function About() {
               backgroundColor: "white",
               paddingTop: "70px",
               // height: `${vh}px`,
-             ...height
+            //  ...height
             }}
           >
             <motion.span
