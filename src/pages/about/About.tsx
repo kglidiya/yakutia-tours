@@ -19,10 +19,10 @@ export default function About() {
   const scrollHandler = (e: any) => {
     if (e.deltaY > 0) {
       setTranslateY((prev) => {
-        if (prev === -(100 * 2)) {
-          return -(100 * 2);
+        if (prev === -(vh * 2)) {
+          return -(vh * 2);
         } else {
-          return prev - 100;
+          return prev - vh;
         }
       });
     }
@@ -31,7 +31,7 @@ export default function About() {
         if (prev === 0) {
           return 0;
         } else {
-          return prev + 100;
+          return prev + vh;
         }
       });
     }
@@ -51,8 +51,8 @@ export default function About() {
     },
     onSwipedUp: () => {
       setTranslateY((prev) => {
-        if (prev === -(100 * 3)) {
-          return -(100 * 3);
+        if (prev === -(vh * 3)) {
+          return -(vh * 3);
         } else {
           return prev - 100;
         }
@@ -93,7 +93,7 @@ export default function About() {
     <motion.main
       className={styles.main}
       {...handlers}
-      // style={{ height: `${vh}px` }}
+      style={{ height: `${vh}px` }}
     >
       <MotionCover image={require("../../assets/images/logo.png")} />
       <motion.div
@@ -105,7 +105,7 @@ export default function About() {
       >
         <Intro images={images} text="О нас" onClick={onClick} />
         <section className={styles.section}
-        //  style={{ height: `${vh}px` }}
+         style={{ height: `${vh}px` }}
          >
           <motion.span
             className={styles.imageSun}
@@ -161,7 +161,7 @@ export default function About() {
         </section>
 
         <section className={styles.section} 
-        // style={{ height: `${vh}px` }}
+        style={{ height: `${vh}px` }}
         >
           <motion.span
             className={styles.imageSun}
@@ -255,7 +255,7 @@ export default function About() {
             style={{
               backgroundColor: "white",
               paddingTop: "70px",
-              // height: `${vh}px`,
+              height: `${vh}px`,
             }}
           >
             <motion.span
