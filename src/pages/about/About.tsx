@@ -45,7 +45,7 @@ export default function About() {
         if (prev === 0) {
           return 0;
         } else {
-          return prev + 100;
+          return prev + vh;
         }
       });
     },
@@ -54,12 +54,12 @@ export default function About() {
         if (prev === -(vh * 3)) {
           return -(vh * 3);
         } else {
-          return prev - 100;
+          return prev - vh;
         }
       });
     },
   });
-
+console.log(translateY)
   const onResize = () => {
     // window.scrollTo({
     //   top: 0,
@@ -99,7 +99,7 @@ export default function About() {
       <motion.div
         ref={ref}
         animate={{
-          transform: `translateY(${translateY}vh)`,
+          transform: `translateY(${translateY}px)`,
         }}
         transition={{ duration: 1 }}
       >
