@@ -1,6 +1,7 @@
 .main {
   position: relative;
   overflow: hidden;
+  height: 100vh;
   background: linear-gradient(
       to top,
       rgba(253, 253, 253, 0) 0%,

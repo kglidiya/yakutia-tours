@@ -19,10 +19,10 @@ export default function About() {
   const scrollHandler = (e: any) => {
     if (e.deltaY > 0) {
       setTranslateY((prev) => {
-        if (prev === -(vh * 2)) {
-          return -(vh * 2);
+        if (prev === -(100 * 2)) {
+          return -(100 * 2);
         } else {
-          return prev - vh;
+          return prev - 100;
         }
       });
     }
@@ -31,7 +31,7 @@ export default function About() {
         if (prev === 0) {
           return 0;
         } else {
-          return prev + vh;
+          return prev + 100;
         }
       });
     }
@@ -45,16 +45,16 @@ export default function About() {
         if (prev === 0) {
           return 0;
         } else {
-          return prev + vh;
+          return prev + 100;
         }
       });
     },
     onSwipedUp: () => {
       setTranslateY((prev) => {
-        if (prev === -(vh * 3)) {
-          return -(vh * 3);
+        if (prev === -(100 * 3)) {
+          return -(100 * 3);
         } else {
-          return prev - vh;
+          return prev - 100;
         }
       });
     },
@@ -93,18 +93,20 @@ export default function About() {
     <motion.main
       className={styles.main}
       {...handlers}
-      style={{ height: `${vh}px` }}
+      // style={{ height: `${vh}px` }}
     >
       <MotionCover image={require("../../assets/images/logo.png")} />
       <motion.div
         ref={ref}
         animate={{
-          transform: `translateY(${translateY}px)`,
+          transform: `translateY(${translateY}vh)`,
         }}
         transition={{ duration: 1 }}
       >
         <Intro images={images} text="О нас" onClick={onClick} />
-        <section className={styles.section} style={{ height: `${vh}px` }}>
+        <section className={styles.section}
+        //  style={{ height: `${vh}px` }}
+         >
           <motion.span
             className={styles.imageSun}
             initial={{
@@ -158,7 +160,9 @@ export default function About() {
           </motion.div>
         </section>
 
-        <section className={styles.section} style={{ height: `${vh}px` }}>
+        <section className={styles.section} 
+        // style={{ height: `${vh}px` }}
+        >
           <motion.span
             className={styles.imageSun}
             initial={{
@@ -251,7 +255,7 @@ export default function About() {
             style={{
               backgroundColor: "white",
               paddingTop: "70px",
-              height: `${vh}px`,
+              // height: `${vh}px`,
             }}
           >
             <motion.span
