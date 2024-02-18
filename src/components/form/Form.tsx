@@ -76,7 +76,7 @@ export default function Form({
     <form
       onSubmit={handleSubmit(onSubmit)}
       className={styles.wrapper}
-      style={height}
+      // style={height}
       ref={form}
     >
       <h3 className={styles.title}>{text}</h3>

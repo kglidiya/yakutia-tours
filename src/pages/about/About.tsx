@@ -15,7 +15,7 @@ export default function About() {
   const ref = useRef<HTMLDivElement | null>(null);
   const [translateY, setTranslateY] = useState(0);
   const [vh, setVh] = useState(window.innerHeight);
-  const [isKeyBoardVisible, setIsKeyBoardVisible] = useState(false)
+  const [isKeyBoardVisible, setIsKeyBoardVisible] = useState(false);
   const scrollHandler = (e: any) => {
     if (e.deltaY > 0) {
       setTranslateY((prev) => {
@@ -68,11 +68,8 @@ export default function About() {
     //     behavior: "smooth",
     //   });
     //   setVh(window.innerHeight);
-    //   setTranslateY(0); 
+    //   setTranslateY(0);
     // }
-    
-
- 
   };
 
   useEffect(() => {
@@ -93,12 +90,23 @@ export default function About() {
   const onClick = () => {
     setTranslateY(-vh);
   };
-
+  const [height, setHeight] = useState({ height: "538px" });
+  useEffect(() => {
+    if (mobile) {
+      if (isKeyBoardVisible) {
+        setHeight({ height: "320px" });
+      } else {
+        setHeight({ height: `${vh}px` });
+      }
+    }
+  }, [isKeyBoardVisible]);
   return (
     <motion.main
       className={styles.main}
       {...handlers}
       style={{ height: `${vh}px` }}
+      // style={height}
+     
     >
       <MotionCover image={require("../../assets/images/logo.png")} />
       <motion.div
@@ -109,9 +117,7 @@ export default function About() {
         transition={{ duration: 1 }}
       >
         <Intro images={images} text="О нас" onClick={onClick} />
-        <section className={styles.section}
-         style={{ height: `${vh}px` }}
-         >
+        <section className={styles.section} style={{ height: `${vh}px` }}>
           <motion.span
             className={styles.imageSun}
             initial={{
@@ -163,9 +169,7 @@ export default function About() {
           </motion.div>
         </section>
 
-        <section className={styles.section} 
-        style={{ height: `${vh}px` }}
-        >
+        <section className={styles.section} style={{ height: `${vh}px` }}>
           <motion.span
             className={styles.imageSun}
             initial={{
@@ -189,7 +193,12 @@ export default function About() {
             </p>
             <p className={styles.text}>Ждем Ваших пожеланий.</p>
             <div className={styles.form}>
-              {!tablet && <Form text="Форма обратной связи" setIsKeyBoardVisible={ setIsKeyBoardVisible}/>}
+              {!tablet && (
+                <Form
+                  text="Форма обратной связи"
+                  setIsKeyBoardVisible={setIsKeyBoardVisible}
+                />
+              )}
             </div>
           </div>
           <motion.div
@@ -250,11 +259,11 @@ export default function About() {
         {mobile && (
           <section
             className={styles.section}
-            style={{
+            style={ {
               backgroundColor: "white",
               paddingTop: "70px",
-              height: `${vh}px`,
-           
+              // height: `${vh}px`,
+             ...height
             }}
           >
             <motion.span
@@ -270,7 +279,10 @@ export default function About() {
                 transition: { duration: 3, delay: 0 },
               }}
             ></motion.span>
-            <Form text="Форма обратной связи"  setIsKeyBoardVisible={ setIsKeyBoardVisible}/>
+            <Form
+              text="Форма обратной связи"
+              setIsKeyBoardVisible={setIsKeyBoardVisible}
+            />
           </section>
         )}
       </motion.div>
