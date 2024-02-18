@@ -13,8 +13,8 @@ interface ITextArea {
   errorMessage?: string;
   setValue?: any;
 
-  onBlur?: ChangeEventHandler<HTMLInputElement>;
-  setIsInputFocused?: any;
+  // onBlur?: ChangeEventHandler<HTMLInputElement>;
+  // setIsInputFocused?: any;
 }
 
 const TextArea = ({
@@ -26,18 +26,18 @@ const TextArea = ({
   minLength,
   error,
   errorMessage,
-  onBlur,
-  setIsInputFocused,
+  // onBlur,
+  // setIsInputFocused,
 }: ITextArea) => {
   return (
     <div className={styles.container}>
       <textarea
-        onFocus={() => setIsInputFocused(true)}
+        // onFocus={() => setIsInputFocused(true)}
         className={styles.textarea}
         placeholder={placeholder}
         {...register(name, {
           required,
-          onBlur,
+          // onBlur,
           maxLength,
           minLength,
         })}

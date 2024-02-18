@@ -51,8 +51,8 @@ export default function About() {
     },
     onSwipedUp: () => {
       setTranslateY((prev) => {
-        if (prev === -(vh * 3)) {
-          return -(vh * 3);
+        if (prev === -(vh * 2)) {
+          return -(vh * 2);
         } else {
           return prev - vh;
         }
@@ -90,22 +90,22 @@ export default function About() {
   const onClick = () => {
     setTranslateY(-vh);
   };
-  const [height, setHeight] = useState({ height: "538px" });
-  useEffect(() => {
-    if (mobile) {
-      if (isKeyBoardVisible) {
-        setHeight({ height: "320px" });
-      } else {
-        setHeight({ height: `${vh}px` });
-      }
-    }
-  }, [isKeyBoardVisible]);
+  // const [height, setHeight] = useState({ height: "538px" });
+  // useEffect(() => {
+  //   if (mobile) {
+  //     if (isKeyBoardVisible) {
+  //       setHeight({ height: "320px" });
+  //     } else {
+  //       setHeight({ height: `${vh}px` });
+  //     }
+  //   }
+  // }, [isKeyBoardVisible]);
   return (
     <motion.main
       className={styles.main}
       {...handlers}
-      // style={{ height: `${vh}px` }}
-      style={height}
+      style={{ height: `${vh}px` }}
+      // style={height}
      
     >
       <MotionCover image={require("../../assets/images/logo.png")} />
@@ -196,7 +196,7 @@ export default function About() {
               {!tablet && (
                 <Form
                   text="Форма обратной связи"
-                  setIsKeyBoardVisible={setIsKeyBoardVisible}
+                  
                 />
               )}
             </div>
@@ -256,14 +256,14 @@ export default function About() {
             />
           </motion.div>
         </section>
-        {mobile && (
+        {/* {mobile && (
           <section
             className={styles.section}
             style={ {
               backgroundColor: "white",
               paddingTop: "70px",
-              // height: `${vh}px`,
-             ...height
+              height: `${vh}px`,
+            //  ...height
             }}
           >
             <motion.span
@@ -284,7 +284,7 @@ export default function About() {
               setIsKeyBoardVisible={setIsKeyBoardVisible}
             />
           </section>
-        )}
+        )} */}
       </motion.div>
     </motion.main>
   );

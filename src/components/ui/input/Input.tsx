@@ -10,8 +10,8 @@ interface IInput {
   required: boolean;
   error?: FieldErrors<any>;
   errorMessage?: string;
-  onBlur?: ChangeEventHandler<HTMLInputElement>;
-  setIsInputFocused?: any;
+  // onBlur?: ChangeEventHandler<HTMLInputElement>;
+  // setIsInputFocused?: any;
 }
 
 const Input = ({
@@ -22,20 +22,20 @@ const Input = ({
   required,
   error,
   errorMessage,
-  onBlur,
-  setIsInputFocused,
+  // onBlur,
+  // setIsInputFocused,
 }: IInput) => {
   return (
     <div className={styles.container}>
       <input
         // onBlur={() => setIsInputFocused(false)}
-        onFocus={() => setIsInputFocused(true)}
+        // onFocus={() => setIsInputFocused(true)}
         placeholder={placeholder}
         type={type}
         autoComplete="off"
         {...register(name, {
           // onChange,
-          onBlur,
+          // onBlur,
           required,
         })}
         className={styles.input}
