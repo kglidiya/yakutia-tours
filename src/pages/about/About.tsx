@@ -15,7 +15,6 @@ export default function About() {
   const ref = useRef<HTMLDivElement | null>(null);
   const [translateY, setTranslateY] = useState(0);
   const [vh, setVh] = useState(window.innerHeight);
-  const [isKeyBoardVisible, setIsKeyBoardVisible] = useState(false);
   const scrollHandler = (e: any) => {
     if (e.deltaY > 0) {
       setTranslateY((prev) => {
@@ -61,15 +60,13 @@ export default function About() {
   });
 
   const onResize = () => {
-    // if(!isKeyBoardVisible) {
-    //   window.scrollTo({
-    //     top: 0,
-    //     left: 0,
-    //     behavior: "smooth",
-    //   });
-    //   setVh(window.innerHeight);
-    //   setTranslateY(0);
-    // }
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+    setVh(window.innerHeight);
+    setTranslateY(0);
   };
 
   useEffect(() => {
@@ -90,23 +87,12 @@ export default function About() {
   const onClick = () => {
     setTranslateY(-vh);
   };
-  // const [height, setHeight] = useState({ height: "538px" });
-  // useEffect(() => {
-  //   if (mobile) {
-  //     if (isKeyBoardVisible) {
-  //       setHeight({ height: "320px" });
-  //     } else {
-  //       setHeight({ height: `${vh}px` });
-  //     }
-  //   }
-  // }, [isKeyBoardVisible]);
+
   return (
     <motion.main
       className={styles.main}
       {...handlers}
       style={{ height: `${vh}px` }}
-      // style={height}
-     
     >
       <MotionCover image={require("../../assets/images/logo.png")} />
       <motion.div
@@ -193,12 +179,7 @@ export default function About() {
             </p>
             <p className={styles.text}>Ждем Ваших пожеланий.</p>
             <div className={styles.form}>
-              {!tablet && (
-                <Form
-                  text="Форма обратной связи"
-                  
-                />
-              )}
+              {!tablet && <Form text="Форма обратной связи" />}
             </div>
           </div>
           <motion.div
@@ -256,35 +237,6 @@ export default function About() {
             />
           </motion.div>
         </section>
-        {/* {mobile && (
-          <section
-            className={styles.section}
-            style={ {
-              backgroundColor: "white",
-              paddingTop: "70px",
-              height: `${vh}px`,
-            //  ...height
-            }}
-          >
-            <motion.span
-              className={styles.imageSun}
-              initial={{
-                top: "1%",
-                right: "-15vw",
-                opacity: 0,
-              }}
-              whileInView={{
-                right: 0,
-                opacity: 1,
-                transition: { duration: 3, delay: 0 },
-              }}
-            ></motion.span>
-            <Form
-              text="Форма обратной связи"
-              setIsKeyBoardVisible={setIsKeyBoardVisible}
-            />
-          </section>
-        )} */}
       </motion.div>
     </motion.main>
   );

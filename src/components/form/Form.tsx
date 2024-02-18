@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useRef, useState } from "react";
 import styles from "./Form.module.css";
 import Input from "../ui/input/Input";
 import { useForm } from "react-hook-form";
@@ -7,19 +7,10 @@ import TextArea from "../ui/textarea/TextArea";
 import AnimatedPerson from "../ui/animated-person/AnimatedPerson";
 import emailjs from "@emailjs/browser";
 import Spinner from "../ui/spinner/Spinner";
-import useMediaQuery from "../../hooks/use-media-query";
 
-export default function Form({
-  text,
-  // setIsKeyBoardVisible,
-}: {
-  text: string;
-  // setIsKeyBoardVisible: any;
-}) {
-  const mobile = useMediaQuery("(max-width: 576px)");
+export default function Form({ text }: { text: string }) {
   const form = useRef<HTMLFormElement | null>(null);
-  // const [height, setHeight] = useState({ height: "538px" });
-  // const [isInputFocused, setIsInputFocused] = useState(false);
+
   const [btnText, setBtnText] = useState<string | ReactNode>("Отправить");
   const {
     register,
@@ -54,29 +45,11 @@ export default function Form({
         }
       );
   };
-  // const onBlur = () => {
-  //   if (mobile) {
-  //     setIsInputFocused(false);
-  //   }
-  // };
-  // useEffect(() => {
-  //   if (mobile) {
-  //     if (isInputFocused) {
-  //       setHeight({ height: "315px" });
-  //       setIsKeyBoardVisible(true);
-  //     } else {
-  //       setHeight({ height: "538px" });
-  //       setIsKeyBoardVisible(false);
-  //     }
-  //   }
-  // }, [isInputFocused, mobile]);
 
-  // console.log(isInputFocused);
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className={styles.wrapper}
-      // style={height}
       ref={form}
     >
       <h3 className={styles.title}>{text}</h3>
@@ -90,8 +63,6 @@ export default function Form({
           required
           error={errors}
           errorMessage="Заполните это поле"
-          // onBlur={onBlur}
-          // setIsInputFocused={setIsInputFocused}
         />
         <Input
           type="text"
@@ -101,8 +72,6 @@ export default function Form({
           required
           error={errors}
           errorMessage="Заполните это поле"
-          // onBlur={onBlur}
-          // setIsInputFocused={setIsInputFocused}
         />
         <TextArea
           register={register}
@@ -111,8 +80,6 @@ export default function Form({
           name="message"
           error={errors}
           errorMessage="Заполните это поле"
-          // onBlur={onBlur}
-          // setIsInputFocused={setIsInputFocused}
         />
         <Button type="submit" text={btnText} fontSize="18px" width="250px" />
       </div>

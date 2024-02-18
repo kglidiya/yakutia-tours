@@ -44,7 +44,7 @@ export default function Header() {
         <Link to="tel:9876543210" className={`${styles.link} ${styles.link_default}`}>
           {" "}
           <WhatsUpIcon />
-          +7 (915) 678-24-34
+          +7 (991) 278-27-43
         </Link>
 
         <Link to="mailto:" className={`${styles.link} ${styles.link_default}`}>

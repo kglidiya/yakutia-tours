@@ -1,4 +1,3 @@
-import { ChangeEventHandler } from "react";
 import styles from "./Input.module.css";
 import { FieldErrors, UseFormRegister } from "react-hook-form";
 
@@ -10,8 +9,6 @@ interface IInput {
   required: boolean;
   error?: FieldErrors<any>;
   errorMessage?: string;
-  // onBlur?: ChangeEventHandler<HTMLInputElement>;
-  // setIsInputFocused?: any;
 }
 
 const Input = ({
@@ -22,20 +19,14 @@ const Input = ({
   required,
   error,
   errorMessage,
-  // onBlur,
-  // setIsInputFocused,
 }: IInput) => {
   return (
     <div className={styles.container}>
       <input
-        // onBlur={() => setIsInputFocused(false)}
-        // onFocus={() => setIsInputFocused(true)}
         placeholder={placeholder}
         type={type}
         autoComplete="off"
         {...register(name, {
-          // onChange,
-          // onBlur,
           required,
         })}
         className={styles.input}

@@ -1,7 +1,6 @@
 .container {
   position: relative;
   width: 100%;
-
 }
 
 .input {
@@ -15,8 +14,6 @@
   transition: all 0.2s linear;
   box-sizing: border-box;
   font-size: 16px;
-  z-index: 4;
-  position: relative;
 }
 
 .input:focus {

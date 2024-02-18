@@ -1,6 +1,5 @@
 import { UseFormRegister } from "react-hook-form";
 import styles from "./TextArea.module.css";
-import { ChangeEventHandler } from "react";
 
 interface ITextArea {
   placeholder?: string;
@@ -12,9 +11,6 @@ interface ITextArea {
   error?: any;
   errorMessage?: string;
   setValue?: any;
-
-  // onBlur?: ChangeEventHandler<HTMLInputElement>;
-  // setIsInputFocused?: any;
 }
 
 const TextArea = ({
@@ -26,18 +22,14 @@ const TextArea = ({
   minLength,
   error,
   errorMessage,
-  // onBlur,
-  // setIsInputFocused,
 }: ITextArea) => {
   return (
     <div className={styles.container}>
       <textarea
-        // onFocus={() => setIsInputFocused(true)}
         className={styles.textarea}
         placeholder={placeholder}
         {...register(name, {
           required,
-          // onBlur,
           maxLength,
           minLength,
         })}

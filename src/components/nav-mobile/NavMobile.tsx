@@ -49,7 +49,7 @@ export default function NavMobile() {
           >
             {" "}
             <WhatsUpIcon />
-            +7 (915) 678-24-34
+            +7 (991) 278-27-43
           </Link>
         </li>
         <li>

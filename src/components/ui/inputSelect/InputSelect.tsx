@@ -35,7 +35,7 @@ const InputSelect = ({
   const handleToggle = () => {
     setActive(!isActive);
   };
- console.log(getValues(name))
+
   return (
     <div className={styles.container}>
       <input
