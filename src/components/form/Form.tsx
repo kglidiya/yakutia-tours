@@ -1,4 +1,4 @@
-import { ReactNode, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import styles from "./Form.module.css";
 import Input from "../ui/input/Input";
 import { useForm } from "react-hook-form";
@@ -12,7 +12,9 @@ import useMediaQuery from "../../hooks/use-media-query";
 export default function Form({ text }: { text: string }) {
   const mobile = useMediaQuery("(max-width: 576px)");
   const form = useRef<HTMLFormElement | null>(null);
-  const [height, setHeight] = useState("538px");
+  const [height, setHeight] = useState({height: "538px",
+paddingTop: '1px'});
+  const [isInputFocused, setIsInputFocused] = useState(false);
   const [btnText, setBtnText] = useState<string | ReactNode>("Отправить");
   const {
     register,
@@ -47,17 +49,28 @@ export default function Form({ text }: { text: string }) {
         }
       );
   };
-  const onChahge = () => {
+  const onBlur = () => {
     if(mobile) {
-      setHeight('330px') 
+      setIsInputFocused(false)
     }
 
   };
+  useEffect(() => {
+    if(mobile) {
+      if(isInputFocused) {
+        setHeight({height: '330px', paddingTop: '1px'})
+       } else setHeight({height: "538px",
+       paddingTop: '1px'});
+    }
+  
+  }, [isInputFocused, mobile])
+
+  console.log(isInputFocused)
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className={styles.wrapper}
-      style={{ height: mobile ? height : "" }}
+      style={height}
       ref={form}
     >
       <h3 className={styles.title}>{text}</h3>
@@ -71,7 +84,8 @@ export default function Form({ text }: { text: string }) {
           required
           error={errors}
           errorMessage="Заполните это поле"
-          onChange={onChahge}
+          onBlur={onBlur}
+          setIsInputFocused={setIsInputFocused}
          
         />
         <Input
@@ -82,6 +96,8 @@ export default function Form({ text }: { text: string }) {
           required
           error={errors}
           errorMessage="Заполните это поле"
+          onBlur={onBlur}
+          setIsInputFocused={setIsInputFocused}
         />
         <TextArea
           register={register}
@@ -90,7 +106,7 @@ export default function Form({ text }: { text: string }) {
           name="message"
           error={errors}
           errorMessage="Заполните это поле"
-          onChange={onChahge}
+          // onChange={onChahge}
         />
         <Button type="submit" text={btnText} fontSize="18px" width="250px" />
       </div>
