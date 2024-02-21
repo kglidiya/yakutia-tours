@@ -6,7 +6,7 @@
 .input {
 	display: block;
 	height: 38px;
-	border: 1px solid rgb(98, 161, 216);
+	border: 1px solid var(--blue-primary);
 	width: 100%;
 	padding-left: 10px;
 	padding-right: 35px;
@@ -17,11 +17,11 @@
 }
 
 .input:focus {
-	border-bottom: 2px solid rgb(98, 161, 216);
+	border: 2px solid var(--blue-primary);
 }
 
 .input:hover {
-	border-bottom: 2px solid rgb(98, 161, 216);
+	border: 2px solid var(--blue-primary);
 }
 
 .error {
@@ -89,7 +89,7 @@ input:-webkit-autofill:active {
 
 .list__item:hover {
 	transition: background-color 0.3s linear;
-	background-color: rgb(98, 161, 216);
+	background-color: var(--blue-primary);
 	color: white;
 	border-radius: 4px;
 }

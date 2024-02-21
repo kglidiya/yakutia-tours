@@ -10,6 +10,6 @@ export default function Footer() {
 	});
 
 	return (
-		<motion.div style={{ right: `${width}%` }} className={styles.footer} />
+		<motion.footer style={{ right: `${width}%` }} className={styles.wrapper} />
 	);
 }

@@ -1,30 +1,22 @@
-import { useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
+import { HelmetProvider } from 'react-helmet-async';
 import AppRouter from './components/appRouter/AppRouter';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import HelmetSeo from './components/helmetSeo/HemetSeo';
 
 function App() {
-	const vh = window.innerHeight * 0.01;
-
-	useEffect(() => {
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
-		window.addEventListener('resize', () => {
-			document.documentElement.style.setProperty('--vh', `${vh}px`);
-		});
-	}, []);
-
 	return (
-		<div className="App">
+		<HelmetProvider>
+			<HelmetSeo title="Вечная мерзлота" description="Туры по зимней Якутии" />
 			<Router>
 				<Header />
 				<AppRouter />
 			</Router>
 			<Footer />
-		</div>
+		</HelmetProvider>
 	);
 }
 

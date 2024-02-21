@@ -1,23 +1,10 @@
 .main {
 	position: relative;
-	/* position: fixed;
-  top: 0;
-  left: 0;
-  height: auto;
-  width: 100%; */
 	background-image: url(../../assets/images/translucent-background-home.png);
 	background-size: 20%;
 	background-attachment: fixed;
 }
 
-/* .main::after {
-  content: "";
-  height: 100%;
-  background: #8bd0f7;
-  mix-blend-mode: multiply;
-  opacity: 0.5;
-  display: block;
-} */
 .facts {
 	font-size: 24px;
 	width: 70%;
@@ -31,7 +18,6 @@
 	gap: 20px;
 	width: 70%;
 	margin: 30px auto;
-	/* flex-wrap: wrap; */
 }
 
 .facts__image {
@@ -56,7 +42,6 @@
 }
 
 .form {
-	/* height: 60vh; */
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -69,7 +54,6 @@
 		),
 		url('https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg');
 	overflow: hidden;
-	/* background-image: url("https://happychristmasnewyeargreetings.com/wp-content/uploads/2017/12/Christmas-snow-wallpaper-Q9gJJF7.jpg"); */
 	background-size: cover;
 	overflow: hidden;
 	padding-top: 0;
@@ -78,9 +62,11 @@
 		1px -23px 40px 12px #d4eff5,
 		-2px 24px 26px 1px #d4eff5 inset;
 }
+
 .condition__wrapper {
 	width: 70%;
 }
+
 .condition {
 	font-size: 24px;
 	font-weight: bold;
@@ -109,7 +95,6 @@
 .list__text {
 	margin: 0;
 	width: 80%;
-	/* padding-left: 20px; */
 }
 
 .list__marker_included {
@@ -118,12 +103,14 @@
 	height: 32px;
 	background: url(../../assets/images/included_icon.svg) no-repeat;
 }
+
 .list__marker_excluded {
 	display: block;
 	width: 32px;
 	height: 32px;
 	background: url(../../assets/images/excluded_icon.svg) no-repeat;
 }
+
 @media (max-width: 1400px) {
 	.facts__gallery {
 		width: 90%;
@@ -155,13 +142,16 @@
 	.facts__gallery {
 		flex-wrap: wrap;
 	}
+
 	.facts__image {
 		width: 42vw;
 		height: 42vw;
 	}
+
 	.condition__wrapper {
 		width: 90%;
 	}
+
 	.condition {
 		font-size: 20px;
 	}
@@ -171,6 +161,7 @@
 	.main {
 		background-size: 60%;
 	}
+
 	.facts {
 		font-size: 18px;
 		margin: 50px auto;
@@ -198,12 +189,3 @@
 		padding-bottom: 200px;
 	}
 }
-/* @media (max-width: 992px) {
-  .facts__gallery {
-    width: 90%;
-  }
-
-  .tours__gallery {
-    width: 90%;
-  }
-} */

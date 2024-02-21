@@ -2,7 +2,7 @@
 	width: fit-content;
 	display: flex;
 	height: 50px;
-	background-color: rgb(98, 161, 216);
+	background-color: var(--blue-primary);
 	border-radius: 10px;
 	border: none;
 	color: white;

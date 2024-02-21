@@ -27,7 +27,7 @@
 }
 
 .title {
-	color: rgb(98, 161, 216);
+	color: var(--blue-primary);
 	font-size: 24px;
 	padding: 20px;
 	margin: 0;

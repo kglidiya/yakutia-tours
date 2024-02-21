@@ -89,9 +89,7 @@ export default function Tour({ tour }: { tour: ITour }) {
 
 	return (
 		<>
-			{/* <MotionCover image={require("../../assets/images/logo.png")} /> */}
 			<motion.div
-				// className={`${styles.intro} ${styles.intro_oymyakon}`}
 				className={styles.intro}
 				style={style}
 				{...handlers}

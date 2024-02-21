@@ -55,7 +55,7 @@ export default function Header() {
 						className={`${styles.link} ${styles.link_default}`}
 					>
 						<EmailIcon />
-						beryff@yandex.ruLink
+						permafrost.yakutia@gmail.com
 					</Link>
 				</nav>
 			)}

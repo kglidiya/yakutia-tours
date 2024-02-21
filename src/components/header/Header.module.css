@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Roboto&display=swap');
 
 .wrapper {
-	/* height: 50px; */
 	width: 90%;
 	position: absolute;
 	top: 0;
@@ -42,7 +41,7 @@
 
 .logo__text:last-of-type {
 	font-size: 44px;
-	color: rgb(98, 161, 216);
+	color: var(--blue-primary);
 }
 
 .links {
@@ -73,7 +72,7 @@
 }
 
 .link_active {
-	color: rgb(98, 161, 216);
+	color: var(--blue-primary);
 	text-shadow:
 		-1px 0 black,
 		0 1px black,
@@ -85,10 +84,12 @@
 	.wrapper {
 		padding-left: 20px;
 	}
+
 	.logo__image {
 		width: 120px;
 		height: 120px;
 	}
+	
 	.logo__text {
 		font-size: 28px;
 	}
@@ -96,9 +97,11 @@
 	.logo__text:last-of-type {
 		font-size: 40px;
 	}
+
 	.links {
 		gap: 30px;
 	}
+
 	.link {
 		font-size: 20px;
 	}
@@ -118,9 +121,6 @@
 		width: 100%;
 	}
 
-	/* .logo {
-    margin-top: 50px;
-  } */
 	.logo__image {
 		width: 100px;
 		height: 100px;
@@ -131,6 +131,7 @@
 	.logo__text {
 		font-size: 26px;
 	}
+
 	.logo__text:last-of-type {
 		font-size: 38px;
 	}
@@ -144,6 +145,7 @@
 	.logo__text {
 		font-size: 24px;
 	}
+
 	.logo__text:last-of-type {
 		font-size: 30px;
 	}

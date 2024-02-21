@@ -8,5 +8,5 @@
 }
 
 .fill:hover {
-	fill: #62a1d8;
+	fill: var(--blue-primary);
 }

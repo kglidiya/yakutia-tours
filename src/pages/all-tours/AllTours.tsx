@@ -62,9 +62,9 @@ export default function AllTours() {
 
 	return (
 		<main style={{ position: 'relative' }} ref={refMain}>
-			<div className={styles.container} ref={refContent}>
+			<div className={styles.intro} ref={refContent}>
 				<video
-					className={styles.intro}
+					className={styles.video}
 					autoPlay
 					loop
 					muted

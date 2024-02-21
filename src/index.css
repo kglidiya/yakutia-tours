@@ -1,7 +1,11 @@
 @import './assets/fonts/fontc.scss';
+:root {
+	--blue-primary: #62a1d8;
+}
 
 body {
 	margin: 0;
+	padding: 0;
 	font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI',
 		'Kablammo', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
 		'Helvetica Neue', sans-serif;
@@ -24,6 +28,7 @@ body {
 .slick-slider .slick-dots {
 	bottom: -55px;
 }
+
 .slick-slider .slick-dots li button:before {
 	font-size: 10px;
 }

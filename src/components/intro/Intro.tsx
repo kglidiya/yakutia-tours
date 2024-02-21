@@ -25,6 +25,20 @@ export default function Intro({
 		return () => clearInterval(timer);
 	}, [images]);
 
+	useEffect(() => {
+		const setViewHeight = () => {
+			document.documentElement.style.setProperty(
+				'--vh',
+				`${window.innerHeight * 0.01}px`
+			);
+		};
+		setViewHeight();
+		window.addEventListener('resize', setViewHeight);
+		return () => {
+			window.removeEventListener('resize', setViewHeight);
+		};
+	}, []);
+
 	return (
 		<section className={styles.wrapper}>
 			<motion.img
