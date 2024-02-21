@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import { images } from '../../utils/helpers';
+import { images } from '../../utils/constants';
 import MotionCover from '../../components/motion-cover/MotionCover';
 import styles from './About.module.css';
 import Form from '../../components/form/Form';

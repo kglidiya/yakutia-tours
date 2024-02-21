@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { images, tourGallery, factsGallery } from '../../utils/helpers';
+import { images, tourGallery, factsGallery } from '../../utils/constants';
 import MotionCover from '../../components/motion-cover/MotionCover';
 import styles from './Home.module.css';
 import TourCard from '../../components/tour-card/TourCard';

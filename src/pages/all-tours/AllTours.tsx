@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import styles from './AllTours.module.css';
-import { tourGallery } from '../../utils/helpers';
+import { tourGallery } from '../../utils/constants';
 import ButtonScroll from '../../components/ui/button-nav/ButtonNav';
 import Button from '../../components/ui/button/Button';
 import MotionFooter from '../../components/motion-footer/MotionFooter';

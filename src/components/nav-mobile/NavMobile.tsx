@@ -60,7 +60,7 @@ export default function NavMobile() {
 						className={`${styles.link} ${styles.link_default}`}
 					>
 						<EmailIcon />
-						permafrost.yakutia@gmail.com
+						permafrost.yakutia@yandex.ru
 					</Link>
 				</li>
 			</motion.ul>

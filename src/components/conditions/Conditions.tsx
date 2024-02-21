@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import { motion } from 'framer-motion';
-import { tourConditions } from '../../utils/helpers';
+import { tourConditions } from '../../utils/constants';
 import styles from './Conditions.module.css';
 import Form from '../form/Form';
 

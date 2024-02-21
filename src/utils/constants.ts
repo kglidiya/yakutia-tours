@@ -1,25 +1,15 @@
 export const images = [
-	// "https://sportishka.com/uploads/posts/2022-02/1645635189_49-sportishka-com-p-kurilskoe-ozero-kamchatka-turizm-krasivo-f-57.jpg",
-	// "https://photocentra.ru/images/main107/1071764_main.jpg",
-	// "https://kronoki.ru/upload/iblock/b29/b294f641f110741f056ef09e27234f82.jpg",
-	// "https://dalgeotour.com/upload/iblock/df5/4e99900u3yjj9c9j2pbyqrw605ssfv2e.jpg",
-	'https://celes.club/uploads/posts/2021-12/1640858891_29-celes-club-p-oimyakon-zima-priroda-krasivo-foto-35.jpg',
-	'https://celes.club/uploads/posts/2021-12/1640831579_66-celes-club-p-priroda-yakutii-zimoi-priroda-krasivo-foto-78.jpg',
-
-	'https://goarctic.ru/upload/iblock/aa8/aa859a34bf7475b05f8e106b92cd8cf9.jpg',
-
-	//  "http://wikiway.com/upload/uf/0e9/oyamikon_035.jpg",
-	//  "https://celes.club/uploads/posts/2021-11/1637323386_54-celes-club-p-yakutskaya-loshad-zhivotnie-krasivo-foto-55.jpg",
-	'https://sportishka.com/uploads/posts/2022-03/1646721567_48-sportishka-com-p-tundra-zimoi-i-letom-turizm-krasivo-foto-54.jpg',
-	'https://35photo.pro/photos_main/428/2144480.jpg',
+	'https://i.postimg.cc/sfNfLyhJ/1640858891-29-celes-club-p-oimyakon-zima-priroda-krasivo-foto-35.jpg',
+	'https://i.postimg.cc/HkRBv60x/1640831579-66-celes-club-p-priroda-yakutii-zimoi-priroda-krasivo-foto-78.jpg',
+	'https://i.postimg.cc/HLxQTd6k/aa859a34bf7475b05f8e106b92cd8cf9.jpg',
+	'https://i.postimg.cc/bwLxXsH5/1646721567-48-sportishka-com-p-tundra-zimoi-i-letom-turizm-krasivo-foto-54.jpg',
 ];
 
 export const factsGallery = [
-	'https://img.dni.ru/binaries/v3_photo/124341.jpg',
-	'https://cdn.fishki.net/upload/post/2020/01/29/3214613/davydovagalina6533-80032710-147820549987965-8155857056283111211-n.jpg',
-	'https://cdn1.img.sputniknews.uz/img/07e5/01/04/15724557_0:0:1274:720_2072x0_60_0_0_2d47a5927db890df5c2faf45c3067bcd.jpg',
-
-	'https://bloknot.ru/wp-content/uploads/2020/02/nOgJgLoY.jpg',
+	'https://i.postimg.cc/NFw92ckT/124341.jpg',
+	'https://i.postimg.cc/CLTHbyxc/davydovagalina6533-80032710-147820549987965-8155857056283111211-n.jpg',
+	'https://i.postimg.cc/cLdR5QYY/15724557-0-0-1274-720-2072x0-60-0-0-2d47a5927db890df5c2faf45c3067bcd.jpg',
+	'https://i.postimg.cc/ZYyx9Y49/nOgJgLoY.jpg',
 ];
 
 export const tourGallery = [
@@ -27,9 +17,9 @@ export const tourGallery = [
 		id: 1,
 		path: 'oymyakon',
 		image:
-			'https://avatars.dzeninfra.ru/get-zen_doc/1549204/pub_6376ec167056c31ec5f83291_6376eef4b54d7a6ee08870d7/scale_1200',
+			'https://i.postimg.cc/nrHGcbRh/7658a750-7ad9-4148-b2c6-4f9a4351d0c6-1024x1280.jpg',
 		image_intro:
-			'https://sportishka.com/uploads/posts/2023-12/1702175870_sportishka-com-p-priroda-yakutii-zimoi-pinterest-2.jpg',
+			'https://i.postimg.cc/9QHXYp6P/1702175870-sportishka-com-p-priroda-yakutii-zimoi-pinterest-2.jpg',
 		title: 'Путешествие в Оймякон (Полюс холода)',
 		title_short: 'Путешествие в Оймякон',
 		subtitle:
@@ -53,22 +43,21 @@ export const tourGallery = [
 			'Путь  до Якутска 6.00 ч - подъем, завтрак 7.00 ч - выезд В пути остановки для  приема пищи в придорожных  кафе Приезд в Якутск к 24.00 часам  По приезду в Якутск развоз по гостиницам. Длина дневного маршрута 913 километра. По приезду в Якутск развоз по гостиницам. По желанию туристов мы можем организовать выезд на Ленские Столбы и однодневную экскурсию в Якутске',
 		],
 		gallery: [
-			'https://i.pinimg.com/originals/d6/f2/16/d6f2165c4c69115c5ba89c8d1dda8d60.jpg',
-			'https://avatars.dzeninfra.ru/get-zen_doc/3630505/pub_61607a57f6ac020e08530b78_61608b41d416587b2022afff/scale_1200',
-			'https://ic.pics.livejournal.com/e_kaspersky/24977487/9334902/9334902_original.jpg',
-			'https://cdni.rbth.com/rbthmedia/images/2019.08/original/5d5bdd1585600a1c3e6d78d5.jpg',
-			'https://www.inyakutia.ru/upload/iblock/b4a/Polyus-KHoloda-_9_.jpg',
-			'https://www.russiadiscovery.com/upload/files/festival-polus-kholoda-oimyakon-2020-(30)_1565176268.jpg',
+			'https://i.postimg.cc/25Zw0xLr/d6f2165c4c69115c5ba89c8d1dda8d60.jpg',
+			'https://i.postimg.cc/xCGP2TPZ/scale-1200.jpg',
+			'https://i.postimg.cc/3xW9vhKy/9334902-original.jpg',
+			'https://i.postimg.cc/593mKyyY/5d5bdd1585600a1c3e6d78d5.jpg',
+			'https://i.postimg.cc/dtVjbFZW/Polyus-KHoloda-9.jpg',
+			'https://i.postimg.cc/sDTwxxRd/festival-polus-kholoda-oimyakon-2020-30-1565176268.jpg',
 		],
 	},
 
 	{
 		id: 2,
 		path: 'deers',
-		image:
-			'https://sportishka.com/uploads/posts/2023-12/1702175870_sportishka-com-p-priroda-yakutii-zimoi-pinterest-2.jpg',
+		image: 'https://i.postimg.cc/J4VbKpsP/severnyj-olen43.webp',
 		image_intro:
-			'https://goarctic.ru/upload/iblock/aa8/aa859a34bf7475b05f8e106b92cd8cf9.jpg',
+			'https://i.postimg.cc/HLxQTd6k/aa859a34bf7475b05f8e106b92cd8cf9.jpg',
 		title: 'В гостях у оленеводов',
 		title_short: 'В гостях у оленеводов',
 		subtitle:
@@ -93,12 +82,12 @@ export const tourGallery = [
 			'После  завтрака вы на оленьей упряжке  поедете к стаду оленей. Сегодня  вы погрузитесь в быт оленеводов  и понаблюдаете за их ежедневной  обязанностью — отловом ездовых  оленей. Оленеводы покажут вам, как  заарканить оленя, правильно собрать  упряжку и управлять ею. При  желании вы сможете попробовать себя в роли каюра — погонщика оленей. После обеда у вас будет свободное время. По возможности для вас организуют образовательный вечер: оленеводы расскажут вам о своих традициях, верованиях и духовной культуре. Если позволит погода и планы оленеводов, возможен выезд на подледную рыбалку. Возвращение в Якутск. По приезду в Якутск развоз по гостиницам. По приезду в Якутск развоз по гостиницам. По желанию туристов мы можем организовать посещение ресторана традиционной кухни.',
 		],
 		gallery: [
-			'https://jazico-travel.com/Assets/images/russia/5.jpg',
-			'https://storage.yandexcloud.net/storage.yasno.media/nat-geo/images/2019/5/16/690a7a99c6ae4aefae27b84e92c71a55.max-1200x800.jpg',
-			'https://celes.club/uploads/posts/2021-12/1640858884_27-celes-club-p-oimyakon-zima-priroda-krasivo-foto-33.jpg',
-			'https://daddyelk.com/wp-content/uploads/2021/12/reindeer-1.jpg',
-			'https://pandashop31.ru/wp-content/uploads/severnyj-olen43.webp',
-			'https://celes.club/uploads/posts/2023-03/1679651616_celes-club-p-yakutiya-oleni-vkontakte-47.jpg',
+			'https://i.postimg.cc/PJh5vvqz/5.jpg',
+			'https://i.postimg.cc/CKB13VtD/690a7a99c6ae4aefae27b84e92c71a55-max-1200x800.jpg',
+			'https://i.postimg.cc/K8Y45TD0/1640858884-27-celes-club-p-oimyakon-zima-priroda-krasivo-foto-33.jpg',
+			'https://i.postimg.cc/XNwZN4vk/reindeer-1.jpg',
+			'https://i.postimg.cc/J4VbKpsP/severnyj-olen43.webp',
+			'https://i.postimg.cc/nrv96tXT/1679651616-celes-club-p-yakutiya-oleni-vkontakte-47.jpg',
 		],
 	},
 
@@ -106,9 +95,9 @@ export const tourGallery = [
 		id: 3,
 		path: 'lena-pillars',
 		image:
-			'https://happylove.top/uploads/posts/2023-09/1693962860_happylove-top-p-yakutiya-stolbi-lenskie-vkontakte-20.jpg',
+			'https://i.postimg.cc/13f6w1jd/1693962860-happylove-top-p-yakutiya-stolbi-lenskie-vkontakte-20.jpg',
 		image_intro:
-			'https://travelsoul.ru/wp-content/uploads/1/6/c/16c17ed25322d7eead53bf20e014ee87.jpeg',
+			'https://i.postimg.cc/13f6w1jd/1693962860-happylove-top-p-yakutiya-stolbi-lenskie-vkontakte-20.jpg',
 		title: 'Ленские столбы',
 		title_short: 'Ленские столбы',
 		subtitle:
@@ -137,12 +126,12 @@ export const tourGallery = [
 			`Выезд из Якутска в 09.00. По пути вы будете делать остановки, чтобы осмотреть наскальные рисунки на скалах Эмэгэттэх, Еланковская и Арка Желаний. Прибыв на место, вы подниметесь на смотровую площадку «Лабыдья», откуда открываются великолепные виды на покрытые льдом просторы реки Лена и «охраняющих» ее скал. На маршруте у вас будет обед-перекус (ланч-бокс), а поужинаете вы самостоятельно в придорожном кафе. В 22:00 возвращение в гостиницу Якутска`,
 		],
 		gallery: [
-			'https://shpitsbergen.ru/wp-content/uploads/0/9/1/091b3fe96112f76bd24e62b1038fcb75.jpeg',
-			'https://travel-ykt.ru/wp-content/uploads/lenskie_stolbi_zimoi_46.jpg',
-			'http://vsegda-pomnim.com/uploads/posts/2022-03/1648677250_12-vsegda-pomnim-com-p-reka-lena-zimoi-foto-13.jpg',
-			'https://губернатор24.рф/wp-content/uploads/2020/08/IMG-20200826-WA0036.jpg',
-			'https://inyakutia.com/upload/iblock/1fb/100-_1_.jpg',
-			'https://i.pinimg.com/originals/36/84/80/368480a2140465350f172947e5c2ec31.jpg',
+			'https://i.postimg.cc/C5cBncHY/091b3fe96112f76bd24e62b1038fcb75.jpg',
+			'https://i.postimg.cc/J4dH1dz5/lenskie-stolbi-zimoi-46.jpg',
+			'https://i.postimg.cc/HWz7NLGK/1648677250-12-vsegda-pomnim-com-p-reka-lena-zimoi-foto-13.jpg',
+			'https://i.postimg.cc/SNKzbpkK/IMG-20200826-WA0036.jpg',
+			'https://i.postimg.cc/MpMMXbc2/100-1.jpg',
+			'https://i.postimg.cc/JzvXQdwz/368480a2140465350f172947e5c2ec31.jpg',
 		],
 	},
 
@@ -150,8 +139,8 @@ export const tourGallery = [
 		id: 4,
 		path: 'yakutsk-magadan',
 		image:
-			'https://celes.club/uploads/posts/2023-03/1679761087_celes-club-p-doroga-zimoi-pinterest-43.jpg',
-		image_intro: 'https://img.tourister.ru/files/7/4/3/5/6/5/0/original.jpg',
+			'https://i.postimg.cc/4dBbZMQG/1679761087-celes-club-p-doroga-zimoi-pinterest-43.jpg',
+		image_intro: 'https://i.postimg.cc/8CdmXsFj/original.jpg',
 		title: 'Якутск — ГУЛАГ — Оймякон — Магадан',
 		title_short: 'Якутск — Магадан',
 		subtitle:
@@ -179,11 +168,11 @@ export const tourGallery = [
 			`Заключительный день тура. Отъезд в аэропорт. Завтрак.Групповой трансфер в аэропорт. Вылет из Магадана.`,
 		],
 		gallery: [
-			'https://s10.stc.yc.kpcdn.net/share/i/12/12906276/wr-960.webp',
-			'https://img.tourister.ru/files/7/4/3/5/6/5/0/original.jpg',
-			'https://govoritmagadan.ru/wp-content/uploads/2020/12/gallery_793_39_208511.jpg',
-			'http://photokonkurs.com/uploads/img/2007-01-04/HUMOR/90534.jpg',
-			'https://newizv.ru/attachments/586274ed53803bc968a1ef0fcb0295d5835f0288/store/crop/0/0/1160/773/1920/0/0/aa0f5462a52a5770343b24758f9b6692574930c5012519e81c988096ade4/f8d6d26a3ab64d913d2cf639c12e50c33a4582d54ec792f585ef1227b6a2',
+			'https://i.postimg.cc/QtXk2s5S/wr-960.webp',
+			'https://i.postimg.cc/8CdmXsFj/original.jpg',
+			'https://i.postimg.cc/JhCQQjzf/gallery-793-39-208511.jpg',
+			'https://i.postimg.cc/pVsqt9sj/90534.jpg',
+			'https://i.postimg.cc/NFjDHYjL/scale-1200.jpg',
 		],
 	},
 
@@ -191,9 +180,8 @@ export const tourGallery = [
 		id: 5,
 		path: 'hourses',
 		image:
-			'https://pm1.aminoapps.com/7725/db33595fb3923fab3a3ef45cdbc72df7ac8395fdr1-793-505v2_hq.jpg',
-		image_intro:
-			'https://archive.ysia.ru/wp-content/uploads/2016/01/IMG_4304-2-1024x683.jpg',
+			'https://i.postimg.cc/j5WbKVz0/db33595fb3923fab3a3ef45cdbc72df7ac8395fdr1-793-505v2-hq.jpg',
+		image_intro: 'https://i.postimg.cc/Sxqk9vpC/IMG-4304-2-1024x683.jpg',
 		title: 'Конные прогулки',
 		title_short: 'Конные прогулки',
 		subtitle:
@@ -224,13 +212,13 @@ export const tourGallery = [
 			` Выезд из Якутска на конную базу. Время в пути 1,5 часа. Знакомство с бытом коневодов. Прогулки верхом или в санях на выбор. Дегустация блюд из жеребятины. Якутские лошади уникальны: они живут при температуре -60-70 градусов в условиях, где световой день зимой длится всего три часа. У этих животных очень плотная шерсть, что и помогает выжить при экстремально низких температурах. Жителей республики Саха (Якутия) эти лошади снабжают и молоком, и мясом, а также часть их становится ездовыми. Интересно, что лошади питаются подножным кормом, находя растительность глубоко под снегом. Возвращение в Якутск в 22:00`,
 		],
 		gallery: [
-			'https://cdn.iz.ru/sites/default/files/styles/2048x1365/public/photo_item-2018-12/1545322597_5.jpg?itok=UM0nvilO',
-			'https://sezon-dacha.ru/wp-content/uploads/3/2/8/3280471a42a891496f51974a45a0bae4.jpeg',
-			'https://cdni.rbth.com/rbthmedia/images/2020.10/original/5f9be3fa85600a4437735aab.jpg',
-			'https://pibig.info/uploads/posts/2023-09/1696033333_pibig-info-p-oimyakon-gori-instagram-85.jpg',
-			'https://celes.club/uploads/posts/2021-11/1637323386_54-celes-club-p-yakutskaya-loshad-zhivotnie-krasivo-foto-55.jpg',
-			'https://i.ytimg.com/vi/wRGppj2GWgQ/maxresdefault.jpg',
-			'https://bugaga.ru/uploads/posts/2020-10/1603737843_02.jpg',
+			'https://i.postimg.cc/MZCW6GPs/1545322597-5.jpg',
+			'https://i.postimg.cc/Kjgspxtj/3280471a42a891496f51974a45a0bae4.jpg',
+			'https://i.postimg.cc/s2gz6Gx2/5f9be3fa85600a4437735aab.jpg',
+			'https://i.postimg.cc/TPN6Z25J/1696033333-pibig-info-p-oimyakon-gori-instagram-85.jpg',
+			'https://i.postimg.cc/0279bqh9/1637323386-54-celes-club-p-yakutskaya-loshad-zhivotnie-krasivo-foto-55.jpg',
+			'https://i.postimg.cc/FHZmVV9q/maxresdefault.jpg',
+			'https://i.postimg.cc/HWcY1M2c/1603737843-02.jpg',
 		],
 	},
 
@@ -238,9 +226,9 @@ export const tourGallery = [
 		id: 6,
 		path: 'chum',
 		image:
-			'https://demotivation.ru/wp-content/uploads/2020/05/nordlicht-yukon-ara-adav-20160214-010224-7580.jpg',
+			'https://i.postimg.cc/QCJsYQQH/nordlicht-yukon-ara-adav-20160214-010224-7580.jpg',
 		image_intro:
-			'https://sportishka.com/uploads/posts/2022-03/1646721567_48-sportishka-com-p-tundra-zimoi-i-letom-turizm-krasivo-foto-54.jpg',
+			'https://i.postimg.cc/mZYbrsvB/1646721567-48-sportishka-com-p-tundra-zimoi-i-letom-turizm-krasivo-foto-54.jpg',
 		title: 'Один день в чуме',
 		title_short: 'Один день в чуме',
 		subtitle:
@@ -269,12 +257,12 @@ export const tourGallery = [
 			'Выезд из Якутска в 9:00. Путь то стоянки в тайге - 3 часа. Быт оленеводов остается неизменным уже несколько сотен лет: будьте готовы к отсутствию привычного уровня комфорта. Вы будете жить в чуме вместе с семьей кочевников, спать на постелях из оленьих шкур и питаться блюдами местной кухни, приготовленными на печи или костре. На следующий день завтрак в 8:00, возвращение в Якутск в 12:00',
 		],
 		gallery: [
-			'http://go-ra.ru/upload/iblock/6fc/ku29q4q8m8hhtgdokp9xwd1s07aantad.jpg',
-			'https://cdnstatic.rg.ru/uploads/images/photogallery/2020/08/18/ae0e5b33cd060b0/ae0e5b33cd060b01597763139.jpg',
-			'https://img.razrisyika.ru/kart/141/1200/561634-chum-15.jpg',
-			'https://www.exje.ru/wp-content/uploads/2016/11/J45A9621.jpg',
-			'https://avatars.dzeninfra.ru/get-zen_doc/9123373/pub_63f110f6e50f1863deb8c0a6_63f153554b6b9a282c3b7f59/scale_1200',
-			'https://www.ttelegraf.ru/files/file/73b195c8bbdad4177153aaaa661eab4a.jpg',
+			'https://i.postimg.cc/HngdtZ7q/ku29q4q8m8hhtgdokp9xwd1s07aantad.jpg',
+			'https://i.postimg.cc/vHGGgKy9/ae0e5b33cd060b01597763139.jpg',
+			'https://i.postimg.cc/NjMYbr5j/561634-chum-15.jpg',
+			'https://i.postimg.cc/FsGNjxF6/J45A9621.jpg',
+			'https://i.postimg.cc/rmWqxXzG/scale-1200.png',
+			'https://i.postimg.cc/HLFprsWs/73b195c8bbdad4177153aaaa661eab4a.jpg',
 		],
 	},
 ];

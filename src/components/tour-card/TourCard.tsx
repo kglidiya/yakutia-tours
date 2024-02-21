@@ -17,7 +17,7 @@ export default function TourCard({
 			style={{ backgroundImage: `url(${tour.image})` }}
 			initial={{ y: 50, opacity: 0 }}
 			whileInView={{ y: 0, opacity: 1 }}
-			transition={{ delay: index * 0.2, duration: 0.2 }}
+			transition={{ delay: index * 0.1, duration: 0.2 }}
 		>
 			<div className={styles.overlay}>
 				<p className={styles.title}>{tour.title}</p>
