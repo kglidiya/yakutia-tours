@@ -22,7 +22,7 @@ export default function Tour({ tour }: { tour: ITour }) {
 		});
 	};
 
-	const scrollToTop = () => {
+	const scrollTop = () => {
 		window.scrollTo({
 			top: 0,
 			left: 0,
@@ -38,12 +38,12 @@ export default function Tour({ tour }: { tour: ITour }) {
 	};
 
 	useEffect(() => {
-		scrollToTop();
+		scrollTop();
 	}, []);
 
 	const handlers = useSwipeable({
 		onSwipedDown: () => {
-			scrollToTop();
+			scrollTop();
 		},
 		onSwipedUp: () => {
 			scrollDown();
@@ -58,7 +58,7 @@ export default function Tour({ tour }: { tour: ITour }) {
 				scrollDown();
 			}
 			if (e.deltaY < 0) {
-				scrollToTop();
+				scrollTop();
 			}
 		};
 		if (scrollContainer) {
@@ -122,7 +122,7 @@ export default function Tour({ tour }: { tour: ITour }) {
 				<div className={styles.content}>
 					<div className={styles.description}>
 						<PhotoSlider images={tour.gallery} />
-						<Title text=" Программа тура" margin="100px auto 60px auto" />
+						<Title text=" Программа тура" margin="80px auto 30px auto" />
 						<TourProgram tour={tour.program} />
 						<motion.div
 							ref={refForm}

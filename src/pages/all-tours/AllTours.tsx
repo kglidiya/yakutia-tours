@@ -69,7 +69,7 @@ export default function AllTours() {
 					loop
 					muted
 					playsInline
-					poster="https://celes.club/uploads/posts/2021-12/1640858891_29-celes-club-p-oimyakon-zima-priroda-krasivo-foto-35.jpg"
+					poster="https://i.postimg.cc/sfNfLyhJ/1640858891-29-celes-club-p-oimyakon-zima-priroda-krasivo-foto-35.jpg"
 				>
 					<source src={video} type="video/mp4" />
 				</video>
@@ -112,7 +112,7 @@ export default function AllTours() {
 					transition={{ duration: 1 }}
 				>
 					Для бронирования тура необходимо оплатить 30% его стоимости. Полность
-					тур должен быть оплачет за две недели до его начала. Оставьте заявку и
+					тур должен быть оплачен за две недели до его начала. Оставьте заявку и
 					с Вами свяжется наш менеджер для уточнения деталей.
 				</motion.p>
 			</section>

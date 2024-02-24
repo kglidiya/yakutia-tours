@@ -20,7 +20,7 @@ export default function About() {
 	const ref = useRef<HTMLDivElement | null>(null);
 	const [translateY, setTranslateY] = useState(0);
 	const [vh, setVh] = useState(window.innerHeight);
-	const scrollHandler = (e: any) => {
+	const scrollHandler = (e: WheelEvent) => {
 		if (e.deltaY > 0) {
 			setTranslateY((prev) => {
 				if (prev === -(vh * 2)) {
@@ -39,7 +39,7 @@ export default function About() {
 		}
 	};
 
-	const debouncedSearch = useDebounce(scrollHandler, 300);
+	const debouncedWheelHandler = useDebounce(scrollHandler, 300);
 
 	const handlers = useSwipeable({
 		onSwipedDown: () => {
@@ -74,7 +74,7 @@ export default function About() {
 		const scrollContainer = ref.current;
 		const onWheel = (e: any) => {
 			e.preventDefault();
-			debouncedSearch(e);
+			debouncedWheelHandler(e);
 		};
 		if (scrollContainer)
 			scrollContainer.addEventListener('wheel', onWheel, { passive: false });
@@ -84,7 +84,7 @@ export default function About() {
 				scrollContainer.removeEventListener('wheel', onWheel);
 			window.removeEventListener('resize', onResize);
 		};
-	}, [debouncedSearch]);
+	}, [debouncedWheelHandler]);
 
 	const onClick = () => {
 		setTranslateY(-vh);
@@ -116,7 +116,7 @@ export default function About() {
 						whileInView={{
 							right: mobile ? 0 : '12vw',
 							opacity: 1,
-							transition: { duration: 2, delay: 0 },
+							transition: { duration: 3, delay: 0 },
 						}}
 					/>
 					<div className={styles.content}>
@@ -131,22 +131,25 @@ export default function About() {
 							кредо - это ОБЕСПЕЧЕНИЕ НАДЕЖНОСТИ И КАЧЕСТВА на маршрутах. Для
 							этого мы постоянно совершенствуем наши маршруты и работаем над
 							повышением уровня обслуживания туристов. Компания оснащена
-							надежным тур.снаряжением, которая не подведет в любых условиях и
-							обеспечит максимальный комфорт.
+							надежным туристическим снаряжением, которая не подведет в любых
+							условиях и обеспечит максимальный комфорт.
 						</p>
 					</div>
 					<motion.div
 						className={styles.motionImage}
 						initial={{
-							bottom: mobile ? '-11%' : '1%',
+							bottom: '1%',
 							right: 0,
 							left: 0,
-							opacity: 0,
+							opacity: 0.2,
 						}}
 						whileInView={{
-							bottom: '5%',
+							bottom: '7%',
 							opacity: 1,
-							transition: { duration: 1 },
+							transition: {
+								opacity: { duration: 1.5 },
+								bottom: { duration: 2 },
+							},
 						}}
 					>
 						<img
@@ -171,7 +174,7 @@ export default function About() {
 							transition: { duration: 3, delay: 0 },
 						}}
 					/>
-					<div className={`${styles.content} ${styles.content_last}`}>
+					<div className={styles.content}>
 						<p className={styles.text}>
 							По запросу организовываем любые туры, путешествия и экспедиции по
 							Якутии, а также познавательные экскурсии по Якутску и другим
@@ -179,7 +182,7 @@ export default function About() {
 							профессиональные инструкторы-проводники, имеющие допуск работы с
 							группами туристов на маршрутах до 5-й категории сложности.
 						</p>
-						<p className={styles.text}>Ждем Ваших пожеланий.</p>
+						<p className={styles.text}>Ждем Ваших пожеланий!</p>
 						<div className={styles.form}>
 							{!tablet && <Form text="Форма обратной связи" />}
 						</div>

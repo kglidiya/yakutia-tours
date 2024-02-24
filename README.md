@@ -1,1 +1,1 @@
-https://yakutia-tours.vercel.app/
+https://permafrost-yakutia.ru/

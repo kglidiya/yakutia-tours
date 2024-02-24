@@ -63,9 +63,11 @@
 		height: 30vh;
 		padding-bottom: 20px;
 	}
+
 	.slider__background {
 		height: 30vh;
 	}
+	
 	.slider__image {
 		width: 100%;
 		bottom: -10vh;

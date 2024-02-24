@@ -1,7 +1,9 @@
 {
-	"name": "my-app",
+	"name": "yakutia",
+	"author": "Kosinova Lidiya",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "./",
 	"dependencies": {
 		"@emailjs/browser": "^3.12.1",
 		"@testing-library/jest-dom": "^5.17.0",

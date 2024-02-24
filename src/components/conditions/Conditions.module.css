@@ -68,6 +68,7 @@
 	height: 32px;
 	background: url(../../assets/images/excluded_icon.svg) no-repeat;
 }
+
 @media (max-width: 1400px) {
 	.facts__gallery {
 		width: 90%;
@@ -142,6 +143,7 @@
 	.list:last-of-type {
 		margin-bottom: 40px;
 	}
+	
 	.wrapper {
 		padding-bottom: 200px;
 	}
