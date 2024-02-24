@@ -45,7 +45,7 @@ export default function NavMobile() {
 				</li>
 				<li>
 					<Link
-						to="tel:9876543210"
+						to="tel:+79912782743"
 						className={`${styles.link} ${styles.link_default}`}
 					>
 						{' '}
@@ -56,7 +56,7 @@ export default function NavMobile() {
 				<li>
 					{' '}
 					<Link
-						to="mailto:"
+						to="mailto:permafrost.yakutia@yandex.ru"
 						className={`${styles.link} ${styles.link_default}`}
 					>
 						<EmailIcon />
