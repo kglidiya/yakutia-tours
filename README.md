@@ -7,7 +7,7 @@
 ### Tech stack:
 -	React (+TypeScript)
 - CSS
-### БиблиотекиЖ
+### Библиотеки
 - Framer Motion
 - Slick Сarousel
 - React Hook Form
